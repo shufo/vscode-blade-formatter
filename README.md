@@ -1,6 +1,6 @@
 # vscode-blade-formatter
 
-A Blade file formatter for VSCode
+A Blade file formatter extension for VSCode
 
 ## Screencast
 
