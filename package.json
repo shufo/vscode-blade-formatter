@@ -1,0 +1,88 @@
+{
+  "name": "vscode-blade-formatter",
+  "publisher": "shufo",
+  "displayName": "Laravel Blade formatter",
+  "description": "Laravel Blade formatter for VSCode",
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.47.0",
+    "node": ">= 10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shufo/vscode-blade-formatter.git"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "keywords": [
+    "blade",
+    "formatter",
+    "laravel",
+    "template"
+  ],
+  "galleryBanner": {
+    "color": "#ffe04b",
+    "theme": "light"
+  },
+  "author": "Shuhei Hayashibara <@shufo>",
+  "icon": "icon.png",
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "blade",
+        "aliases": [
+          "Blade",
+          "blade"
+        ],
+        "extensions": [
+          ".blade.php"
+        ]
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Blade Formatter",
+      "properties": {
+        "bladeFormatter.format.enabled": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Whether it enbales format"
+        },
+        "bladeFormatter.format.indentSize": {
+          "type": "integer",
+          "default": 4,
+          "markdownDescription": "Indent size"
+        }
+      }
+    }
+  },
+  "activationEvents": [
+    "onLanguage:blade"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js",
+    "changelog": "conventional-changelog -i CHANGELOG.md -p angular -s -r 0"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "@types/vscode": "^1.47.0",
+    "conventional-changelog-cli": "^2.0.34",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.2",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  },
+  "dependencies": {
+    "blade-formatter": "^1.3.1",
+    "esm": "^3.2.25"
+  }
+}
