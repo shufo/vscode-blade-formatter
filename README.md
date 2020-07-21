@@ -14,4 +14,4 @@ A Blade file formatter for VSCode
 
 ## Release Notes
 
-see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/CHANGELOG.md)
+see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/CHANGELOG.md)
