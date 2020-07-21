@@ -2,6 +2,10 @@
 
 A Blade file formatter for VSCode
 
+## Screencast
+
+![Screencast](https://github.com/shufo/vscode-blade-formatter/raw/master/screencast.gif)
+
 ## Extension Settings
 
 - `Blade Formatter: format Enabled`: Whether it enables or not
