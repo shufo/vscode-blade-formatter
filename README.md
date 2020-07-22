@@ -1,6 +1,6 @@
 # vscode-blade-formatter
 
-A Blade file formatter extension for VSCode
+A Blade file formatter extension for VSCode. Marketplace page is [here](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter).
 
 ## Screencast
 
