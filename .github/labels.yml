@@ -1,0 +1,58 @@
+---
+# Default GitHub labels
+- color: d73a4a
+  name: bug
+  description: Something isn't working
+- color: cfd3d7
+  name: duplicate
+  description: This issue or pull request already exists
+- color: a2eeef
+  name: enhancement
+  description: New feature or request
+- color: 7057ff
+  name: good first issue
+  description: Good for newcomers
+- color: 008672
+  name: help wanted
+  description: Extra attention is needed
+- color: e4e669
+  name: invalid
+  description: This doesn't seem right
+- color: d876e3
+  name: question
+  description: Further information is requested
+- color: ffffff
+  name: wontfix
+  description: This will not be worked on
+- color: 0075ca
+  name: documentation
+  description: Improvements or additions to documentation
+
+# Project specific labels
+- color: 0366d6
+  name: dependencies
+  description: Pull requests that update a dependency file
+- color: ee0701
+  name: security
+  description: Pull requests that address a security vulnerability
+- color: 45229e
+  name: php
+  description: Pull requests that update Php code
+- color: 168700
+  name: javascript
+  description: Pull requests that update Javascript code
+- color: 4e51ba
+  name: feature
+  description: New feature or request
+- color: d5fc9f
+  name: fix
+  description: Bug fix
+- color: d5fc9f
+  name: hotfix
+  description: A hot Bug fix
+- color: 8ceabd
+  name: automerge
+  description: PR that can auto merge
+- color: 8ceabd
+  name: WIP
+  description: PR that is WIP

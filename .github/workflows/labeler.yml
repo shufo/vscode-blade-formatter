@@ -1,0 +1,21 @@
+name: "Pull Request Labeler"
+on:
+- pull_request
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/labeler@v2
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+    - uses: TimonVS/pr-labeler-action@v3
+      with:
+        configuration-path: .github/pr-labeler.yml
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # conflict labeler
+    - uses: mschilde/auto-label-merge-conflicts@master
+      with:
+        CONFLICT_LABEL_NAME: "WIP"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

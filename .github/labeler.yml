@@ -1,0 +1,8 @@
+test:
+  - __tests__/**/*
+bin:
+  - bin/**/*
+application:
+  - src/**/*
+github:
+  - .github/**/*
