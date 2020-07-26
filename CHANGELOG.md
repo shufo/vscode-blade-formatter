@@ -1,3 +1,23 @@
+# [0.3.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.2.0...v0.3.0) (2020-07-26)
+
+
+### chore
+
+* 🤖 bump vscode-blade-formatter to 0.3.0 ([e02edc9](https://github.com/shufo/vscode-blade-formatter/commit/e02edc983713289fa46258f6c6ff316d07846815))
+* 🤖 change changelog preset from angular to eslint ([aa2fc00](https://github.com/shufo/vscode-blade-formatter/commit/aa2fc0062d5de62bb4ef2a3f546386ed0060ba80))
+
+### docs
+
+* ✏️ update CHANGELOG.md ([1e1aa5e](https://github.com/shufo/vscode-blade-formatter/commit/1e1aa5ea0b825cb45cfa9b3c0e895f9de94ce591))
+* ✏️ update README.md ([8f83954](https://github.com/shufo/vscode-blade-formatter/commit/8f83954d57b213e20bd32f8cc13c993957d32f0e))
+* ✏️ update README.md ([43f7757](https://github.com/shufo/vscode-blade-formatter/commit/43f7757f2d08e2ce33e726f5e94d2ffc4f3ec882))
+
+### feat
+
+* 🎸 bump blade-formatter to 1.5.0 ([76f484f](https://github.com/shufo/vscode-blade-formatter/commit/76f484f44ee150376f78e20c37384ef0eacf00bf))
+
+
+
 # [0.2.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.1.0...v0.2.0) (2020-07-23)
 
 
