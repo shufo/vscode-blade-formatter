@@ -49,7 +49,7 @@
         "bladeFormatter.format.enabled": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "Whether it enbales format"
+          "markdownDescription": "Whether it enables format"
         },
         "bladeFormatter.format.indentSize": {
           "type": "integer",
