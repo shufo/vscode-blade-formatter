@@ -14,6 +14,13 @@ You can also format by same syntax programmatically with [blade-formatter](https
 - `Blade Formatter: format Indent Size`: An indent size
 
 
+## TODO
+
+- [ ] Add more option for HTML formatting rules
+- [ ] Add option for PHP formatting rules
+- [ ] Automate package publishing flow
+- [ ] Integration test
+
 ## Release Notes
 
 see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/CHANGELOG.md)
