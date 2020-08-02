@@ -1,3 +1,26 @@
+## [0.4.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.4.1...v0.4.2) (2020-08-02)
+
+
+### feat
+
+* 🎸 bump blade-formatter to 1.6.2 ([a55967e](https://github.com/shufo/vscode-blade-formatter/commit/a55967ee6469d4040b9eddea132317750e791b4b))
+
+
+
+## [0.4.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.4.0...v0.4.1) (2020-08-02)
+
+
+### chore
+
+* 🤖 fix dependencies ([f96784d](https://github.com/shufo/vscode-blade-formatter/commit/f96784dc7f7e6b289b84ca1abdf1fb3eb5e804eb))
+* 🤖 Release 0.4.1 ([8555964](https://github.com/shufo/vscode-blade-formatter/commit/85559643d1e9ae101b246a954ed0957fe4492de6))
+
+### feat
+
+* 🎸 bump blade-formatter to 1.6.1 ([67c6e63](https://github.com/shufo/vscode-blade-formatter/commit/67c6e63417e20778f2276e8ca50b5512e8956ce7))
+
+
+
 # [0.4.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.3.4...v0.4.0) (2020-07-30)
 
 
@@ -9,6 +32,7 @@
 
 * ✏️ add todo to provide current simple roadmap ([193a1a1](https://github.com/shufo/vscode-blade-formatter/commit/193a1a18d04f10b9f52d58c80a98acb2b9c3bcbd))
 * ✏️ fix phrase ([d76cee5](https://github.com/shufo/vscode-blade-formatter/commit/d76cee5d25b8f9f0a53ad6e2cad96040adde506a))
+* ✏️ update CHANGELOG.md ([1e6621c](https://github.com/shufo/vscode-blade-formatter/commit/1e6621c756fe82c6272c220687f5a4c6291e77c9))
 
 ### feat
 
