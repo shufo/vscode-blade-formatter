@@ -55,6 +55,16 @@
           "type": "integer",
           "default": 4,
           "markdownDescription": "Indent size"
+        },
+        "bladeFormatter.format.wrapLineLength": {
+          "type": "integer",
+          "default": 120,
+          "markdownDescription": "The length of line wrap size"
+        },
+        "bladeFormatter.format.wrapAttributes": {
+          "type": "string",
+          "default": "auto",
+          "markdownDescription": "The way to wrap attributes"
         }
       }
     }
