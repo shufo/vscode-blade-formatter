@@ -36,6 +36,8 @@ function activate(context) {
           vsctm: vsctmModule,
           oniguruma: onigurumaModule,
           indentSize: extConfig.indentSize,
+          wrapLineLength: extConfig.wrapLineLength,
+          wrapAttributes: extConfig.wrapAttributes
         };
 
         return new Promise((resolve) => {
