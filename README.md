@@ -14,9 +14,12 @@ You can also format by same syntax programmatically with [blade-formatter](https
 
 ## Extension Settings
 
-- `Blade Formatter: format Enabled`: Whether it enables or not
-- `Blade Formatter: format Indent Size`: An indent size
-
+| setting                                    | description                  | default |
+| :----------------------------------------- | :--------------------------- | :------ |
+| `Blade Formatter: format Enabled`          | Whether it enables or not    | true    |
+| `Blade Formatter: format Indent Size`      | An indent size               | 4       |
+| `Blade Formatter: format Wrap Line Length` | The length of line wrap size | 120     |
+| `Blade Formatter: format Wrap Attributes`  | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]`   | `auto`  |
 
 ## TODO
 
