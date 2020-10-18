@@ -1,5 +1,28 @@
+# [0.5.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.4.4...v0.5.0) (2020-10-18)
+
+
+### chore
+
+* 🤖 bump blade-formatter to v1.8.0 ([d5e9fb1](https://github.com/shufo/vscode-blade-formatter/commit/d5e9fb196834317a8c5c13b83625419bb6f26b48))
+* 🤖 Release 0.5.0 ([3b45b26](https://github.com/shufo/vscode-blade-formatter/commit/3b45b2610c27e89715cba2806017363bd1a4634a))
+
+### docs
+
+* ✏️ add badges ([10097dd](https://github.com/shufo/vscode-blade-formatter/commit/10097dd70a8e4f3c355860176d5f0099cf5565a3))
+
+### feat
+
+* 🎸 add enum input box to wrap attributes ([8ef4863](https://github.com/shufo/vscode-blade-formatter/commit/8ef4863bffa5c994520345c8eb103e0ad5b0e72d))
+* 🎸 add package command to package.json ([bb961eb](https://github.com/shufo/vscode-blade-formatter/commit/bb961ebc2bdafc3ca2c9d1efa3a07fda7fed4f58))
+
+
+
 ## [0.4.4](https://github.com/shufo/vscode-blade-formatter/compare/v0.4.3...v0.4.4) (2020-08-04)
 
+
+### chore
+
+* 🤖 Release 0.4.4 ([03e5b19](https://github.com/shufo/vscode-blade-formatter/commit/03e5b19104ea8d3de03c36824f50f3ab866bcf9b))
 
 ### feat
 
