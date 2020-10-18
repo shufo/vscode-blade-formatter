@@ -64,6 +64,15 @@
         "bladeFormatter.format.wrapAttributes": {
           "type": "string",
           "default": "auto",
+          "enum": [
+            "auto",
+            "force",
+            "force-aligned",
+            "force-expand-multiline",
+            "aligned-multiple",
+            "preserve",
+            "preserve-aligned"
+          ],
           "markdownDescription": "The way to wrap attributes"
         }
       }
