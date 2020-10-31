@@ -1,3 +1,17 @@
+## [0.5.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.5.0...v0.5.1) (2020-10-31)
+
+
+### docs
+
+* ✏️ update CHANGELOG.md ([3ce408e](https://github.com/shufo/vscode-blade-formatter/commit/3ce408e7e61faecfb8f0db1e4e5f97082765ee74))
+* ✏️ update README.md ([d17db5b](https://github.com/shufo/vscode-blade-formatter/commit/d17db5b06f6b26ce72feaf0f5ea7efd5fd54de0b))
+
+### fix
+
+* 🐛 handle promise rejection ([5297333](https://github.com/shufo/vscode-blade-formatter/commit/52973335188cb3b179ec84264f664a7a80d61aec))
+
+
+
 # [0.5.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.4.4...v0.5.0) (2020-10-18)
 
 
