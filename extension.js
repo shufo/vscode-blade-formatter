@@ -40,11 +40,14 @@ function activate(context) {
           wrapAttributes: extConfig.wrapAttributes
         };
 
-        return new Promise((resolve) => {
+        return new Promise((resolve, reject) => {
           return new Formatter(options)
             .formatContent(originalText)
             .then((text) => {
               resolve([new vscode.TextEdit(range, text)]);
+            })
+            .then(undefined, err => {
+              reject(err);
             });
         });
       },
