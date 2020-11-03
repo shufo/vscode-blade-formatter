@@ -1,5 +1,27 @@
+## [0.5.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.5.1...v0.5.2) (2020-11-03)
+
+
+### chore
+
+* 🤖 bump blade-formatter to 1.8.1 ([bc97bbc](https://github.com/shufo/vscode-blade-formatter/commit/bc97bbc823987330a164c551d16749f3bddffef6))
+* 🤖 bump blade-formatter to 1.8.1 ([630adef](https://github.com/shufo/vscode-blade-formatter/commit/630adef2ded04b6b9a1a11ac19be8f9f45cd080e))
+
+### docs
+
+* ✏️ add template for issue and pr ([5bbb694](https://github.com/shufo/vscode-blade-formatter/commit/5bbb694d1cd0aecea37a2e1aa12ace6bfe4b568a))
+
+### feat
+
+* 🎸 show message dialog if something goes wrong ([06d110c](https://github.com/shufo/vscode-blade-formatter/commit/06d110c1616cd13cd933e826fd2c5da78979c62f))
+
+
+
 ## [0.5.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.5.0...v0.5.1) (2020-10-31)
 
+
+### chore
+
+* 🤖 Release 0.5.1 ([8307f4e](https://github.com/shufo/vscode-blade-formatter/commit/8307f4e2ca598ca7b3dc6cedb43ef671e6845bd1))
 
 ### docs
 
