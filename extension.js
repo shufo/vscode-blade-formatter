@@ -5,6 +5,15 @@ const onigurumaModule = getCoreNodeModule("vscode-oniguruma");
 
 require = require("esm")(module);
 const { default: Formatter } = require("blade-formatter/src/formatter");
+const { error } = require("console");
+
+const KNOWN_ISSUES = 'Open known Issues';
+const REPORT_ISSUE = 'Report Issue';
+
+const knownIssuesUrl = 'https://github.com/shufo/vscode-blade-formatter/issues';
+const newIssueUrl = 'https://github.com/shufo/vscode-blade-formatter/issues/new';
+
+const WASM_ERROR_MESSAGE = "Must invoke loadWASM first.";
 
 let wasmInitialized = false;
 
@@ -27,7 +36,6 @@ function activate(context) {
         const originalText = document.getText();
         const lastLine = document.lineAt(document.lineCount - 1);
         const range = new Range(new Position(0, 0), lastLine.range.end);
-
         if (!extConfig.enabled) {
           return [new vscode.TextEdit(range, originalText)];
         }
@@ -47,6 +55,19 @@ function activate(context) {
               resolve([new vscode.TextEdit(range, text)]);
             })
             .then(undefined, err => {
+              if (err.message === WASM_ERROR_MESSAGE) {
+                return reject(err);
+              }
+
+              vscode.window.showErrorMessage(err.message, KNOWN_ISSUES, REPORT_ISSUE).then(selected => {
+                if (selected === KNOWN_ISSUES) {
+                  vscode.env.openExternal(vscode.Uri.parse(knownIssuesUrl));
+                }
+                if (selected === REPORT_ISSUE) {
+                  vscode.env.openExternal(vscode.Uri.parse(newIssueUrl));
+                }
+              });
+
               reject(err);
             });
         });
