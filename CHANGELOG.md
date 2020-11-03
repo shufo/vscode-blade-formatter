@@ -1,3 +1,16 @@
+# [0.6.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.5.2...v0.6.0) (2020-11-03)
+
+
+### ci
+
+* 🎡 change workflow name ([2b6837e](https://github.com/shufo/vscode-blade-formatter/commit/2b6837e2ac1b1532784e3abccaede5ef4c531322))
+
+### feat
+
+* 🎸 bump blade-formatter to 1.9.0 ([35bb94c](https://github.com/shufo/vscode-blade-formatter/commit/35bb94c128574070b70ff1fcaf19a6bda3b6f012))
+
+
+
 ## [0.5.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.5.1...v0.5.2) (2020-11-03)
 
 
@@ -5,6 +18,7 @@
 
 * 🤖 bump blade-formatter to 1.8.1 ([bc97bbc](https://github.com/shufo/vscode-blade-formatter/commit/bc97bbc823987330a164c551d16749f3bddffef6))
 * 🤖 bump blade-formatter to 1.8.1 ([630adef](https://github.com/shufo/vscode-blade-formatter/commit/630adef2ded04b6b9a1a11ac19be8f9f45cd080e))
+* 🤖 Release 0.5.2 ([ebdb390](https://github.com/shufo/vscode-blade-formatter/commit/ebdb39090d1fae0b09533f1560579b2aac940f82))
 
 ### docs
 
