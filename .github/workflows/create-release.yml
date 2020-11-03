@@ -4,11 +4,11 @@ on:
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
-name: Create Release
+name: Publish Exntension
 
 jobs:
   build:
-    name: Create Release
+    name: Publish Extension
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
