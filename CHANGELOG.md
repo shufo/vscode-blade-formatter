@@ -1,5 +1,22 @@
+## [0.6.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.0...v0.6.1) (2020-11-05)
+
+
+### ci
+
+* 🎡 add stale workflow ([9ab4df1](https://github.com/shufo/vscode-blade-formatter/commit/9ab4df163219e1640ba454d74036b920f6943bc6))
+
+### feat
+
+* 🎸 bump blade-formatter to 1.9.1 ([2212792](https://github.com/shufo/vscode-blade-formatter/commit/2212792b1981c9842c72e7a531933043cba0a0b0))
+
+
+
 # [0.6.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.5.2...v0.6.0) (2020-11-03)
 
+
+### chore
+
+* 🤖 Release 0.6.0 ([2b18453](https://github.com/shufo/vscode-blade-formatter/commit/2b1845337caec8a86c8995fa45ab4b4c131cb0fa))
 
 ### ci
 
