@@ -1,8 +1,19 @@
+## [0.6.3](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.2...v0.6.3) (2020-12-08)
+
+
+### feat
+
+* 🎸 bump blade-formatter to 1.9.6 ([e840216](https://github.com/shufo/vscode-blade-formatter/commit/e840216ff0aaaa988c20a32268d8f989c290c113))
+
+
+
 ## [0.6.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.1...v0.6.2) (2020-12-06)
 
 
 ### chore
 
+* 🤖 fix dependency lock ([62c6f88](https://github.com/shufo/vscode-blade-formatter/commit/62c6f886641747102a92d139267eb67f73387627))
+* 🤖 Release 0.6.2 ([27dfe0b](https://github.com/shufo/vscode-blade-formatter/commit/27dfe0be874764698fa0e6576f1f38b587076c03))
 * update issue template ([130797d](https://github.com/shufo/vscode-blade-formatter/commit/130797df582bb49f39defa700db135f033af310e))
 
 ### feat
