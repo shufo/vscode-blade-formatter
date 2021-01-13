@@ -1,5 +1,22 @@
+## [0.6.4](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.3...v0.6.4) (2021-01-13)
+
+
+### docs
+
+* ✏️ add link to marketplace page ([6c237f8](https://github.com/shufo/vscode-blade-formatter/commit/6c237f818abc68c2d3694c649b374defa8540040))
+
+### feat
+
+* 🎸 bump blade-formatter to 1.9.7 ([656adfd](https://github.com/shufo/vscode-blade-formatter/commit/656adfdef2fd3cd700969c91b09ab4273e3e413d))
+
+
+
 ## [0.6.3](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.2...v0.6.3) (2020-12-08)
 
+
+### chore
+
+* 🤖 Release 0.6.3 ([0ab5ec0](https://github.com/shufo/vscode-blade-formatter/commit/0ab5ec0f067a25803e3bccef7a93d3de2ec4daff))
 
 ### feat
 
