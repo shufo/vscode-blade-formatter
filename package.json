@@ -103,7 +103,7 @@
     "debug": "^4.3.1"
   },
   "dependencies": {
-    "blade-formatter": "^1.9.9",
+    "blade-formatter": "^1.10.1",
     "esm": "^3.2.25"
   }
 }
