@@ -1,5 +1,18 @@
+## [0.6.7](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.6...v0.6.7) (2021-01-29)
+
+
+### feat
+
+* 🎸 bump blade-formatter to 1.10.1 ([fd6b0c8](https://github.com/shufo/vscode-blade-formatter/commit/fd6b0c877f4f0de4e19485da649624d36d34e714))
+
+
+
 ## [0.6.6](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.5...v0.6.6) (2021-01-23)
 
+
+### chore
+
+* 🤖 Release 0.6.6 ([cc41c05](https://github.com/shufo/vscode-blade-formatter/commit/cc41c05ceeb30d76b8f4d34481e4dce4be70ebc5))
 
 ### feat
 
