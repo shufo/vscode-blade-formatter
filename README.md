@@ -27,7 +27,7 @@ You can also format by same syntax programmatically with [blade-formatter](https
 To exclude files from formatting, create `.bladeignore` file in the root of your project `.bladeignore` uses [gitignore syntax](https://git-scm.com/docs/gitignore#_pattern_format)
 
 ```gitignore
-# Ignore email tempaltes
+# Ignore email templates
 resources/views/email/**
 ```
 
