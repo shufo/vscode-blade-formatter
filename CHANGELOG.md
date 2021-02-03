@@ -1,5 +1,47 @@
+## [0.6.8](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.7...v0.6.8) (2021-02-03)
+
+
+### chore
+
+* 🤖 add ignore pattern for test-resources ([7086c4c](https://github.com/shufo/vscode-blade-formatter/commit/7086c4cc43c07360f9442ea3c417f7993f3b3848))
+* 🤖 add ignore pattern for vscodeignore ([8c8603e](https://github.com/shufo/vscode-blade-formatter/commit/8c8603e446bb9a2def4b61548904733366692eb8))
+* 🤖 use npm instead of yarn ([8cb4307](https://github.com/shufo/vscode-blade-formatter/commit/8cb43074990559d294349fde36f5b9a5e5989d12))
+
+### ci
+
+* 🎡 add name for workflow ([927e6d7](https://github.com/shufo/vscode-blade-formatter/commit/927e6d759a685ed0cf1953ed63963b8b93dff963))
+* 🎡 add test workflow ([32fdb6f](https://github.com/shufo/vscode-blade-formatter/commit/32fdb6fb7a93653ab50f638edb776dd83c695f8b))
+* 🎡 change workflow name ([69c5063](https://github.com/shufo/vscode-blade-formatter/commit/69c50639ef3c84369871194c68cc90b0308a9886))
+
+### docs
+
+* ✏️ add CI status badge ([1c6c54d](https://github.com/shufo/vscode-blade-formatter/commit/1c6c54dbbd895001a5a02be7c698ec141679d266))
+
+### feat
+
+* 🎸 add .eslintignore ([a335c5c](https://github.com/shufo/vscode-blade-formatter/commit/a335c5c114bd70ceb431e68f29cd3ccdbf9aaf31))
+* 🎸 add dependencies for ignore feature ([88f459a](https://github.com/shufo/vscode-blade-formatter/commit/88f459a09afae9619d819606b77ca367b9f9f939))
+* 🎸 ignore document format if .bladeignore exists ([93e0785](https://github.com/shufo/vscode-blade-formatter/commit/93e078580485844e2853a2a2664d7290f76f222f))
+
+### style
+
+* 💄 format ([e2540d0](https://github.com/shufo/vscode-blade-formatter/commit/e2540d0e6e6862bd227ccd05e0717477fb224306))
+* 💄 formatting ([f90c91e](https://github.com/shufo/vscode-blade-formatter/commit/f90c91e2c1169cf09f9f22a11671c2609ebc95ea))
+
+### test
+
+* 💍 add end to end test ([69b6a4c](https://github.com/shufo/vscode-blade-formatter/commit/69b6a4cc4f6006bdbfc673841f6255c4b7c64168))
+* 💍 add fixtures for test ([776022e](https://github.com/shufo/vscode-blade-formatter/commit/776022e509ff677ec9873b7450624e8ea0fc6217))
+* 💍 add launch args for extension test ([04b6455](https://github.com/shufo/vscode-blade-formatter/commit/04b64555a8eea9fb0ba9d3a1c908d4f4d50a1f84))
+
+
+
 ## [0.6.7](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.6...v0.6.7) (2021-01-29)
 
+
+### chore
+
+* 🤖 Release 0.6.7 ([28b339d](https://github.com/shufo/vscode-blade-formatter/commit/28b339d0bafd0a5df7da566643f8fca2f7111577))
 
 ### feat
 
