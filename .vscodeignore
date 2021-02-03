@@ -7,3 +7,5 @@ vsc-extension-quickstart.md
 **/*.map
 **/.eslintrc.json
 screencast.gif
+test-resources/**
+out/**
