@@ -1,10 +1,11 @@
-## [0.6.8](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.7...v0.6.8) (2021-02-03)
+# [0.7.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.7...v0.7.0) (2021-02-03)
 
 
 ### chore
 
 * 🤖 add ignore pattern for test-resources ([7086c4c](https://github.com/shufo/vscode-blade-formatter/commit/7086c4cc43c07360f9442ea3c417f7993f3b3848))
 * 🤖 add ignore pattern for vscodeignore ([8c8603e](https://github.com/shufo/vscode-blade-formatter/commit/8c8603e446bb9a2def4b61548904733366692eb8))
+* 🤖 Release 0.6.8 ([005560a](https://github.com/shufo/vscode-blade-formatter/commit/005560abfec86bc8e415c94ea5e6dcb0a84ad728))
 * 🤖 use npm instead of yarn ([8cb4307](https://github.com/shufo/vscode-blade-formatter/commit/8cb43074990559d294349fde36f5b9a5e5989d12))
 
 ### ci
@@ -12,10 +13,13 @@
 * 🎡 add name for workflow ([927e6d7](https://github.com/shufo/vscode-blade-formatter/commit/927e6d759a685ed0cf1953ed63963b8b93dff963))
 * 🎡 add test workflow ([32fdb6f](https://github.com/shufo/vscode-blade-formatter/commit/32fdb6fb7a93653ab50f638edb776dd83c695f8b))
 * 🎡 change workflow name ([69c5063](https://github.com/shufo/vscode-blade-formatter/commit/69c50639ef3c84369871194c68cc90b0308a9886))
+* 🎡 run test before publish extension ([e4985fb](https://github.com/shufo/vscode-blade-formatter/commit/e4985fb461e529b6ae0c82014ed79dcfa870c27a))
 
 ### docs
 
 * ✏️ add CI status badge ([1c6c54d](https://github.com/shufo/vscode-blade-formatter/commit/1c6c54dbbd895001a5a02be7c698ec141679d266))
+* ✏️ add LICENSE file ([dc82823](https://github.com/shufo/vscode-blade-formatter/commit/dc82823e35d8853d729c069fa972ff7c7e282848))
+* ✏️ update README.md ([898f871](https://github.com/shufo/vscode-blade-formatter/commit/898f871a87e9bae90d5ca3f039580dc45df10e93))
 
 ### feat
 
