@@ -11,11 +11,12 @@ require = require("esm")(module);
 const { default: Formatter } = require("blade-formatter/src/formatter");
 const { error } = require("console");
 
-const KNOWN_ISSUES = 'Open known Issues';
-const REPORT_ISSUE = 'Report Issue';
+const KNOWN_ISSUES = "Open known Issues";
+const REPORT_ISSUE = "Report Issue";
 
-const knownIssuesUrl = 'https://github.com/shufo/vscode-blade-formatter/issues';
-const newIssueUrl = 'https://github.com/shufo/vscode-blade-formatter/issues/new';
+const knownIssuesUrl = "https://github.com/shufo/vscode-blade-formatter/issues";
+const newIssueUrl =
+  "https://github.com/shufo/vscode-blade-formatter/issues/new";
 
 const WASM_ERROR_MESSAGE = "Must invoke loadWASM first.";
 
@@ -53,7 +54,7 @@ function activate(context) {
           oniguruma: onigurumaModule,
           indentSize: extConfig.indentSize,
           wrapLineLength: extConfig.wrapLineLength,
-          wrapAttributes: extConfig.wrapAttributes
+          wrapAttributes: extConfig.wrapAttributes,
         };
 
         return new Promise((resolve, reject) => {
@@ -62,19 +63,21 @@ function activate(context) {
             .then((text) => {
               resolve([new vscode.TextEdit(range, text)]);
             })
-            .then(undefined, err => {
+            .then(undefined, (err) => {
               if (err.message === WASM_ERROR_MESSAGE) {
                 return reject(err);
               }
 
-              vscode.window.showErrorMessage(err.message, KNOWN_ISSUES, REPORT_ISSUE).then(selected => {
-                if (selected === KNOWN_ISSUES) {
-                  vscode.env.openExternal(vscode.Uri.parse(knownIssuesUrl));
-                }
-                if (selected === REPORT_ISSUE) {
-                  vscode.env.openExternal(vscode.Uri.parse(newIssueUrl));
-                }
-              });
+              vscode.window
+                .showErrorMessage(err.message, KNOWN_ISSUES, REPORT_ISSUE)
+                .then((selected) => {
+                  if (selected === KNOWN_ISSUES) {
+                    vscode.env.openExternal(vscode.Uri.parse(knownIssuesUrl));
+                  }
+                  if (selected === REPORT_ISSUE) {
+                    vscode.env.openExternal(vscode.Uri.parse(newIssueUrl));
+                  }
+                });
 
               reject(err);
             });
