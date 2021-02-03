@@ -1,8 +1,8 @@
-name: Test
+name: CI
 on: [push]
 jobs:
   test:
-    name: Test
+    name: CI
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
