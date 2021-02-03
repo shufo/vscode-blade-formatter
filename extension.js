@@ -1,4 +1,8 @@
 const vscode = require("vscode");
+const path = require("path");
+var findConfig = require("find-config");
+const fs = require("fs");
+const ignore = require("ignore");
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
 const onigurumaModule = getCoreNodeModule("vscode-oniguruma");
@@ -24,6 +28,10 @@ function activate(context) {
   context.subscriptions.push(
     vscode.languages.registerDocumentFormattingEditProvider("blade", {
       provideDocumentFormattingEdits(document) {
+        if (shouldIgnore(document.uri.fsPath)) {
+          return document;
+        }
+
         const extConfig = vscode.workspace.getConfiguration(
           "bladeFormatter.format"
         );
@@ -92,6 +100,24 @@ function getCoreNodeModule(moduleName) {
   } catch (err) {}
 
   return null;
+}
+
+function shouldIgnore(filepath) {
+  const ignoreFilename = ".bladeignore";
+
+  try {
+    const ignoreFilePath = findConfig(ignoreFilename, {
+      cwd: path.dirname(filepath),
+    });
+    const ignoreFileContent = fs.readFileSync(ignoreFilePath).toString();
+    const ig = ignore().add(ignoreFileContent);
+
+    return vscode.workspace.workspaceFolders.find((folder) => {
+      return ig.ignores(path.relative(folder.uri.fsPath, filepath));
+    });
+  } catch (err) {
+    return false;
+  }
 }
 
 module.exports = {
