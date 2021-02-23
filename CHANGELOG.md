@@ -1,3 +1,16 @@
+## [0.7.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.7.0...v0.7.1) (2021-02-23)
+
+
+### docs
+
+* ✏️ typo ([281559d](https://github.com/shufo/vscode-blade-formatter/commit/281559da6651b76d94445b4804805f037f47bb56))
+
+### feat
+
+* 🎸 bump blade-formatter to 1.10.2 ([373f971](https://github.com/shufo/vscode-blade-formatter/commit/373f971ac214fcea07377a2585dd3c787f75a658))
+
+
+
 # [0.7.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.6.7...v0.7.0) (2021-02-03)
 
 
@@ -6,6 +19,7 @@
 * 🤖 add ignore pattern for test-resources ([7086c4c](https://github.com/shufo/vscode-blade-formatter/commit/7086c4cc43c07360f9442ea3c417f7993f3b3848))
 * 🤖 add ignore pattern for vscodeignore ([8c8603e](https://github.com/shufo/vscode-blade-formatter/commit/8c8603e446bb9a2def4b61548904733366692eb8))
 * 🤖 Release 0.6.8 ([005560a](https://github.com/shufo/vscode-blade-formatter/commit/005560abfec86bc8e415c94ea5e6dcb0a84ad728))
+* 🤖 Release 0.7.0 ([7be14d0](https://github.com/shufo/vscode-blade-formatter/commit/7be14d00742adca48151ed2e4aa99f1f1183f556))
 * 🤖 use npm instead of yarn ([8cb4307](https://github.com/shufo/vscode-blade-formatter/commit/8cb43074990559d294349fde36f5b9a5e5989d12))
 
 ### ci
