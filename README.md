@@ -10,10 +10,11 @@ An opinionated Blade file formatter for VSCode. Marketplace page is [here](https
 You can also format by same syntax programmatically with [blade-formatter](https://github.com/shufo/blade-formatter) that this extension relies on.
 
 ## Features
-- PHP 8 support (null safe operator, named arguments) 🐘
-- PSR-2 support (format inside directives)
-- Automatically Indents markup inside directives
-- Automatically add spacing to blade templating markers
+
+-   Automatically Indents markup inside directives
+-   Automatically add spacing to blade templating markers
+-   PHP 8 support (null safe operator, named arguments) 🐘
+-   PSR-2 support (format inside directives)
 
 ## Screencast
 
@@ -55,7 +56,6 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
 3.  Commit your changes (`git commit -am 'Add some feature'`)
 4.  Push to the branch (`git push origin my-new-feature`)
 5.  Create new Pull Request
-
 
 ## LICENSE
 
