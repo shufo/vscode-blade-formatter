@@ -1,5 +1,31 @@
+## [0.7.6](https://github.com/shufo/vscode-blade-formatter/compare/v0.7.5...v0.7.6) (2021-04-02)
+
+
+### chore
+
+* 🤖 enable commitMode for release changelog builder [skip ci] ([23020e3](https://github.com/shufo/vscode-blade-formatter/commit/23020e3261be86bb0e893a53317a572dca439c51))
+
+### ci
+
+* 🎡 publish before create releas ([8b7a689](https://github.com/shufo/vscode-blade-formatter/commit/8b7a6892be98e89755b31625eb71564fb8850dcc))
+
+### docs
+
+* ✏️ update README.md ([25dc773](https://github.com/shufo/vscode-blade-formatter/commit/25dc7734fe3ab5de1acc2042ce1ac2af0a65291d))
+
+### feat
+
+* 🎸 add dependabot config ([00b5048](https://github.com/shufo/vscode-blade-formatter/commit/00b5048449d4bff409c48e57f41a51eafe6562f6))
+* 🎸 bump blade-formatter to 1.10.7 ([265b3de](https://github.com/shufo/vscode-blade-formatter/commit/265b3def3d7eec8ced9474d15a67297362d9d410))
+
+
+
 ## [0.7.5](https://github.com/shufo/vscode-blade-formatter/compare/v0.7.4...v0.7.5) (2021-03-31)
 
+
+### chore
+
+* 🤖 Release 0.7.5 ([4a7c3f7](https://github.com/shufo/vscode-blade-formatter/commit/4a7c3f7f8a01f176e771afa103acf0310fa170cc))
 
 ### feat
 
