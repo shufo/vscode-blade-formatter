@@ -3,7 +3,7 @@
   "publisher": "shufo",
   "displayName": "Laravel Blade formatter",
   "description": "Laravel Blade formatter for VSCode",
-  "version": "0.7.6",
+  "version": "0.7.8",
   "license": "MIT",
   "engines": {
     "vscode": "^1.47.0",

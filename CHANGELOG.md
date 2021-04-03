@@ -17,6 +17,13 @@
 -   🎸 add dependabot config ([00b5048](https://github.com/shufo/vscode-blade-formatter/commit/00b5048449d4bff409c48e57f41a51eafe6562f6))
 -   🎸 bump blade-formatter to 1.10.7 ([265b3de](https://github.com/shufo/vscode-blade-formatter/commit/265b3def3d7eec8ced9474d15a67297362d9d410))
 
+### [0.7.8](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.7...v0.7.8) (2021-04-03)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.11.0 ([317b634](https://www.github.com/shufo/vscode-blade-formatter/commit/317b63417d0656b19958a82dc9c5600b57de2a83))
+
 ### [0.7.5](https://github.com/shufo/vscode-blade-formatter/compare/v0.7.4...v0.7.5) (2021-03-31)
 
 ### chore
