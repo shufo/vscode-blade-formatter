@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+      - master
+name: create-release
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        with:
+          release-type: node
