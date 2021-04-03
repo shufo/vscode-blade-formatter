@@ -4,30 +4,22 @@ on:
       - master
 name: create-release
 jobs:
-  test:
-    name: CI
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+  release-please:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - name: Install dependencies
-        run: npm install
-      - name: Run headless test
-        uses: GabrielBB/xvfb-action@v1.0
-        with:
-          run: npm run test
       - uses: GoogleCloudPlatform/release-please-action@v2
         id: release
         with:
           release-type: node
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+      - name: Setup Node.js
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Checkout code
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v2
       - run: npm install
         if: ${{ steps.release.outputs.release_created }}
       - uses: lannonbr/vsce-action@master
