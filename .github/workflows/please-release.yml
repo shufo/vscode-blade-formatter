@@ -28,14 +28,6 @@ jobs:
         with:
           release-type: node
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
-  release:
-    if: ${{ steps.release.outputs.release_created }}
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        if: ${{ steps.release.outputs.release_created }}
-        uses: actions/checkout@v2
       - run: npm install
         if: ${{ steps.release.outputs.release_created }}
       - uses: lannonbr/vsce-action@master
