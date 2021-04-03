@@ -56,3 +56,6 @@
 - color: 8ceabd
   name: WIP
   description: PR that is WIP
+- color: 8ceabd
+  name: "autorelease: pending"
+  description: autorelease pr waiting for merge
