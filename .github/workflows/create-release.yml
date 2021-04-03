@@ -1,60 +1,30 @@
 on:
   push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-
-name: Publish Exntension
-
+    branches:
+      - master
+name: create-release
 jobs:
-  test:
-    name: test
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Install dependencies
-        run: npm install
-      - name: Run headless test
-        uses: GabrielBB/xvfb-action@v1.0
-        with:
-          run: npm run test
-
-  build:
-    name: Publish Extension
-    needs: test
+  release-please:
     runs-on: ubuntu-latest
     steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          release-type: node
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+      - name: Setup Node.js
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
       - name: Checkout code
+        if: ${{ steps.release.outputs.release_created }}
         uses: actions/checkout@v2
       - run: npm install
+        if: ${{ steps.release.outputs.release_created }}
       - uses: lannonbr/vsce-action@master
+        if: ${{ steps.release.outputs.release_created }}
         with:
           args: "publish -p $VSCE_TOKEN"
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
-      - name: Build Changelog
-        id: github_release
-        uses: mikepenz/release-changelog-builder-action@v1
-        with:
-          commitMode: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: ${{ steps.github_release.outputs.changelog }}
-          draft: false
-          prerelease: false
