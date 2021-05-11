@@ -57,6 +57,11 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
 4.  Push to the branch (`git push origin my-new-feature`)
 5.  Create new Pull Request
 
+## Contributors
+
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
+
 ## LICENSE
 
 MIT
