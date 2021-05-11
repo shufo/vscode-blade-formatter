@@ -60,6 +60,30 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
 ## Contributors
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/shufo">
+            <img src="https://avatars.githubusercontent.com/u/1641039?v=4" width="100;" alt="shufo"/>
+            <br />
+            <sub><b>Shuhei Hayashibara</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/slovenianGooner">
+            <img src="https://avatars.githubusercontent.com/u/1257629?v=4" width="100;" alt="slovenianGooner"/>
+            <br />
+            <sub><b>slovenianGooner</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/j3j5">
+            <img src="https://avatars.githubusercontent.com/u/1239921?v=4" width="100;" alt="j3j5"/>
+            <br />
+            <sub><b>Julio J. Foulquie</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
 
 ## LICENSE
