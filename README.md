@@ -73,7 +73,7 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
         <a href="https://github.com/slovenianGooner">
             <img src="https://avatars.githubusercontent.com/u/1257629?v=4" width="100;" alt="slovenianGooner"/>
             <br />
-            <sub><b>slovenianGooner</b></sub>
+            <sub><b>SlovenianGooner</b></sub>
         </a>
     </td>
     <td align="center">
