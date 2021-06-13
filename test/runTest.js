@@ -4,6 +4,8 @@ const { runTests } = require("vscode-test");
 
 async function main() {
   try {
+    // vscode version
+    const version = "1.57.0";
     // The folder containing the Extension Manifest package.json
     // Passed to `--extensionDevelopmentPath`
     const extensionDevelopmentPath = path.resolve(__dirname, "../");
@@ -19,6 +21,7 @@ async function main() {
 
     // Download VS Code, unzip it and run the integration test
     await runTests({
+      version,
       extensionDevelopmentPath,
       extensionTestsPath,
       launchArgs,
