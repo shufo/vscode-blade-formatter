@@ -93,7 +93,7 @@
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "@types/vscode": "^1.47.0",
+    "@types/vscode": "^1.57.0",
     "@zeit/eslint-config-node": "^0.3.0",
     "conventional-changelog-cli": "^2.0.34",
     "debug": "^4.3.1",
