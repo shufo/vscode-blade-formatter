@@ -1,5 +1,14 @@
 # ChangeLog
 
+### [0.7.16](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.15...v0.7.16) (2021-06-15)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.11.7 ([f65c7c7](https://www.github.com/shufo/vscode-blade-formatter/commit/f65c7c7f21f69e58ed7cc73bfcc2561101e5c59b))
+* **deps-dev:** bump glob from 7.1.6 to 7.1.7 ([6f51539](https://www.github.com/shufo/vscode-blade-formatter/commit/6f515390442bbb0fbc2f6fa68c87d482e230e078))
+* **deps:** bump lodash from 4.17.20 to 4.17.21 ([a9b0cd6](https://www.github.com/shufo/vscode-blade-formatter/commit/a9b0cd6d132d9ea7e9ac1259cbe839b4fdd131fc))
+
 ### [0.7.15](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.14...v0.7.15) (2021-06-13)
 
 
