@@ -1,5 +1,14 @@
 # ChangeLog
 
+### [0.7.18](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.17...v0.7.18) (2021-07-04)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.11.9 ([1c379ab](https://www.github.com/shufo/vscode-blade-formatter/commit/1c379ab4e06e95315823df5157605996924d0746))
+* add codeql-analysis workflow ([8e4d923](https://www.github.com/shufo/vscode-blade-formatter/commit/8e4d923e4e8bd10c11646ffafbaa692e6648920a))
+* **deps:** bump glob-parent from 5.1.1 to 5.1.2 ([ba28b45](https://www.github.com/shufo/vscode-blade-formatter/commit/ba28b459d63d8fa0d8f785e836abf294b4bba52f))
+
 ### [0.7.17](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.16...v0.7.17) (2021-06-20)
 
 
