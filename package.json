@@ -90,7 +90,7 @@
     "package": "vsce package"
   },
   "devDependencies": {
-    "@types/glob": "^7.1.1",
+    "@types/glob": "^7.1.4",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
     "@types/vscode": "^1.47.0",
