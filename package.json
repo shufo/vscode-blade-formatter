@@ -87,7 +87,8 @@
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js",
     "changelog": "conventional-changelog -i CHANGELOG.md -p eslint -s -r 0",
-    "package": "vsce package"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
