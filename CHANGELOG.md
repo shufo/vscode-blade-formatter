@@ -1,5 +1,16 @@
 # ChangeLog
 
+### [0.7.22](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.21...v0.7.22) (2021-08-07)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.11.13 ([d8dc944](https://www.github.com/shufo/vscode-blade-formatter/commit/d8dc9446c6e1dc4913e6578a74fff4929c229b4d))
+* **deps-dev:** bump @types/mocha from 7.0.2 to 9.0.0 ([197e818](https://www.github.com/shufo/vscode-blade-formatter/commit/197e818377a91cbb5409ead03545c1a81253e148))
+* **deps-dev:** bump @types/vscode from 1.58.0 to 1.59.0 ([6981cdd](https://www.github.com/shufo/vscode-blade-formatter/commit/6981cddb519c7fbc47d1fb2f0f97b1273f48c2fa))
+* **deps-dev:** bump mocha from 8.4.0 to 9.0.3 ([58eeda3](https://www.github.com/shufo/vscode-blade-formatter/commit/58eeda3367c111816908ff3a3f39c32763ea384a))
+* **deps-dev:** bump vscode-test from 1.5.2 to 1.6.1 ([b28e660](https://www.github.com/shufo/vscode-blade-formatter/commit/b28e6606fb73b27159ef9af285bdbff233d5ee79))
+
 ### [0.7.21](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.20...v0.7.21) (2021-08-03)
 
 
