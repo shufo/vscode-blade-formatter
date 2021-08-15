@@ -8,6 +8,17 @@
 * 🤖 bump blade-formatter to 1.12.0 ([9b31d52](https://www.github.com/shufo/vscode-blade-formatter/commit/9b31d528a8ac0547bdccfa68a1b15e801103ca33))
 * 🤖 revert @types/vscode to 1.57 ([15d3069](https://www.github.com/shufo/vscode-blade-formatter/commit/15d3069b3c36949c8719f93812aec900d6a003d7))
 * **deps-dev:** bump @types/node from 16.4.10 to 16.4.13 ([1e88a5d](https://www.github.com/shufo/vscode-blade-formatter/commit/1e88a5d3f47b8554b6b6cfb4819560d9f65c3786))
+* **deps-dev:** bump eslint from 7.30.0 to 7.32.0 ([f1d9076](https://www.github.com/shufo/vscode-blade-formatter/commit/f1d9076e3490e8a15e8707b3597d7ddac1f01d8b))
+* release 0.7.23 ([02b70fd](https://www.github.com/shufo/vscode-blade-formatter/commit/02b70fd75b668b04897fe654b32281a52bdaf24f))
+
+### [0.7.23](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.22...v0.7.23) (2021-08-15)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.12.0 ([9b31d52](https://www.github.com/shufo/vscode-blade-formatter/commit/9b31d528a8ac0547bdccfa68a1b15e801103ca33))
+* 🤖 revert @types/vscode to 1.57 ([15d3069](https://www.github.com/shufo/vscode-blade-formatter/commit/15d3069b3c36949c8719f93812aec900d6a003d7))
+* **deps-dev:** bump @types/node from 16.4.10 to 16.4.13 ([1e88a5d](https://www.github.com/shufo/vscode-blade-formatter/commit/1e88a5d3f47b8554b6b6cfb4819560d9f65c3786))
 
 ### [0.7.22](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.21...v0.7.22) (2021-08-07)
 
