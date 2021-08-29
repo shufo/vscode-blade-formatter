@@ -6,6 +6,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
+        vscode_version: ["1.59.0", "1.58.0"]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -19,4 +20,4 @@ jobs:
       - name: Run headless test
         uses: GabrielBB/xvfb-action@v1.0
         with:
-          run: npm run test
+          run: VSCODE_VERSION=${{ matrix.vscode_version }} npm run test
