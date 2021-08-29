@@ -1,11 +1,12 @@
 const path = require("path");
 
 const { runTests } = require("vscode-test");
+const VSCODE_VERSION = process.env.VSCODE_VERSION;
 
 async function main() {
   try {
     // vscode version
-    const version = "1.57.0";
+    const version = VSCODE_VERSION;
     // The folder containing the Extension Manifest package.json
     // Passed to `--extensionDevelopmentPath`
     const extensionDevelopmentPath = path.resolve(__dirname, "../");
