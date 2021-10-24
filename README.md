@@ -29,6 +29,7 @@ You can also format by same syntax programmatically with [blade-formatter](https
 | `Blade Formatter: format Indent Size`      | An indent size                                                                                                                   | 4       |
 | `Blade Formatter: format Wrap Line Length` | The length of line wrap size                                                                                                     | 120     |
 | `Blade Formatter: format Wrap Attributes`  | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]` | `auto`  |
+| `Blade Formatter: format use Tabs`         | Use tab as indentation character                                                                                                 | false   |
 
 ## Ignoring Files: .bladeignore
 

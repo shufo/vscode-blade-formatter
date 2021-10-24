@@ -55,6 +55,7 @@ function activate(context) {
           indentSize: extConfig.indentSize,
           wrapLineLength: extConfig.wrapLineLength,
           wrapAttributes: extConfig.wrapAttributes,
+          useTabs: extConfig.useTabs,
         };
 
         return new Promise((resolve, reject) => {

@@ -74,6 +74,11 @@
             "preserve-aligned"
           ],
           "markdownDescription": "The way to wrap attributes"
+        },
+        "bladeFormatter.format.useTabs": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Use tab as indentation character"
         }
       }
     }
