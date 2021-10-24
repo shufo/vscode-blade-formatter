@@ -1,5 +1,12 @@
 # ChangeLog
 
+### [0.8.1](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.8.0...v0.8.1) (2021-10-24)
+
+
+### Miscellaneous
+
+* **deps-dev:** bump typescript from 4.3.5 to 4.4.4 ([783d9e2](https://www.github.com/shufo/vscode-blade-formatter/commit/783d9e23cbbdaeb782e505c465bea2c59ac2812a))
+
 ## [0.8.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.29...v0.8.0) (2021-10-24)
 
 
