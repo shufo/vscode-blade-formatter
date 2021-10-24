@@ -114,5 +114,8 @@
     "esm": "^3.2.25",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   }
 }
