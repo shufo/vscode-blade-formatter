@@ -1,5 +1,17 @@
 # ChangeLog
 
+## [0.8.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.29...v0.8.0) (2021-10-24)
+
+
+### Features
+
+* 🎸 add `useTab` option to support tab as indent character ([ca0ae3c](https://www.github.com/shufo/vscode-blade-formatter/commit/ca0ae3ccb14b91c79293fafab4c56eeaff9f470d))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.14.0 ([685a14c](https://www.github.com/shufo/vscode-blade-formatter/commit/685a14c999498083b3dec5ae1af9333608ce9b2b))
+
 ### [0.7.29](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.7.28...v0.7.29) (2021-10-10)
 
 
