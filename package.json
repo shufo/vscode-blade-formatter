@@ -96,7 +96,7 @@
     "publish": "vsce publish"
   },
   "devDependencies": {
-    "@types/glob": "^7.1.1",
+    "@types/glob": "^7.2.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.4.13",
     "@types/vscode": "^1.57.0",
