@@ -1,5 +1,12 @@
 # ChangeLog
 
+### [0.8.2](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.8.1...v0.8.2) (2021-10-25)
+
+
+### Miscellaneous
+
+* **deps-dev:** bump mocha from 9.0.3 to 9.1.3 ([40431eb](https://www.github.com/shufo/vscode-blade-formatter/commit/40431eb5e91905893ef3566c77fa5b8f15dfca55))
+
 ### [0.8.1](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.8.0...v0.8.1) (2021-10-24)
 
 
