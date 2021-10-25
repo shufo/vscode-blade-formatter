@@ -22,9 +22,9 @@ jobs:
         uses: actions/checkout@v2
       - run: npm install
         if: ${{ steps.release.outputs.release_created }}
-      - uses: lannonbr/vsce-action@master
+      - run: npm install -g vsce
         if: ${{ steps.release.outputs.release_created }}
-        with:
-          args: "publish -p $VSCE_TOKEN"
+      - run: vsce publish -p $VSCE_TOKEN
+        if: ${{ steps.release.outputs.release_created }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
