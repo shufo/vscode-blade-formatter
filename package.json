@@ -98,7 +98,7 @@
   "devDependencies": {
     "@types/glob": "^7.1.1",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.4.13",
+    "@types/node": "^16.11.5",
     "@types/vscode": "^1.57.0",
     "@zeit/eslint-config-node": "^0.3.0",
     "conventional-changelog-cli": "^2.0.34",
