@@ -110,7 +110,7 @@
     "vscode-test": "^1.6.1"
   },
   "dependencies": {
-    "blade-formatter": "^1.14.0",
+    "blade-formatter": "^1.14.1",
     "esm": "^3.2.25",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8"
