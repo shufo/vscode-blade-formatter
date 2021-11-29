@@ -102,7 +102,7 @@
     "@types/vscode": "^1.57.0",
     "@zeit/eslint-config-node": "^0.3.0",
     "conventional-changelog-cli": "^2.0.34",
-    "debug": "^4.3.1",
+    "debug": "^4.3.3",
     "eslint": "^8.1.0",
     "glob": "^7.2.0",
     "mocha": "^9.1.3",
