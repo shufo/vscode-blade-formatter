@@ -78,7 +78,7 @@ jobs:
   publish-gh:
     name: Upload Release Asset
     runs-on: ubuntu-latest
-    needs: package
+    needs: [release-please, package]
     if: github.event.inputs.publishGH == 'true'
     steps:
     - name: Upload Release Asset
@@ -95,7 +95,7 @@ jobs:
   publish-ms:
     name: Publish to MS marketplace
     runs-on: ubuntu-latest
-    needs: package
+    needs: [release-please, package]
     if: github.event.inputs.publishMS == 'true'
     steps:
       - uses: actions/checkout@v2
@@ -108,7 +108,7 @@ jobs:
   publish-ovsx:
     name: Publish to OpenVSX
     runs-on: ubuntu-latest
-    needs: package
+    needs: [release-please, package]
     if: github.event.inputs.publishOVSX == 'true'
     steps:
       - uses: actions/checkout@v2
