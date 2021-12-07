@@ -2,9 +2,30 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      publishMS:
+        description: 'Publish to MS marketplace'
+        type: boolean
+        required: true
+        default: "true"
+      publishOVSX:
+        description: 'Publish to OpenVSX'
+        type: boolean
+        required: true
+        default: "true"
+      publishGH:
+        description: 'Publish to GitHub releases'
+        type: boolean
+        required: true
+        default: "true"
+
 name: create-release
 jobs:
   release-please:
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+    name: Release to GitHub Releases
     runs-on: ubuntu-latest
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
@@ -12,19 +33,69 @@ jobs:
         with:
           release-type: node
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
-      - name: Setup Node.js
-        if: ${{ steps.release.outputs.release_created }}
-        uses: actions/setup-node@v2
+
+  package:
+    needs: release-please
+    name: Package
+    runs-on: ubuntu-latest
+    #if: ${{ needs.release-please.outputs.release_created }}
+    outputs:
+      packageName: ${{ steps.setup.outputs.packageName }}
+      tag: ${{ steps.setup-tag.outputs.tag }}
+      version: ${{ steps.setup-tag.outputs.version }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 16.x
-      - name: Checkout code
-        if: ${{ steps.release.outputs.release_created }}
-        uses: actions/checkout@v2
-      - run: npm install
-        if: ${{ steps.release.outputs.release_created }}
-      - run: npm install -g vsce
-        if: ${{ steps.release.outputs.release_created }}
-      - run: vsce publish -p $VSCE_TOKEN
-        if: ${{ steps.release.outputs.release_created }}
-        env:
-          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Setup package path
+        id: setup
+        run: echo "::set-output name=packageName::$(node -e "console.log(require('./package.json').name + '-' + require('./package.json').version + '.vsix')")"
+
+      - name: Package
+        run: npx vsce package --packagePath ${{ steps.setup.outputs.packageName }}
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.setup.outputs.packageName }}
+          path: ${{ steps.setup.outputs.packageName }}
+      
+      - name: Setup tag
+        id: setup-tag
+        run: |
+          $version = (Get-Content ./package.json -Raw | ConvertFrom-Json).version
+          Write-Host "tag: release/$version"
+          Write-Host "::set-output name=tag::release/$version"
+          Write-Host "::set-output name=version::$version"
+        shell: pwsh
+
+  publish-ms:
+    name: Publish to MS marketplace
+    runs-on: ubuntu-latest
+    needs: package
+    if: github.event.inputs.publishMS == 'true'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: ${{ needs.package.outputs.packageName }}
+      - name: Publish to MS marketplace
+        run: npx vsce publish --packagePath ./${{ needs.package.outputs.packageName }} -p ${{ secrets.VSCE_PAT }}
+
+  publish-ovsx:
+    name: Publish to OpenVSX
+    runs-on: ubuntu-latest
+    needs: package
+    if: github.event.inputs.publishOVSX == 'true'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: ${{ needs.package.outputs.packageName }}
+      - name: Publish to OpenVSX
+        run: npx ovsx publish ./${{ needs.package.outputs.packageName }} -p ${{ secrets.OVSX_PAT }} 
