@@ -40,7 +40,7 @@ jobs:
     needs: release
     name: Package
     runs-on: ubuntu-latest
-    #if: ${{ needs.release.outputs.release_created }}
+    if: ${{ needs.release.outputs.release_created }}
     outputs:
       packageName: ${{ steps.setup.outputs.packageName }}
       tag: ${{ steps.setup-tag.outputs.tag }}
