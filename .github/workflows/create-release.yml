@@ -24,13 +24,14 @@ name: Create the GitHub Release
 jobs:
   release:
     outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
-      upload_url: ${{ steps.release.outputs.upload_url }}
+      release_created: ${{ steps.release_create.outputs.release_created }}
+      upload_url: ${{ steps.release_create.outputs.upload_url }}
+      tag: ${{ steps.release-create.outputs.tag_name }}
     name: Release to GitHub Releases
     runs-on: ubuntu-latest
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
-        id: release
+        id: release_create
         with:
           release-type: node
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
@@ -69,10 +70,9 @@ jobs:
       - name: Setup tag
         id: setup-tag
         run: |
-          $version = (Get-Content ./package.json -Raw | ConvertFrom-Json).version
           Write-Host "tag: v$version"
-          Write-Host "::set-output name=tag::v$version"
-          Write-Host "::set-output name=version::$version"
+          Write-Host "::set-output name=tag::${{ needs.release.outputs.tag }}"
+          Write-Host "::set-output name=version::${{ needs.release.outputs.tag }}"
         shell: pwsh
 
   publish-gh:
