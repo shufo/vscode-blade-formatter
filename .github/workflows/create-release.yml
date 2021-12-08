@@ -108,7 +108,7 @@ jobs:
   publish-ovsx:
     name: Publish to OpenVSX
     runs-on: ubuntu-latest
-    needs: [release-please, package]
+    needs: [release, package]
     if: github.event.inputs.publishOVSX == 'true'
     steps:
       - uses: actions/checkout@v2
