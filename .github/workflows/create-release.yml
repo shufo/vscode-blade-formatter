@@ -36,7 +36,7 @@ jobs:
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
 
   package:
-    needs: release-please
+    needs: release
     name: Package
     runs-on: ubuntu-latest
     #if: ${{ needs.release.outputs.release_created }}
