@@ -54,7 +54,7 @@ jobs:
       - name: Setup tag
         id: setup-tag
         run: |
-          Write-Host "tag: v$version"
+          Write-Host "tag: ${{ needs.release.outputs.tag }}"
           Write-Host "::set-output name=tag::${{ needs.release.outputs.tag }}"
           Write-Host "::set-output name=version::${{ needs.release.outputs.tag }}"
         shell: pwsh
