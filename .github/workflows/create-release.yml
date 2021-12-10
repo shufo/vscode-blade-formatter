@@ -4,7 +4,7 @@ on:
       - master
   workflow_dispatch:
 
-name: Create the GitHub Release
+name: Release the extension
 jobs:
   release:
     outputs:
