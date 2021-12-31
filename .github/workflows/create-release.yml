@@ -20,17 +20,19 @@ jobs:
       - name: Checkout code
         if: ${{ steps.release.outputs.release_created }}
         uses: actions/checkout@v2
-      - run: npm install
+      - run: yarn install
+        if: ${{ steps.release.outputs.release_created }}
+      - run: yarn run compile
         if: ${{ steps.release.outputs.release_created }}
       - run: npm install -g vsce
         if: ${{ steps.release.outputs.release_created }}
-      - run: vsce publish -p $VSCE_TOKEN
+      - run: vsce publish -p $VSCE_TOKEN --yarn
         if: ${{ steps.release.outputs.release_created }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
       - run: npm install -g ovsx
         if: ${{ steps.release.outputs.release_created }}
-      - run: ovsx publish -p $OVSX_TOKEN
+      - run: ovsx publish -p $OVSX_TOKEN --yarn
         if: ${{ steps.release.outputs.release_created }}
         env:
           OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}

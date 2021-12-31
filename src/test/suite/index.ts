@@ -1,8 +1,8 @@
-const path = require('path');
-const Mocha = require('mocha');
-const glob = require('glob');
+import path from 'path';
+import Mocha from 'mocha';
+import glob from 'glob';
 
-function run() {
+export function run() {
 	// Create the mocha test
 	const mocha = new Mocha({
 		ui: 'tdd',
@@ -12,13 +12,13 @@ function run() {
 	const testsRoot = path.resolve(__dirname, '..');
 
 	return new Promise((c, e) => {
-		glob('**/**.test.js', { cwd: testsRoot }, (err, files) => {
+		glob('**/**.test.js', { cwd: testsRoot }, (err: any, files: any) => {
 			if (err) {
 				return e(err);
 			}
 
 			// Add files to the test suite
-			files.forEach(f => mocha.addFile(path.resolve(testsRoot, f)));
+			files.forEach((f: any) => mocha.addFile(path.resolve(testsRoot, f)));
 
 			try {
 				// Run the mocha test
@@ -26,7 +26,7 @@ function run() {
 					if (failures > 0) {
 						e(new Error(`${failures} tests failed.`));
 					} else {
-						c();
+						c("");
 					}
 				});
 			} catch (err) {
@@ -36,7 +36,3 @@ function run() {
 		});
 	});
 }
-
-module.exports = {
-	run
-};

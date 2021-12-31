@@ -2,3 +2,5 @@ node_modules
 .vscode-test/
 *.vsix
 test-resources/**
+dist/
+out/
