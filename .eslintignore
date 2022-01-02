@@ -9,3 +9,4 @@ vsc-extension-quickstart.md
 screencast.gif
 test-resources/**
 out/**
+node_modules

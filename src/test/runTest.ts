@@ -1,7 +1,11 @@
-const path = require("path");
+import path from "path";
 
-const { runTests } = require("vscode-test");
+import { runTests } from "@vscode/test-electron";
+
 const VSCODE_VERSION = process.env.VSCODE_VERSION;
+
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 async function main() {
   try {
@@ -9,14 +13,14 @@ async function main() {
     const version = VSCODE_VERSION;
     // The folder containing the Extension Manifest package.json
     // Passed to `--extensionDevelopmentPath`
-    const extensionDevelopmentPath = path.resolve(__dirname, "../");
+    const extensionDevelopmentPath = path.resolve(__dirname, "../../");
 
     // The path to the extension test script
     // Passed to --extensionTestsPath
     const extensionTestsPath = path.resolve(__dirname, "./suite/index");
 
     const launchArgs = [
-      `${path.resolve(__dirname, "../")}/test/fixtures/test.code-workspace`,
+      `${path.resolve(__dirname, "../../src")}/test/fixtures/test.code-workspace`,
       "--disable-extensions",
     ];
 
