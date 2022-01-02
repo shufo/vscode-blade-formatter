@@ -1,5 +1,12 @@
 # ChangeLog
 
+## [0.9.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.8.6...v0.9.0) (2022-01-02)
+
+
+### Features
+
+* migrate to typescript ([7110b11](https://www.github.com/shufo/vscode-blade-formatter/commit/7110b11de9fde832d39f09b19bcad706b3394525))
+
 ### [0.8.6](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.8.5...v0.8.6) (2021-12-25)
 
 
