@@ -1916,10 +1916,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.15.0.tgz#373f982c6dffd5892600d095fac5f8660c6ca56d"
-  integrity sha512-tWw8PNeGGZZiaBX6FZyuf0791tdzIO311yW7BHEZ8uV5QRALAxp94TYrrSVuat0hNHTrIv5HhNsQz3OhYvhYmw==
+blade-formatter@^1.15.1:
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.15.1.tgz#3b75294dfeeac6a54a389152528cfea7546d857f"
+  integrity sha512-HKqtaLif/wt8CtqsdtzlCLmXSmaYFmVIBnFIoxz8H8X8XKgTWVGmY60nzkFwNaHfpbKfaFBFukwj+ocSYx47EQ==
   dependencies:
     "@prettier/plugin-php" "^0.17.6"
     aigle "^1.14.1"
@@ -1933,10 +1933,10 @@ blade-formatter@1.15.0:
     lodash "^4.17.19"
     php-parser "3.0.3"
     prettier "^2.2.0"
-    vscode-oniguruma "1.5.1"
-    vscode-textmate "^5.4.0"
+    vscode-oniguruma "1.6.1"
+    vscode-textmate "^6.0.0"
     xregexp "^5.0.1"
-    yargs "^16.2.0"
+    yargs "^17.3.1"
 
 bluebird@~3.4.1:
   version "3.4.7"
@@ -5670,10 +5670,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vscode-oniguruma@1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.5.1.tgz#9ca10cd3ada128bd6380344ea28844243d11f695"
-  integrity sha512-JrBZH8DCC262TEYcYdeyZusiETu0Vli0xFgdRwNJjDcObcRjbmJP+IFcA3ScBwIXwgFHYKbAgfxtM/Cl+3Spjw==
+vscode-oniguruma@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.6.1.tgz#2bf4dfcfe3dd2e56eb549a3068c8ee39e6c30ce5"
+  integrity sha512-vc4WhSIaVpgJ0jJIejjYxPvURJavX6QG41vu0mGhqywMkQqulezEqEQ3cO3gc8GvcOpX6ycmKGqRoROEMBNXTQ==
 
 vscode-test@^1.6.1:
   version "1.6.1"
@@ -5685,10 +5685,10 @@ vscode-test@^1.6.1:
     rimraf "^3.0.2"
     unzipper "^0.10.11"
 
-vscode-textmate@^5.4.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.5.0.tgz#d83776562c07d1e3181c2c7f1b3d5f20afcab483"
-  integrity sha512-jToQkPGMNKn0eyKyitYeINJF0NoD240aYyKPIWJv5W2jfPt++jIRg0OSergubtGhbw6SoefkvBYEpX7TsfoSUQ==
+vscode-textmate@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-6.0.0.tgz#a3777197235036814ac9a92451492f2748589210"
+  integrity sha512-gu73tuZfJgu+mvCSy4UZwd2JXykjK9zAZsfmDeut5dx/1a7FeTk0XwJsSuqQn+cuMCGVbIBfl+s53X4T19DnzQ==
 
 walker@^1.0.7:
   version "1.0.8"
@@ -5904,6 +5904,11 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
+yargs-parser@^21.0.0:
+  version "21.0.0"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.0.0.tgz#a485d3966be4317426dd56bdb6a30131b281dc55"
+  integrity sha512-z9kApYUOCwoeZ78rfRYYWdiU/iNL6mwwYlkkZfJoyMR1xps+NEBX5X7XmRpxkZHhXJ6+Ey00IwKxBBSW9FIjyA==
+
 yargs-unparser@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yargs-unparser/-/yargs-unparser-2.0.0.tgz#f131f9226911ae5d9ad38c432fe809366c2325eb"
@@ -5943,6 +5948,19 @@ yargs@^15.0.2:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yargs@^17.3.1:
+  version "17.3.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.3.1.tgz#da56b28f32e2fd45aefb402ed9c26f42be4c07b9"
+  integrity sha512-WUANQeVgjLbNsEmGk20f+nlHgOqzRFpiGWVaBrYGYIGANIIu3lWjoyi0fNlFmJkvfhCZ6BXINe7/W2O2bV4iaA==
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.3"
+    y18n "^5.0.5"
+    yargs-parser "^21.0.0"
 
 yn@3.1.1:
   version "3.1.1"
