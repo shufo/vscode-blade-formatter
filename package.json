@@ -129,7 +129,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "blade-formatter": "^1.15.2",
+    "blade-formatter": "^1.16.0",
     "esm": "^3.2.25",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8"
