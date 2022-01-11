@@ -1,5 +1,14 @@
 # ChangeLog
 
+### [0.10.1](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.10.0...v0.10.1) (2022-01-11)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.16.1 ([acd2741](https://www.github.com/shufo/vscode-blade-formatter/commit/acd27415a94e00c5e7b9ac81cfe12d8289ba3fa2))
+* 🤖 drop esm from dependencies ([e5b835f](https://www.github.com/shufo/vscode-blade-formatter/commit/e5b835f5212fe8500b275c21fbd91a40fdc50220))
+* **deps-dev:** bump @typescript-eslint/eslint-plugin ([edef129](https://www.github.com/shufo/vscode-blade-formatter/commit/edef129ac0db5608226de8b13d37ecb6f8cb0f28))
+
 ## [0.10.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.9.2...v0.10.0) (2022-01-10)
 
 
