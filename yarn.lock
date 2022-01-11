@@ -1955,17 +1955,16 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.16.0.tgz#1fd72b447c6863d6fa9f2aa2a1db7c536c320d90"
-  integrity sha512-b9vHaZBiivfYY7Gbd+AgzKz1Glc5H2dlCn5ddY4a6oyp5XFNgOE5pQPMNGcDGwrEd+Fx1zdTNedDxf7GZ992Qw==
+blade-formatter@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.16.1.tgz#0a0ad4d3cb30033d64b94aea4ee05c0d1df2686a"
+  integrity sha512-rLH1OuO9seW9fQmUdHiSirMVOv9o8+Hzt8RwRSvKmZMr3cE6/S05u8FXYEnLUfqHqp2Mfm8Nh7TDV67sSIU/iA==
   dependencies:
     "@prettier/plugin-php" "^0.17.6"
     aigle "^1.14.1"
     chalk "^4.1.0"
     concat-stream "^2.0.0"
     detect-indent "^6.0.0"
-    esm "^3.2.25"
     glob "^7.1.4"
     ignore "^5.1.8"
     js-beautify "^1.14.0"
