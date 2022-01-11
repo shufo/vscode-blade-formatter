@@ -108,7 +108,7 @@
     "@types/node": "^17.0.8",
     "@types/vscode": "^1.57.0",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.8.1",
+    "@typescript-eslint/parser": "^5.9.1",
     "@vscode/test-electron": "^2.0.1",
     "@zeit/eslint-config-node": "^0.3.0",
     "app-root-path": "^3.0.0",
