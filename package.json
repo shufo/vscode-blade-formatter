@@ -115,6 +115,7 @@
     "babel-jest": "^27.4.5",
     "conventional-changelog-cli": "^2.0.34",
     "debug": "^4.3.1",
+    "dotenv-webpack": "^7.0.3",
     "eslint": "^8.1.0",
     "glob": "^7.2.0",
     "mocha": "^9.1.3",
