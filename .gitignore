@@ -4,3 +4,4 @@ node_modules
 test-resources/**
 dist/
 out/
+.env
