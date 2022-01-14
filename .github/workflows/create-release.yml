@@ -20,6 +20,9 @@ jobs:
       - name: Checkout code
         if: ${{ steps.release.outputs.release_created }}
         uses: actions/checkout@v2
+      - name: Make envfile
+        if: ${{ steps.release.outputs.release_created }}
+        uses: SpicyPizza/create-envfile@v1.2
       - run: yarn install
         if: ${{ steps.release.outputs.release_created }}
       - run: yarn run compile
