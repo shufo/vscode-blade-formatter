@@ -1,9 +1,17 @@
 import vscode from "vscode";
+import { ExtensionContext } from "vscode";
 import path from "path";
 import findConfig from "find-config";
 import fs from "fs";
 import ignore from "ignore";
 import { Formatter } from "blade-formatter";
+import { setExtensionContext } from './extensionContext';
+import { telemetry, TelemetryEventNames } from './telemetry';
+
+export const enum ExtensionConstants {
+    extensionId = 'shufo.vscode-blade-formatter',
+    firstActivationStorageKey = 'firstActivation',
+}
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -23,7 +31,16 @@ let wasmInitialized = false;
 /**
  * @param {vscode.ExtensionContext} context
  */
-export function activate(context: any) {
+export function activate(context: ExtensionContext) {
+    setExtensionContext(context);
+
+    telemetry.send(TelemetryEventNames.Startup);
+
+    if (context.globalState.get(ExtensionConstants.firstActivationStorageKey) === undefined) {
+        telemetry.send(TelemetryEventNames.NewInstall);
+        context.globalState.update(ExtensionConstants.firstActivationStorageKey, false);
+    }
+
     context.subscriptions.push(
         vscode.languages.registerDocumentFormattingEditProvider("blade", {
             provideDocumentFormattingEdits(document: any) {

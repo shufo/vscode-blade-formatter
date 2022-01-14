@@ -4,6 +4,7 @@
 
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
+const Dotenv = require("dotenv-webpack");
 
 //@ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
@@ -35,6 +36,7 @@ const extensionConfig = {
     // support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader
     extensions: [".ts", ".js"],
   },
+  plugins: [new Dotenv({ safe: true })],
   module: {
     rules: [
       {
