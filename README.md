@@ -85,6 +85,15 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
 4.  Push to the branch (`git push origin my-new-feature`)
 5.  Create new Pull Request
 
+## Testing
+
+```bash
+$ yarn install
+$ cp .env.example .env # set your app insight key
+$ yarn run compile
+$ yarn run test
+```
+
 ## Contributors
 
 <!-- readme: collaborators,contributors -start -->
@@ -117,3 +126,9 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
 ## LICENSE
 
 MIT
+
+# Data and telemetry
+
+This extension collects usage data and sends it to [Azure Application Insight](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to improve extension. This extension respects the `telemetry.enableTelemetry` setting.
+
+To opt out, please set the `telemetry.enableTelemetry` setting to false. Learn more in [FAQ](https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting).
