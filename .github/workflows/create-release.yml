@@ -22,7 +22,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Make envfile
         if: ${{ steps.release.outputs.release_created }}
-        uses: SpicyPizza/create-envfile@v1.2
+        run: |
+          echo APP_INSIGHT_INSTRUMENT_KEY=${{ secrets.APP_INSIGHT_INSTRUMENT_KEY }} >> .env
       - run: yarn install
         if: ${{ steps.release.outputs.release_created }}
       - run: yarn run compile

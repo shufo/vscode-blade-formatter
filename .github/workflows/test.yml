@@ -12,7 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1.2
+        run: |
+          echo APP_INSIGHT_INSTRUMENT_KEY=${{ secrets.APP_INSIGHT_INSTRUMENT_KEY }} >> .env
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
