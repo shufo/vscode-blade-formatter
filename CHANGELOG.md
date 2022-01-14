@@ -1,5 +1,12 @@
 # ChangeLog
 
+### [0.10.3](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.10.2...v0.10.3) (2022-01-14)
+
+
+### Miscellaneous
+
+* add telemetry to report usage ([#308](https://www.github.com/shufo/vscode-blade-formatter/issues/308)) ([972d165](https://www.github.com/shufo/vscode-blade-formatter/commit/972d165e2079181919704e7164d8645354515c88))
+
 ### [0.10.2](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.10.1...v0.10.2) (2022-01-12)
 
 
