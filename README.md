@@ -127,7 +127,7 @@ $ yarn run test
 
 MIT
 
-# Data and telemetry
+## Data and telemetry
 
 This extension collects usage data and sends it to [Azure Application Insight](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to improve extension. This extension respects the `telemetry.enableTelemetry` setting.
 
