@@ -7,6 +7,7 @@ import ignore from "ignore";
 import { Formatter } from "blade-formatter";
 import { setExtensionContext } from './extensionContext';
 import { telemetry, TelemetryEventNames } from './telemetry';
+import { readRuntimeConfig } from './runtimeConfig';
 
 export const enum ExtensionConstants {
     extensionId = 'shufo.vscode-blade-formatter',
@@ -64,6 +65,8 @@ export function activate(context: ExtensionContext) {
                     return [new vscode.TextEdit(range, originalText)];
                 }
 
+                const runtimeConfig = readRuntimeConfig(document.uri.fsPath);
+
                 const options = {
                     vsctm: vsctmModule,
                     oniguruma: onigurumaModule,
@@ -71,6 +74,7 @@ export function activate(context: ExtensionContext) {
                     wrapLineLength: extConfig.wrapLineLength,
                     wrapAttributes: extConfig.wrapAttributes,
                     useTabs: extConfig.useTabs,
+                    ...runtimeConfig,
                 };
 
                 return new Promise((resolve, reject) => {
