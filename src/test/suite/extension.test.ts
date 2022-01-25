@@ -23,6 +23,30 @@ suite("Extension Test Suite", () => {
         this.timeout(20000);
         await formatSameAsBladeFormatter("ignore.blade.php", "ignore.blade.php");
     });
+
+    test("Should format file with runtime config / indentSize", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/indentSize/index.blade.php",
+            "withConfig/indentSize/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / wrapAttributes", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/wrapAttributes/index.blade.php",
+            "withConfig/wrapAttributes/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / wrapLineLength", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/wrapLineLength/index.blade.php",
+            "withConfig/wrapLineLength/formatted.index.blade.php"
+        );
+    });
 });
 
 async function formatSameAsBladeFormatter(file: any, formattedFile: any, options: any = {}) {
