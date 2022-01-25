@@ -137,6 +137,7 @@
     "vscode-extension-telemetry": "^0.4.5"
   },
   "optionalDependencies": {
-    "fsevents": "*"
+    "fsevents": "*",
+    "kind-of": "*"
   }
 }
