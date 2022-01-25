@@ -1,5 +1,20 @@
 # ChangeLog
 
+## [0.11.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.10.3...v0.11.0) (2022-01-25)
+
+
+### Features
+
+* 🎸 configuring settings from runtime config ([4179ae1](https://www.github.com/shufo/vscode-blade-formatter/commit/4179ae19216003f6abf753313e27f375f307a39f))
+
+
+### Miscellaneous
+
+* 🤖 add ajv to dependencies ([7529b43](https://www.github.com/shufo/vscode-blade-formatter/commit/7529b43b28ce85ca9e5875458a6241c47e49be05))
+* 🤖 add kind-of as optional dependency ([c117f6e](https://www.github.com/shufo/vscode-blade-formatter/commit/c117f6e618547f5069af2bd8f7f88e4a29af927a))
+* 🤖 bump blade-formatter to 1.17.0 ([f095874](https://www.github.com/shufo/vscode-blade-formatter/commit/f095874c050478accd029acaf9cf650a462575a3))
+* 🤖 bump dependency lock ([d07e25e](https://www.github.com/shufo/vscode-blade-formatter/commit/d07e25e9da1690c17490e1b5e85c8c980681cecd))
+
 ### [0.10.3](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.10.2...v0.10.3) (2022-01-14)
 
 
