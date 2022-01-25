@@ -31,6 +31,22 @@ You can also format by same syntax programmatically with [blade-formatter](https
 | `Blade Formatter: format Wrap Attributes`  | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]` | `auto`  |
 | `Blade Formatter: format use Tabs`         | Use tab as indentation character                                                                                                 | false   |
 
+## Configuration file: .bladeformatterrc.json or .bladeformatterrc
+
+To configure settings per project, put `.bladeformatterrc.json` or `.bladeformatterrc` to your project root will vscode-blade-formatter treat it as setting files.
+
+Configuration file will like below:
+
+```json
+{
+    "indentSize": 4,
+    "wrapAttributues": "auto",
+    "wrapLineLength": 120,
+    "endWithNewLine": true,
+    "useTabs": false
+}
+```
+
 ## Ignoring Files: .bladeignore
 
 To exclude files from formatting, create `.bladeignore` file in the root of your project `.bladeignore` uses [gitignore syntax](https://git-scm.com/docs/gitignore#_pattern_format)
