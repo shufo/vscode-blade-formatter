@@ -130,7 +130,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "blade-formatter": "^1.17.0",
+    "blade-formatter": "^1.17.1",
     "ajv": "^8.9.0",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8",
