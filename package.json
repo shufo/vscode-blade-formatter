@@ -40,6 +40,12 @@
         "extensions": [
           ".blade.php"
         ]
+      },
+      {
+        "id": "json",
+        "filenames": [
+          ".bladeformatterrc"
+        ]
       }
     ],
     "configuration": {
