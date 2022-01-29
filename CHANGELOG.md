@@ -1,5 +1,19 @@
 # ChangeLog
 
+## [0.12.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.11.0...v0.12.0) (2022-01-29)
+
+
+### Features
+
+* add json schema for config file and enable jsonValidation feature ([bbab3d7](https://www.github.com/shufo/vscode-blade-formatter/commit/bbab3d7a778a1bdd3d4f04113a850b620d254cda))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.17.1 ([175ead1](https://www.github.com/shufo/vscode-blade-formatter/commit/175ead130f3c4ce8ad288cca28b56979e38c4dae))
+* 🤖 bump blade-formatter to 1.17.2 ([04e0d7b](https://www.github.com/shufo/vscode-blade-formatter/commit/04e0d7b883bd3781590307867ac8f96d434223fc))
+* add .bladeformatterrc to contributes.languages ([342c1e1](https://www.github.com/shufo/vscode-blade-formatter/commit/342c1e1abbc7943a0ddbd9b8510fbb1291c50d76))
+
 ## [0.11.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.10.3...v0.11.0) (2022-01-25)
 
 
