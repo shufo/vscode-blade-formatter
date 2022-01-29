@@ -130,6 +130,13 @@ $ yarn run test
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/yaegassy">
+            <img src="https://avatars.githubusercontent.com/u/188642?v=4" width="100;" alt="yaegassy"/>
+            <br />
+            <sub><b>Yaegassy</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/j3j5">
             <img src="https://avatars.githubusercontent.com/u/1239921?v=4" width="100;" alt="j3j5"/>
             <br />
