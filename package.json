@@ -30,6 +30,16 @@
   "icon": "icon.png",
   "main": "./dist/extension.js",
   "contributes": {
+    "jsonValidation": [
+      {
+        "fileMatch": ".bladeformatterrc.json",
+        "url": "./schemas/bladeformatterrc.schema.json"
+      },
+      {
+        "fileMatch": ".bladeformatterrc",
+        "url": "./schemas/bladeformatterrc.schema.json"
+      }
+    ],
     "languages": [
       {
         "id": "blade",
@@ -39,6 +49,12 @@
         ],
         "extensions": [
           ".blade.php"
+        ]
+      },
+      {
+        "id": "json",
+        "filenames": [
+          ".bladeformatterrc"
         ]
       }
     ],

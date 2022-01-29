@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Schema for .bladeformatterrc.json",
+  "properties": {
+    "indentSize": {
+      "description": "An indent size",
+      "default": 4,
+      "type": "integer"
+    },
+    "wrapLineLength": {
+      "description": "The length of line wrap size",
+      "default": 120,
+      "type": "integer"
+    },
+    "wrapAttributues": {
+      "default": "auto",
+      "description": "The way to wrap attributes",
+      "type": "string",
+      "enum": [
+        "auto",
+        "force",
+        "force-aligned",
+        "force-expand-multiline",
+        "aligned-multiple",
+        "preserve",
+        "preserve-aligned"
+      ]
+    },
+    "endWithNewLine": {
+      "description": "End output with newline",
+      "default": true,
+      "type": "boolean"
+    },
+    "useTabs": {
+      "description": "Indent with tabs instead of spaces",
+      "default": false,
+      "type": "boolean"
+    }
+  }
+}
