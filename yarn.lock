@@ -1121,14 +1121,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@prettier/plugin-php@^0.17.6":
-  version "0.17.6"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.17.6.tgz#49e2cb091da89d525842412d2de20fc3ca3d1a20"
-  integrity sha512-Nxkq+Gl8bGbutRV7e3/p5d+Bcftn75oH61RT8xzk44T5ET7fVP50pUdaOdvt704GSNr6wwmfBW8MhBz5IKt+fA==
+"@prettier/plugin-php@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.18.0.tgz#5dc7224aea5f58cb93d58882b51b6646dcfd81e5"
+  integrity sha512-os1CLqJFUSJpp3hkJ4IARW1h5ZuWhRdPnGaGaJs517uCL57V4C9dJeaSmIUi20qPji+mDhGs7SNZgdyW8VNcuw==
   dependencies:
     linguist-languages "^7.5.1"
     mem "^8.0.0"
-    php-parser "https://github.com/glayzzle/php-parser#27abcb2337ac6450c068ef064982dfabf77916a5"
+    php-parser "3.1.0-beta.0"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -1965,12 +1965,12 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.17.3:
-  version "1.17.3"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.17.3.tgz#ac51dc3c414a48d34bfa353bab5e630209397ba2"
-  integrity sha512-93LJIOYbnVdREIPlf8dnMdL8cNWxbQCXI2X8KYFG2jwaSNtIweP+vjFBb6E03oycF6XoKPf4bwGCAbBp7SnioQ==
+blade-formatter@^1.17.4:
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.17.4.tgz#da7ce492e798ae2d9da9f0201b9be7753996356c"
+  integrity sha512-1RVpie+07EoaEHPLtNiVeCkLxzICNLNTaYhpXNc3qgJ4f3nx+YhrovdRh6y/0IemXfg6EPsqeunBj0gQu+O37Q==
   dependencies:
-    "@prettier/plugin-php" "^0.17.6"
+    "@prettier/plugin-php" "^0.18.0"
     aigle "^1.14.1"
     ajv "^8.9.0"
     chalk "^4.1.0"
@@ -4602,9 +4602,10 @@ php-parser@3.0.3:
   resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.0.3.tgz#287779ea8a273ec5cf926f28e5f38ffa4ad32d4a"
   integrity sha512-WjbrtYrwmLY9hpoKoq1+mVqJhT0dEVDZRWSpNIw2MpTw3VM/K4C6e0WR4KlU6G/XROkV7tpH4NesV2dDiPxqaw==
 
-"php-parser@https://github.com/glayzzle/php-parser#27abcb2337ac6450c068ef064982dfabf77916a5":
-  version "3.0.2"
-  resolved "https://github.com/glayzzle/php-parser#27abcb2337ac6450c068ef064982dfabf77916a5"
+php-parser@3.1.0-beta.0:
+  version "3.1.0-beta.0"
+  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.1.0-beta.0.tgz#e43cb58ca35022f00973daf9dc55170de1f64ebf"
+  integrity sha512-j4v15Zy6pvJKd1N3XR53AUTySr1YEiKer8OlIFvqZTdRwMMmWttPiOZ7oyP53/QHY4DDHUfAtK9ZMomKw0xFlw==
 
 picocolors@^1.0.0:
   version "1.0.0"
