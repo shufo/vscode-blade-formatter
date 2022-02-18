@@ -1,0 +1,17 @@
+name: Auto Assign
+on:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [opened]
+jobs:
+  assignAuthor:
+    name: Assign author
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign author to created issue or PR
+        uses: technote-space/assign-author@v1
+      - name: "Auto-assign issue"
+        uses: pozil/auto-assign-issue@v1.4.0
+        with:
+          assignees: shufo
