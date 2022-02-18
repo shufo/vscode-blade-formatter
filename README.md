@@ -93,6 +93,12 @@ To disable format in an entire file, put a `{{-- blade-formatter-disable --}}` c
 
 see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/CHANGELOG.md)
 
+## Related Projects
+
+-   [blade-formatter](https://github.com/shufo/blade-formatter) - CLI blade formatter this extension relies on
+-   [prettier-plugin-blade](https://github.com/shufo/prettier-plugin-blade) - Prettier plugin for Blade
+-   [coc-blade](https://github.com/yaegassy/coc-blade) - [coc.nvim](https://github.com/neoclide/coc.nvim) Extension by [@yaegassy](https://github.com/yaegassy)
+
 ## Contributing
 
 1.  Fork it
