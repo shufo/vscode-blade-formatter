@@ -1,5 +1,17 @@
 # ChangeLog
 
+### [0.12.6](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.12.5...v0.12.6) (2022-02-20)
+
+
+### Fixes
+
+* typo in extension setting ([1bb9428](https://www.github.com/shufo/vscode-blade-formatter/commit/1bb94285200c70915d40a1142e9c8804b87fdff7))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.18.5 ([b34a354](https://www.github.com/shufo/vscode-blade-formatter/commit/b34a35456ff1a1bce0fefa1edbdc84965e972d74))
+
 ### [0.12.5](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.12.4...v0.12.5) (2022-02-13)
 
 
