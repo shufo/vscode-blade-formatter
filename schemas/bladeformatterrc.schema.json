@@ -12,7 +12,7 @@
       "default": 120,
       "type": "integer"
     },
-    "wrapAttributues": {
+    "wrapAttributes": {
       "default": "auto",
       "description": "The way to wrap attributes",
       "type": "string",
