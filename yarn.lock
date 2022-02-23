@@ -1965,10 +1965,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.18.6:
-  version "1.18.6"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.18.6.tgz#97530eb09cf061c59492dea3c12f07e1f949c9e6"
-  integrity sha512-fCec52ioJ7QT0x36so0Xa9rOWNyW82XYTserxCXAMRJuSdBDrWghaz4zQGJdcKxdn7FQxG2W2RiaDZFhzmBvNw==
+blade-formatter@^1.19.0:
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.19.0.tgz#14d5d016851e824e7a7844b2abe608696ce4ac64"
+  integrity sha512-uuMGwHHaGk1nFFmbVcH4ZM3/iuy70hyrTuA06qBkRlCtu/Vrm/wCnzCR8qAPBBq5lfB/C7qjrMd0xI1/6eiwLw==
   dependencies:
     "@prettier/plugin-php" "^0.18.0"
     aigle "^1.14.1"
