@@ -1,5 +1,17 @@
 # ChangeLog
 
+## [0.13.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.12.8...v0.13.0) (2022-02-27)
+
+
+### Features
+
+* 🎸 sort Tailwind CSS classes ([e2d2612](https://www.github.com/shufo/vscode-blade-formatter/commit/e2d2612e58053767514c8e18a7958765b2ac003c))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.20.1 ([630edc0](https://www.github.com/shufo/vscode-blade-formatter/commit/630edc05de62f7e6acb80d62ccb53c30f9e95b52))
+
 ### [0.12.8](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.12.7...v0.12.8) (2022-02-23)
 
 
