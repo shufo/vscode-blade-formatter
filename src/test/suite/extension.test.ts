@@ -50,6 +50,14 @@ suite("Extension Test Suite", () => {
             "withConfig/wrapLineLength/formatted.index.blade.php"
         );
     });
+
+    test("Should format file with runtime config / sortTailwindcssClasses", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/sortTailwindcssClasses/index.blade.php",
+            "withConfig/sortTailwindcssClasses/formatted.index.blade.php"
+        );
+    });
 });
 
 async function formatSameAsBladeFormatter(
