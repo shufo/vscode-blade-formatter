@@ -21,7 +21,10 @@ suite("Extension Test Suite", () => {
 
     test("Should ignore file if target listed in .bladeignore", async function (this: any) {
         this.timeout(20000);
-        await formatSameAsBladeFormatter("ignore.blade.php", "ignore.blade.php");
+        await formatSameAsBladeFormatter(
+            "ignore.blade.php",
+            "ignore.blade.php"
+        );
     });
 
     test("Should format file with runtime config / indentSize", async function (this: any) {
@@ -47,9 +50,21 @@ suite("Extension Test Suite", () => {
             "withConfig/wrapLineLength/formatted.index.blade.php"
         );
     });
+
+    test("Should format file with runtime config / sortTailwindcssClasses", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/sortTailwindcssClasses/index.blade.php",
+            "withConfig/sortTailwindcssClasses/formatted.index.blade.php"
+        );
+    });
 });
 
-async function formatSameAsBladeFormatter(file: any, formattedFile: any, options: any = {}) {
+async function formatSameAsBladeFormatter(
+    file: any,
+    formattedFile: any,
+    options: any = {}
+) {
     const { actual, source } = await format("project", file);
     const formatted = await getContent("project", formattedFile);
     assert.equal(actual, formatted);
@@ -106,9 +121,11 @@ async function waitForActivation(extensionId: any) {
 }
 
 const getWorkspaceFolderUri = (workspaceFolderName: any) => {
-    const workspaceFolder = vscode.workspace?.workspaceFolders?.find((folder: any) => {
-        return folder.name === workspaceFolderName;
-    });
+    const workspaceFolder = vscode.workspace?.workspaceFolders?.find(
+        (folder: any) => {
+            return folder.name === workspaceFolderName;
+        }
+    );
     if (!workspaceFolder) {
         throw new Error(
             "Folder not found in workspace. Did you forget to add the test folder to test.code-workspace?"

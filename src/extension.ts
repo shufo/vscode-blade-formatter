@@ -74,6 +74,7 @@ export function activate(context: ExtensionContext) {
                     wrapLineLength: extConfig.wrapLineLength,
                     wrapAttributes: extConfig.wrapAttributes,
                     useTabs: extConfig.useTabs,
+                    sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
                     ...runtimeConfig,
                 };
 
