@@ -16,6 +16,7 @@ You can also format by same syntax programmatically with [blade-formatter](https
 -   Automatically add spacing to blade templating markers
 -   PHP 8 support (null safe operator, named arguments) 🐘
 -   PSR-2 support (format inside directives)
+-   Automatically sort Tailwind CSS classes with respect of `tailwind.config.js`
 
 ## Screencast
 
@@ -23,13 +24,14 @@ You can also format by same syntax programmatically with [blade-formatter](https
 
 ## Extension Settings
 
-| setting                                    | description                                                                                                                      | default |
-| :----------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------ |
-| `Blade Formatter: format Enabled`          | Whether it enables or not                                                                                                        | true    |
-| `Blade Formatter: format Indent Size`      | An indent size                                                                                                                   | 4       |
-| `Blade Formatter: format Wrap Line Length` | The length of line wrap size                                                                                                     | 120     |
-| `Blade Formatter: format Wrap Attributes`  | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]` | `auto`  |
-| `Blade Formatter: format use Tabs`         | Use tab as indentation character                                                                                                 | false   |
+| setting                                             | description                                                                                                                      | default |
+| :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------ |
+| `Blade Formatter: format Enabled`                   | Whether it enables or not                                                                                                        | true    |
+| `Blade Formatter: format Indent Size`               | An indent size                                                                                                                   | 4       |
+| `Blade Formatter: format Wrap Line Length`          | The length of line wrap size                                                                                                     | 120     |
+| `Blade Formatter: format Wrap Attributes`           | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]` | `auto`  |
+| `Blade Formatter: format use Tabs`                  | Use tab as indentation character                                                                                                 | false   |
+| `Blade Formatter: format Sort Tailwind Css Classes` | Sort Tailwind CSS classes automatically                                                                                          | false   |
 
 ## Configuration file: .bladeformatterrc.json or .bladeformatterrc
 
@@ -43,7 +45,8 @@ Configuration file will like below:
     "wrapAttributes": "auto",
     "wrapLineLength": 120,
     "endWithNewLine": true,
-    "useTabs": false
+    "useTabs": false,
+    "sortTailwindcssClasses": true
 }
 ```
 
