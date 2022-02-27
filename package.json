@@ -95,6 +95,11 @@
           "type": "boolean",
           "default": false,
           "markdownDescription": "Use tab as indentation character"
+        },
+        "bladeFormatter.format.sortTailwindcssClasses": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Sort Tailwindcss Classes automatically"
         }
       }
     }

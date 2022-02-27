@@ -20,6 +20,7 @@ export interface RuntimeConfig {
     wrapAttributes?: WrapAttributes;
     endWithNewline?: boolean;
     useTabs?: boolean;
+    sortTailwindcssClasses?: boolean;
 }
 
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
@@ -50,6 +51,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
             },
             endWithNewline: { type: 'boolean' },
             useTabs: { type: 'boolean' },
+            sortTailwindcssClasses: { type: 'boolean' },
         },
         additionalProperties: true,
     };

@@ -35,6 +35,11 @@
       "description": "Indent with tabs instead of spaces",
       "default": false,
       "type": "boolean"
+    },
+    "sortTailwindcssClasses": {
+      "description": "Sort Tailwindcss classes automatically",
+      "default": false,
+      "type": "boolean"
     }
   }
 }
