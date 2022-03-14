@@ -12,6 +12,8 @@ import { readRuntimeConfig } from './runtimeConfig';
 export const enum ExtensionConstants {
     extensionId = 'shufo.vscode-blade-formatter',
     firstActivationStorageKey = 'firstActivation',
+    globalVersionKey = 'vscode-blade-formatter-version',
+    displayName = 'Laravel Blade Formatter',
 }
 
 const { Range, Position } = vscode;
@@ -33,6 +35,7 @@ let wasmInitialized = false;
  * @param {vscode.ExtensionContext} context
  */
 export function activate(context: ExtensionContext) {
+    showWelcomeMessage(context);
     setExtensionContext(context);
 
     telemetry.send(TelemetryEventNames.Startup);
@@ -143,5 +146,40 @@ function shouldIgnore(filepath: any) {
         });
     } catch (err) {
         return false;
+    }
+}
+
+function showWelcomeMessage(context: vscode.ExtensionContext) {
+    let message: string | null = null;
+
+    const previousVersion = context.globalState.get<string>(ExtensionConstants.globalVersionKey);
+    const currentVersion = vscode.extensions.getExtension(ExtensionConstants.extensionId)?.packageJSON?.version;
+    const previousVersionArray = previousVersion ? previousVersion.split('.').map((s: string) => Number(s)) : [0, 0, 0];
+    const currentVersionArray = currentVersion.split('.').map((s: string) => Number(s));
+
+    if (previousVersion === undefined || previousVersion.length === 0) {
+        message = `Thanks for using ${ExtensionConstants.displayName}.`;
+    } else if (currentVersion !== previousVersion && (
+        // patch update
+        (previousVersionArray[0] === currentVersionArray[0] && previousVersionArray[1] === currentVersionArray[1] && previousVersionArray[2] < currentVersionArray[2]) ||
+        // minor update
+        (previousVersionArray[0] === currentVersionArray[0] && previousVersionArray[1] < currentVersionArray[1]) ||
+        // major update
+        (previousVersionArray[0] < currentVersionArray[0])
+    )
+    ) {
+        message = `${ExtensionConstants.displayName} updated to ${currentVersion}.`;
+    }
+
+    if (message) {
+        vscode.window.showInformationMessage(message, '⭐️ Star on Github', '🐞 Report Bug')
+            .then(function (val: string | undefined) {
+                if (val === '🐞 Report Bug') {
+                    vscode.env.openExternal(vscode.Uri.parse('https://github.com/shufo/vscode-blade-formatter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc'));
+                } else if (val === '⭐️ Star on Github') {
+                    vscode.env.openExternal(vscode.Uri.parse('https://github.com/shufo/vscode-blade-formatter'));
+                }
+            });
+        context.globalState.update(ExtensionConstants.globalVersionKey, currentVersion);
     }
 }
