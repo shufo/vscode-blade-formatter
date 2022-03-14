@@ -8,13 +8,7 @@ import { Formatter } from "blade-formatter";
 import { setExtensionContext } from './extensionContext';
 import { telemetry, TelemetryEventNames } from './telemetry';
 import { readRuntimeConfig } from './runtimeConfig';
-
-export const enum ExtensionConstants {
-    extensionId = 'shufo.vscode-blade-formatter',
-    firstActivationStorageKey = 'firstActivation',
-    globalVersionKey = 'vscode-blade-formatter-version',
-    displayName = 'Laravel Blade Formatter',
-}
+import { ExtensionConstants } from "./constants";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
