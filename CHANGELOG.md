@@ -1,5 +1,12 @@
 # ChangeLog
 
+### [0.13.9](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.8...v0.13.9) (2022-03-14)
+
+
+### Miscellaneous
+
+* 🤖 show welcome message on startup ([e7b94e0](https://www.github.com/shufo/vscode-blade-formatter/commit/e7b94e03856f169385ec1cec8b4b75f563a65d28))
+
 ### [0.13.8](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.7...v0.13.8) (2022-03-14)
 
 
