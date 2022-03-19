@@ -152,7 +152,7 @@
   },
   "dependencies": {
     "ajv": "^8.9.0",
-    "blade-formatter": "^1.21.4",
+    "blade-formatter": "^1.21.5",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8",
     "vscode-extension-telemetry": "^0.4.5"
