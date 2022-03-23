@@ -110,6 +110,14 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
 4.  Push to the branch (`git push origin my-new-feature`)
 5.  Create new Pull Request
 
+## Development
+
+```bash
+$ yarn install
+$ cp .env.example .env # set your app insight key
+$ yarn run watch # watch changes
+```
+
 ## Testing
 
 ```bash
