@@ -1998,10 +1998,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.22.1:
-  version "1.22.1"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.22.1.tgz#4d27d3a40ca3ffb1f5126611ac63f64ba6f171f7"
-  integrity sha512-ODuaDTpOE0AOoY+sEV1npzjmCrVai5NyQT2BUVA7oJdiAN9Nx9CwOkDcLVZAwFmUXdiA9+0fMwjRKeBlY6lc+g==
+blade-formatter@^1.22.2:
+  version "1.22.2"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.22.2.tgz#46affb015379c9e31bc693afd70b582c5d1fbabd"
+  integrity sha512-02OfnkZun8CaLwENgPBtE4JFLEd4GidLopBo13baN682TFvhlb8VCfGxldfvQG3C36xAj6iKoL7Ymbw1nwL0AA==
   dependencies:
     "@prettier/plugin-php" "^0.18.0"
     "@shufo/tailwindcss-class-sorter" "^1.0.3"
