@@ -1,5 +1,15 @@
 # ChangeLog
 
+### [0.13.14](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.13...v0.13.14) (2022-03-29)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.22.2 ([c3107c9](https://www.github.com/shufo/vscode-blade-formatter/commit/c3107c924b3b88bf5f502c24cc60bfc5cee037f0))
+* **deps-dev:** bump @vscode/test-electron from 2.0.1 to 2.1.2 ([f07b6d4](https://www.github.com/shufo/vscode-blade-formatter/commit/f07b6d4cf07684613dfdd148bb77a99f9b88a8bd))
+* **deps:** bump ansi-regex from 4.1.0 to 4.1.1 ([919cfc2](https://www.github.com/shufo/vscode-blade-formatter/commit/919cfc2e19456533a5b61ec6c08a66c5dd2b0c19))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([33ab7c6](https://www.github.com/shufo/vscode-blade-formatter/commit/33ab7c69fe91f27d747fef4e7048714306fc1fd4))
+
 ### [0.13.13](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.12...v0.13.13) (2022-03-25)
 
 
