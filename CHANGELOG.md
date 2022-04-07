@@ -1,5 +1,15 @@
 # ChangeLog
 
+### [0.13.17](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.16...v0.13.17) (2022-04-07)
+
+
+### Miscellaneous
+
+* **deps-dev:** bump @types/node from 17.0.8 to 17.0.18 ([5a94527](https://www.github.com/shufo/vscode-blade-formatter/commit/5a945270cdb36ee9726264b08eba2c127fe6c1d8))
+* **deps-dev:** bump mocha from 9.1.3 to 9.2.1 ([38f7197](https://www.github.com/shufo/vscode-blade-formatter/commit/38f719781030619c61dc6336dd82b52d93dba84a))
+* **deps-dev:** bump typescript from 4.5.4 to 4.5.5 ([b9d8f21](https://www.github.com/shufo/vscode-blade-formatter/commit/b9d8f21ad4639ffc038c06694e5dbb5357e74c0c))
+* **deps:** bump ajv from 8.9.0 to 8.11.0 ([d298a59](https://www.github.com/shufo/vscode-blade-formatter/commit/d298a59c531d15fbc528ea99d02330b45027901b))
+
 ### [0.13.16](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.15...v0.13.16) (2022-04-03)
 
 
