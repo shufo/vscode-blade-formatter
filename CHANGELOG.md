@@ -1,5 +1,14 @@
 # ChangeLog
 
+### [0.13.18](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.17...v0.13.18) (2022-04-15)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.23.1 ([839835b](https://www.github.com/shufo/vscode-blade-formatter/commit/839835bce3ed4e77e0831312ea163bb58557309c))
+* **deps-dev:** bump ts-jest from 27.1.2 to 27.1.3 ([baf4884](https://www.github.com/shufo/vscode-blade-formatter/commit/baf4884f340e056f59cfefe91dbe80694ef2cc0d))
+* **deps-dev:** bump webpack from 5.65.0 to 5.69.1 ([884b055](https://www.github.com/shufo/vscode-blade-formatter/commit/884b055e09fbf0f3eb8e2d5f83559819552cafff))
+
 ### [0.13.17](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.16...v0.13.17) (2022-04-07)
 
 
