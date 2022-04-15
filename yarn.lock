@@ -1988,10 +1988,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.23.0:
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.23.0.tgz#ca1b9860bb2160e546b88e1ee953ad7156f7ad0e"
-  integrity sha512-5Tb8TvYzwuW4r+Hc9eAXtHXFwRv8hSfCPDHvjukgoGnbPLimyGUdOe4IPAwW/HAEw5HDMgGA93xuknDXF9WkHA==
+blade-formatter@^1.23.1:
+  version "1.23.1"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.23.1.tgz#ce0c42cb9ab4da84eeac6cbe9a49c3ff6af923b8"
+  integrity sha512-O//tY34VRVjBx0nGLGeqUpvc0n1/C1sHAMkltuqgpBzWI9XrilDflSL6TtBCcYG9FabviUEX9SlQYrITsgX98w==
   dependencies:
     "@prettier/plugin-php" "^0.18.0"
     "@shufo/tailwindcss-class-sorter" "^1.0.3"
@@ -2001,14 +2001,14 @@ blade-formatter@^1.23.0:
     concat-stream "^2.0.0"
     detect-indent "^6.0.0"
     find-config "^1.0.0"
-    glob "^7.1.4"
+    glob "^8.0.1"
     ignore "^5.1.8"
     js-beautify "^1.14.0"
     lodash "^4.17.19"
     php-parser "3.0.3"
     prettier "^2.2.0"
     vscode-oniguruma "1.6.2"
-    vscode-textmate "^6.0.0"
+    vscode-textmate "^7.0.1"
     xregexp "^5.0.1"
     yargs "^17.3.1"
 
@@ -2024,6 +2024,13 @@ brace-expansion@^1.1.7:
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
+
+brace-expansion@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-2.0.1.tgz#1edc459e0f0c548486ecf9fc99f2221364b9a0ae"
+  integrity sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==
+  dependencies:
+    balanced-match "^1.0.0"
 
 braces@^2.3.1:
   version "2.3.2"
@@ -3352,6 +3359,18 @@ glob@7.2.0, glob@^7.1.3, glob@^7.1.4, glob@^7.2.0:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+glob@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-8.0.1.tgz#00308f5c035aa0b2a447cd37ead267ddff1577d3"
+  integrity sha512-cF7FYZZ47YzmCu7dDy50xSRRfO3ErRfrXuLZcNIuyiJEco0XSrGtuilG19L5xp3NcwTx7Gn+X6Tv3fmsUPTbow==
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^5.0.1"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
 globals@^11.1.0:
   version "11.12.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
@@ -4293,6 +4312,13 @@ minimatch@^3.0.2, minimatch@^3.0.4:
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   dependencies:
     brace-expansion "^1.1.7"
+
+minimatch@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.0.1.tgz#fb9022f7528125187c92bd9e9b6366be1cf3415b"
+  integrity sha512-nLDxIFRyhDblz3qMuq+SoRZED4+miJ/G+tdDrjkkkRnjAsBexeGpgjLEQ0blJy7rHhR2b93rhQY4SvyWu9v03g==
+  dependencies:
+    brace-expansion "^2.0.1"
 
 minimist-options@4.1.0:
   version "4.1.0"
@@ -5951,10 +5977,10 @@ vscode-test@^1.6.1:
     rimraf "^3.0.2"
     unzipper "^0.10.11"
 
-vscode-textmate@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-6.0.0.tgz#a3777197235036814ac9a92451492f2748589210"
-  integrity sha512-gu73tuZfJgu+mvCSy4UZwd2JXykjK9zAZsfmDeut5dx/1a7FeTk0XwJsSuqQn+cuMCGVbIBfl+s53X4T19DnzQ==
+vscode-textmate@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-7.0.1.tgz#8118a32b02735dccd14f893b495fa5389ad7de79"
+  integrity sha512-zQ5U/nuXAAMsh691FtV0wPz89nSkHbs+IQV8FDk+wew9BlSDhf4UmWGlWJfTR2Ti6xZv87Tj5fENzKf6Qk7aLw==
 
 walker@^1.0.7:
   version "1.0.8"
