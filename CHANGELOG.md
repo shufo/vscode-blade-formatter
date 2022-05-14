@@ -1,5 +1,12 @@
 # ChangeLog
 
+## [0.14.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.24...v0.14.0) (2022-05-14)
+
+
+### Miscellaneous
+
+* release 0.14.0 ([b65613f](https://www.github.com/shufo/vscode-blade-formatter/commit/b65613fe8d8b8edde9d24a66e5d730af48814a06))
+
 ### [0.13.24](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.13.23...v0.13.24) (2022-05-09)
 
 
