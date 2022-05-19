@@ -59,6 +59,6 @@
 - color: 8ceabd
   name: "autorelease: pending"
   description: autorelease pr waiting for merge
-- color: 8ceabd
+- color: bfd4f2
   name: Stale
   description: Stale label
