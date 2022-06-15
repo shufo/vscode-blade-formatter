@@ -9,6 +9,7 @@ import { setExtensionContext } from './extensionContext';
 import { telemetry, TelemetryEventNames } from './telemetry';
 import { readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
+import { messages } from "./messages";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -75,10 +76,15 @@ export function activate(context: ExtensionContext) {
                     ...runtimeConfig,
                 };
 
+                const progressMessage = isLargeFile(document) ? messages.largeFileFormattingMessage : messages.formattingMessage;
+                const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 1000);
+                statusBarItem.text = `$(loading~spin) ${progressMessage}`;
+                statusBarItem.show();
                 return new Promise((resolve, reject) => {
                     return new Formatter(options)
                         .formatContent(originalText)
                         .then((text: any) => {
+                            statusBarItem.dispose();
                             resolve([new vscode.TextEdit(range, text)]);
                         })
                         .then(undefined, (err: any) => {
@@ -176,4 +182,8 @@ function showWelcomeMessage(context: vscode.ExtensionContext) {
             });
         context.globalState.update(ExtensionConstants.globalVersionKey, currentVersion);
     }
+}
+
+function isLargeFile(document: vscode.TextDocument) {
+    return document.lineCount > 1000;
 }
