@@ -100,6 +100,11 @@
           "type": "boolean",
           "default": false,
           "markdownDescription": "Sort Tailwindcss Classes automatically"
+        },
+        "bladeFormatter.misc.dontShowNewVersionMessage": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "If set to 'true', the new version message won't be shown anymore."
         }
       }
     }

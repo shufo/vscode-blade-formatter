@@ -1,4 +1,4 @@
-import vscode from "vscode";
+import vscode, { WorkspaceConfiguration } from "vscode";
 import { ExtensionContext } from "vscode";
 import path from "path";
 import findConfig from "find-config";
@@ -155,6 +155,12 @@ function shouldIgnore(filepath: any) {
 }
 
 function showWelcomeMessage(context: vscode.ExtensionContext) {
+    const extConfig: WorkspaceConfiguration = vscode.workspace.getConfiguration("bladeFormatter.misc");
+
+    if (extConfig.dontShowNewVersionMessage) {
+        return;
+    }
+
     let message: string | null = null;
 
     const previousVersion = context.globalState.get<string>(ExtensionConstants.globalVersionKey);

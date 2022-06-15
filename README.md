@@ -32,6 +32,7 @@ You can also format by same syntax programmatically with [blade-formatter](https
 | `Blade Formatter: format Wrap Attributes`           | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]` | `auto`  |
 | `Blade Formatter: format use Tabs`                  | Use tab as indentation character                                                                                                 | false   |
 | `Blade Formatter: format Sort Tailwind Css Classes` | Sort Tailwind CSS classes automatically                                                                                          | false   |
+| `Blade Formatter: Dont Show New Version Message`    | If set to 'true', the new version message won't be shown anymore.                                                                | false   |
 
 ## Configuration file: .bladeformatterrc.json or .bladeformatterrc
 
