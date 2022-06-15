@@ -92,6 +92,7 @@ export function activate(context: ExtensionContext) {
                             resolve([new vscode.TextEdit(range, text)]);
                         })
                         .then(undefined, (err: any) => {
+                            statusBarItem.dispose();
                             if (err.message === WASM_ERROR_MESSAGE) {
                                 return reject(err);
                             }
