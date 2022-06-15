@@ -1,4 +1,4 @@
-import vscode from "vscode";
+import vscode, { WorkspaceConfiguration } from "vscode";
 import { ExtensionContext } from "vscode";
 import path from "path";
 import findConfig from "find-config";
