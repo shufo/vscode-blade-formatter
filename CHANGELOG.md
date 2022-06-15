@@ -1,5 +1,18 @@
 # ChangeLog
 
+## [0.15.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.14.7...v0.15.0) (2022-06-15)
+
+
+### Features
+
+* 🎸 config `dontShowNewVersion` to suppress update message ([83750c9](https://www.github.com/shufo/vscode-blade-formatter/commit/83750c9a85ed29bd11bfd2f194d00ba097d0e599))
+* 🎸 show progress in status bar ([f0bf258](https://www.github.com/shufo/vscode-blade-formatter/commit/f0bf2583664355ba23a73528444fd192a0da9f2b))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.26.7 ([8f26295](https://www.github.com/shufo/vscode-blade-formatter/commit/8f26295245ef98a0273239305b26777ce0a02402))
+
 ### [0.14.7](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.14.6...v0.14.7) (2022-06-10)
 
 
