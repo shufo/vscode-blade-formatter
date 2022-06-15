@@ -80,6 +80,10 @@ export function activate(context: ExtensionContext) {
                 const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 1000);
                 statusBarItem.text = `$(loading~spin) ${progressMessage}`;
                 statusBarItem.show();
+                setTimeout(() => {
+                    statusBarItem.dispose();
+                }, 5000);
+
                 return new Promise((resolve, reject) => {
                     return new Formatter(options)
                         .formatContent(originalText)
