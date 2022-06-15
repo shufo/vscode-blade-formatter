@@ -42,7 +42,7 @@ export function activate(context: ExtensionContext) {
 
     context.subscriptions.push(
         vscode.languages.registerDocumentFormattingEditProvider("blade", {
-            provideDocumentFormattingEdits(document: any) {
+            provideDocumentFormattingEdits(document: vscode.TextDocument, vscodeOpts: vscode.FormattingOptions): any {
                 if (shouldIgnore(document.uri.fsPath)) {
                     return document;
                 }
