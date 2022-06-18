@@ -1,5 +1,14 @@
 # ChangeLog
 
+## [0.15.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.15.1...v0.15.2) (2022-06-18)
+
+
+### Miscellaneous
+
+* 🤖 revert @types/vscode to ^1.57.0 ([1035bd7](https://github.com/shufo/vscode-blade-formatter/commit/1035bd71d4d3db8574d0b51c2d4d00dadd775bb6))
+* **deps:** update actions/labeler action to v4 ([f27dda2](https://github.com/shufo/vscode-blade-formatter/commit/f27dda220bed2664bfd1a2be2b36cb4814c4ee2b))
+* **deps:** update dependency glob to v8 ([9e3db04](https://github.com/shufo/vscode-blade-formatter/commit/9e3db046b6baf990ca47160f94a460838e787b07))
+
 ## [0.15.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.15.0...v0.15.1) (2022-06-18)
 
 
