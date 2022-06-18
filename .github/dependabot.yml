@@ -8,11 +8,3 @@ updates:
     open-pull-requests-limit: 10
     allow:
       - dependency-type: "production"
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: monthly
-      time: "20:00"
-    open-pull-requests-limit: 10
-    allow:
-      - dependency-type: "development"
