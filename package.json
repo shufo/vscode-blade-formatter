@@ -144,7 +144,7 @@
     "dotenv-webpack": "7.1.0",
     "eslint": "8.18.0",
     "glob": "8.0.3",
-    "mocha": "^9.2.2",
+    "mocha": "^10.0.0",
     "ts-jest": "27.1.5",
     "ts-loader": "9.3.0",
     "ts-migrate": "0.1.29",
