@@ -20,7 +20,7 @@ You can also format by same syntax programmatically with [blade-formatter](https
 
 ## Screencast
 
-![Screencast](https://github.com/shufo/vscode-blade-formatter/raw/master/screencast.gif)
+![Screencast](https://github.com/shufo/vscode-blade-formatter/blob/main/screencast.gif?raw=true)
 
 ## Extension Settings
 
