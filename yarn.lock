@@ -1322,7 +1322,7 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/vscode@1.68.0":
+"@types/vscode@^1.57.0":
   version "1.68.0"
   resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.68.0.tgz#c0864e4ea43c509bfc6b53f4e91aa923fd0475b8"
   integrity sha512-duBwEK5ta/eBBMJMQ7ECMEsMvlE3XJdRGh3xoS1uOO4jl2Z4LPBl5vx8WvBP10ERAgDRmIt/FaSD4RHyBGbChw==
