@@ -1,0 +1,21 @@
+{
+  "extends": ["config:base"],
+  "assigneesFromCodeOwners": true,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "schedule": ["every weekend"],
+      "groupName": "all minor update of dev dependencies",
+      "groupSlug": "all-minor-dependencies",
+      "labels": ["dependencies"]
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "schedule": ["every weekend"],
+      "matchUpdateTypes": ["major"],
+      "labels": ["dependencies", "breaking"]
+    }
+  ]
+}
