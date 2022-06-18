@@ -32,7 +32,7 @@ jobs:
         run: yarn install
 
       - name: Run headless test
-        uses: GabrielBB/xvfb-action@v1.0
+        uses: GabrielBB/xvfb-action@v1.6
         with:
           run: npm run test
         env:
