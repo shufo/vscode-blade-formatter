@@ -1,5 +1,17 @@
 # ChangeLog
 
+### [0.15.1](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.15.0...v0.15.1) (2022-06-18)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.26.8 ([63b9220](https://www.github.com/shufo/vscode-blade-formatter/commit/63b92203f734d48b8e837114f91f8bc04e3540a8))
+* 🤖 replace vscode-test to @vscode/test-electron ([fb68661](https://www.github.com/shufo/vscode-blade-formatter/commit/fb6866162da09ea2efce7ccab3da84bf506f65a6))
+* **deps:** update actions/checkout action to v3 ([c8c0b24](https://www.github.com/shufo/vscode-blade-formatter/commit/c8c0b2422181656b6f55b5fa9d57302014134b8a))
+* **deps:** update actions/setup-node action to v3 ([3012d0f](https://www.github.com/shufo/vscode-blade-formatter/commit/3012d0f40db0afc0d9d8f7ea906e28eda3f1e1aa))
+* **deps:** update all minor update of dev dependencies ([78d9988](https://www.github.com/shufo/vscode-blade-formatter/commit/78d998817602e5b75760c7ef74f830b4db7c2d9e))
+* **deps:** update gabrielbb/xvfb-action action to v1.6 ([52988c5](https://www.github.com/shufo/vscode-blade-formatter/commit/52988c535c3d246bf259fe2842b11ab1a19e343c))
+
 ## [0.15.0](https://www.github.com/shufo/vscode-blade-formatter/compare/v0.14.7...v0.15.0) (2022-06-15)
 
 
