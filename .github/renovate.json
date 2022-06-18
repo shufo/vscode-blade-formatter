@@ -4,6 +4,7 @@
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
+      "excludePackageNames": ["@types/vscode"],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "schedule": ["every weekend"],
@@ -13,6 +14,7 @@
     },
     {
       "matchPackagePatterns": ["*"],
+      "excludePackageNames": ["@types/vscode"],
       "schedule": ["every weekend"],
       "matchUpdateTypes": ["major"],
       "labels": ["dependencies", "breaking"]
