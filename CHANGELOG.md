@@ -1,5 +1,18 @@
 # ChangeLog
 
+## [0.15.3](https://github.com/shufo/vscode-blade-formatter/compare/v0.15.2...v0.15.3) (2022-06-21)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.26.10 ([4a83418](https://github.com/shufo/vscode-blade-formatter/commit/4a834183fd60441acc35d78b41d93f7bad660d1f))
+* 🤖 bump blade-formatter to 1.26.9 ([ff0b517](https://github.com/shufo/vscode-blade-formatter/commit/ff0b517dc9a0cc2c9adcc911933291ff17e4c134))
+* **deps:** update dependency mocha to v10 ([0b8d855](https://github.com/shufo/vscode-blade-formatter/commit/0b8d85576b616788ec713a4c40998dd7510a97e1))
+* **deps:** update github/codeql-action action to v2 ([0826980](https://github.com/shufo/vscode-blade-formatter/commit/082698045a6df085da378b6095c51f038d3dacef))
+* **deps:** update jest monorepo to v28 ([7785688](https://github.com/shufo/vscode-blade-formatter/commit/778568817e0bcfa02d76a66db2c7c97d30c97dbe))
+* **deps:** update pozil/auto-assign-issue action to v1.7.1 ([7e07abd](https://github.com/shufo/vscode-blade-formatter/commit/7e07abdd7c4eb60d62b6197a7ec759551238c04d))
+* **deps:** update pozil/auto-assign-issue action to v1.7.2 ([2ef39e8](https://github.com/shufo/vscode-blade-formatter/commit/2ef39e8b6df3f1e3e319de9bdd60a421f0075178))
+
 ## [0.15.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.15.1...v0.15.2) (2022-06-18)
 
 
