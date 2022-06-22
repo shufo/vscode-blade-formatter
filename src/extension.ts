@@ -10,6 +10,7 @@ import { telemetry, TelemetryEventNames } from './telemetry';
 import { readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
+import { getCoreNodeModule } from "./util";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -116,25 +117,6 @@ export function activate(context: ExtensionContext) {
 }
 
 export function deactivate() { }
-
-/**
- * Returns a node module installed with VSCode, or null if it fails.
- */
-function getCoreNodeModule(moduleName: string) {
-    try {
-        // @ts-ignore
-        return __non_webpack_require__(`${vscode.env.appRoot}/node_modules.asar/${moduleName}`);
-    } catch (err: any) {
-    }
-
-    try {
-        // @ts-ignore
-        return __non_webpack_require__(`${vscode.env.appRoot}/node_modules/${moduleName}`);
-    } catch (err: any) {
-    }
-
-    return null;
-}
 
 function shouldIgnore(filepath: any) {
     const ignoreFilename = ".bladeignore";
