@@ -4,8 +4,10 @@ import fs from "fs";
 
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
-import vscode from "vscode";
+import vscode, { TextDocument } from "vscode";
 import { before } from "mocha";
+import { ExtensionConstants } from "../../constants";
+import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 // const myExtension = require('../extension');
 
 suite("Extension Test Suite", () => {
@@ -58,78 +60,18 @@ suite("Extension Test Suite", () => {
             "withConfig/sortTailwindcssClasses/formatted.index.blade.php"
         );
     });
+
+    test("Format command exists in command list", async function () {
+        const commands = await vscode.commands.getCommands();
+        assert(commands.includes(ExtensionConstants.formatCommandKey));
+    });
+
+    test("Format command", async function () {
+        const doc = await getDoc("index.blade.php");
+        await vscode.commands.executeCommand(ExtensionConstants.formatCommandKey);
+        const formatted = await doc.getText();
+        const expected = await getContent("project", "formatted.index.blade.php");
+
+        assert.equal(formatted, expected);
+    });
 });
-
-async function formatSameAsBladeFormatter(
-    file: any,
-    formattedFile: any,
-    options: any = {}
-) {
-    const { actual, source } = await format("project", file);
-    const formatted = await getContent("project", formattedFile);
-    assert.equal(actual, formatted);
-}
-
-async function getContent(workspaceFolderName: any, testFile: any) {
-    const base = getWorkspaceFolderUri(workspaceFolderName);
-    const absPath = path.join(base.fsPath, `${testFile}`);
-    return fs.readFileSync(absPath).toString("utf-8");
-}
-
-async function format(workspaceFolderName: any, testFile: any) {
-    const base = getWorkspaceFolderUri(workspaceFolderName);
-    const absPath = path.join(base.fsPath, testFile);
-    const doc = await vscode.workspace.openTextDocument(absPath);
-    const text = await doc.getText();
-
-    try {
-        await vscode.window.showTextDocument(doc);
-    } catch (error) {
-        // eslint-disable-next-line no-console
-        console.log(error);
-        throw error;
-    }
-    // eslint-disable-next-line no-console
-    console.time(testFile);
-    await waitForActivation("shufo.vscode-blade-formatter");
-    for (let i = 0; i < 3; i++) {
-        await vscode.commands.executeCommand("editor.action.formatDocument");
-    }
-
-    // eslint-disable-next-line no-console
-    console.timeEnd(testFile);
-
-    return { actual: await doc.getText(), source: text };
-}
-
-function sleep(ms: any) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function waitForActivation(extensionId: any) {
-    let i = 0;
-    while (vscode.extensions.getExtension(extensionId)?.isActive === false) {
-        if (i === 10) {
-            break;
-        }
-
-        await sleep(1000);
-        i++;
-    }
-
-    return true;
-}
-
-const getWorkspaceFolderUri = (workspaceFolderName: any) => {
-    const workspaceFolder = vscode.workspace?.workspaceFolders?.find(
-        (folder: any) => {
-            return folder.name === workspaceFolderName;
-        }
-    );
-    if (!workspaceFolder) {
-        throw new Error(
-            "Folder not found in workspace. Did you forget to add the test folder to test.code-workspace?"
-        );
-    }
-    return workspaceFolder.uri;
-};
