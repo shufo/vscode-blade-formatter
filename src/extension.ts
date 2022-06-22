@@ -1,4 +1,4 @@
-import vscode, { WorkspaceConfiguration } from "vscode";
+import vscode, { commands, window, WorkspaceConfiguration } from "vscode";
 import { ExtensionContext } from "vscode";
 import path from "path";
 import findConfig from "find-config";
@@ -10,6 +10,8 @@ import { telemetry, TelemetryEventNames } from './telemetry';
 import { readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
+import { formatFromCommand } from "./commands";
+import { getCoreNodeModule } from "./util";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -39,6 +41,11 @@ export function activate(context: ExtensionContext) {
         telemetry.send(TelemetryEventNames.NewInstall);
         context.globalState.update(ExtensionConstants.firstActivationStorageKey, false);
     }
+
+    commands.registerTextEditorCommand(
+        ExtensionConstants.formatCommandKey,
+        formatFromCommand
+    );
 
     context.subscriptions.push(
         vscode.languages.registerDocumentFormattingEditProvider("blade", {
@@ -116,25 +123,6 @@ export function activate(context: ExtensionContext) {
 }
 
 export function deactivate() { }
-
-/**
- * Returns a node module installed with VSCode, or null if it fails.
- */
-function getCoreNodeModule(moduleName: string) {
-    try {
-        // @ts-ignore
-        return __non_webpack_require__(`${vscode.env.appRoot}/node_modules.asar/${moduleName}`);
-    } catch (err: any) {
-    }
-
-    try {
-        // @ts-ignore
-        return __non_webpack_require__(`${vscode.env.appRoot}/node_modules/${moduleName}`);
-    } catch (err: any) {
-    }
-
-    return null;
-}
 
 function shouldIgnore(filepath: any) {
     const ignoreFilename = ".bladeignore";
