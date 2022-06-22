@@ -1,4 +1,4 @@
-import vscode, { WorkspaceConfiguration } from "vscode";
+import vscode, { commands, window, WorkspaceConfiguration } from "vscode";
 import { ExtensionContext } from "vscode";
 import path from "path";
 import findConfig from "find-config";
@@ -10,6 +10,7 @@ import { telemetry, TelemetryEventNames } from './telemetry';
 import { readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
+import { formatFromCommand } from "./commands";
 import { getCoreNodeModule } from "./util";
 
 const { Range, Position } = vscode;
@@ -40,6 +41,11 @@ export function activate(context: ExtensionContext) {
         telemetry.send(TelemetryEventNames.NewInstall);
         context.globalState.update(ExtensionConstants.firstActivationStorageKey, false);
     }
+
+    commands.registerTextEditorCommand(
+        ExtensionConstants.formatCommandKey,
+        formatFromCommand
+    );
 
     context.subscriptions.push(
         vscode.languages.registerDocumentFormattingEditProvider("blade", {

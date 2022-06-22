@@ -3,4 +3,5 @@ export const enum ExtensionConstants {
     firstActivationStorageKey = 'firstActivation',
     globalVersionKey = 'vscode-blade-formatter-version',
     displayName = 'Laravel Blade Formatter',
+    formatCommandKey = 'vscode-blade-formatter.format',
 }

@@ -30,6 +30,12 @@
   "icon": "icon.png",
   "main": "./dist/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "vscode-blade-formatter.format",
+        "title": "Blade: Format Document"
+      }
+    ],
     "jsonValidation": [
       {
         "fileMatch": ".bladeformatterrc.json",
