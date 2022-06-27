@@ -153,7 +153,7 @@
     "mocha": "^10.0.0",
     "ts-jest": "28.0.5",
     "ts-loader": "9.3.1",
-    "ts-migrate": "0.1.29",
+    "ts-migrate": "0.1.30",
     "ts-node": "10.8.1",
     "typescript": "4.7.4",
     "webpack": "5.73.0",
