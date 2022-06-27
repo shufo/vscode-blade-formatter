@@ -1,5 +1,19 @@
 # ChangeLog
 
+## [0.16.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.15.3...v0.16.0) (2022-06-27)
+
+
+### Features
+
+* 🎸 user facing command Blade: Format Document ([176267a](https://github.com/shufo/vscode-blade-formatter/commit/176267acc9004234a4da5455980b601acae41f01))
+
+
+### Miscellaneous
+
+* **deps:** update all minor update of dev dependencies ([a7a251d](https://github.com/shufo/vscode-blade-formatter/commit/a7a251d67957f3585ee4cd9d0e5d61bfa2cb2897))
+* **deps:** update dependency ts-migrate to v0.1.30 ([e34fb33](https://github.com/shufo/vscode-blade-formatter/commit/e34fb3331a642dbfb4b4698047daf3118f65eefd))
+* **deps:** update pozil/auto-assign-issue action to v1.7.3 ([97f6715](https://github.com/shufo/vscode-blade-formatter/commit/97f6715a0562ad0eb255169bbad2e2c6cf7d8c63))
+
 ## [0.15.3](https://github.com/shufo/vscode-blade-formatter/compare/v0.15.2...v0.15.3) (2022-06-21)
 
 
