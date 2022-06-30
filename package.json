@@ -170,5 +170,8 @@
   "optionalDependencies": {
     "fsevents": "*",
     "kind-of": "*"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/shufo"
   }
 }
