@@ -1,5 +1,16 @@
 # ChangeLog
 
+## [0.16.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.16.0...v0.16.1) (2022-07-04)
+
+
+### Miscellaneous
+
+* 🤖 add sponsor url to package.json ([d827b92](https://github.com/shufo/vscode-blade-formatter/commit/d827b92128031cec1586103f632e17c1fb7c9e32))
+* 🤖 bump blade-formatter to 1.26.11 ([5744197](https://github.com/shufo/vscode-blade-formatter/commit/5744197b3aaf143a3c524136b1ca12995c336fb2))
+* add FUNDING.yml ([5a30874](https://github.com/shufo/vscode-blade-formatter/commit/5a30874dfefc608e5683fa2ff2a3600b90f87741))
+* **deps:** update all minor update of dev dependencies ([41702f7](https://github.com/shufo/vscode-blade-formatter/commit/41702f796c3fb6e3f53f3adee4b1ce02cb4281f9))
+* **deps:** update all minor update of dev dependencies to v5.30.4 ([523d6ef](https://github.com/shufo/vscode-blade-formatter/commit/523d6efcfcdb136de1218a0f77bca2b294549d8b))
+
 ## [0.16.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.15.3...v0.16.0) (2022-06-27)
 
 
