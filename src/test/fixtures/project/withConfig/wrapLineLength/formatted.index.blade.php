@@ -26,7 +26,12 @@
                     class="pf-users-branch__btn">
                     @can('create',
                         App\Models\User::class)
-                        {!! link_to_route('frontend.users.user.create', __('users.create'), [], ['class' => 'btn']) !!}
+                        {!! link_to_route(
+                            'frontend.users.user.create',
+                            __('users.create'),
+                            [],
+                            ['class' => 'btn'],
+                        ) !!}
                     @endcan
                 </div>
             </div>
