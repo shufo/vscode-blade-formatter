@@ -2139,10 +2139,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.26.12:
-  version "1.26.12"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.26.12.tgz#7833f5eefaedcfe19960987ddfe028e75e9728d7"
-  integrity sha512-lvDMfmX8Bzz4NMBl9PxtNceZ+xy6rm8Q0KXJnH11hV7VXJLK+lLW6sd/gWRhrWj1P7LJOORZpW8FBudzlFZavg==
+blade-formatter@^1.26.13:
+  version "1.26.13"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.26.13.tgz#025f8d035a1b33bf85f5963fa5b6087e664a8131"
+  integrity sha512-TiMWISbUWoGiJ5HSvzJiKmVIbn30J4b4YXC/5FkEVg7qcnIingIotskSOKf1Oft01onGpso/MuO5evvoimAVHw==
   dependencies:
     "@prettier/plugin-php" "^0.18.0"
     "@shufo/tailwindcss-class-sorter" "^1.0.3"
@@ -3248,7 +3248,7 @@ fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.0.0:
 fast-levenshtein@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
-  integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
+  integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
 
 fastest-levenshtein@^1.0.12:
   version "1.0.12"
