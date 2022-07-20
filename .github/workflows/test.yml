@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-        vscode_version: ["1.66.0", "1.59.0"]
+        vscode_version: ["1.69.2", "1.59.0"]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
