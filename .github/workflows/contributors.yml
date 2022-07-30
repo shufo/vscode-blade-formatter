@@ -6,6 +6,7 @@ on:
 
 jobs:
   contrib-readme-job:
+    permissions: write-all
     runs-on: ubuntu-latest
     name: A job to automate contrib in readme
     steps:
