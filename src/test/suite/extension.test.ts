@@ -61,6 +61,22 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/sortHtmlAttributes/index.blade.php",
+            "withConfig/sortHtmlAttributes/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / noMultipleEmptyLines", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/noMultipleEmptyLines/index.blade.php",
+            "withConfig/noMultipleEmptyLines/formatted.index.blade.php"
+        );
+    });
+
     test("Format command exists in command list", async function () {
         const commands = await vscode.commands.getCommands();
         assert(commands.includes(ExtensionConstants.formatCommandKey));
