@@ -40,6 +40,17 @@
       "description": "Sort Tailwindcss classes automatically",
       "default": false,
       "type": "boolean"
+    },
+    "sortHtmlAttributes": {
+      "default": "none",
+      "description": "Sort HTML attributes",
+      "type": "string",
+      "enum": ["none", "alphabetical", "code-guide", "idiomatic", "vuejs"]
+    },
+    "noMultipleEmptyLines": {
+      "description": "Collapses multiple blank lines into a single blank line",
+      "default": false,
+      "type": "boolean"
     }
   }
 }
