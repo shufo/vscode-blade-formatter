@@ -2155,10 +2155,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.26.17:
-  version "1.26.17"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.26.17.tgz#14d2fcca7052a5ab7e0ad3603562b62575e40cfc"
-  integrity sha512-sEP8JjDvlfg6QdLrWQ19RfpUf869xg8PgBGSV8r1FRuYTf93iWHKTqFqw8REdDAq6GdC3QKE6jURB5/3vZQVmQ==
+blade-formatter@^1.27.0:
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.27.0.tgz#3c052aa83af5208e272477c1442107d5b102e178"
+  integrity sha512-JyaUS10fAKVcpBnk6kC2/SyNx1iIWIpoPVcOIIvYYwVNAqyRMpf75Tc0X1+VJ3r7Ck0S9IG305hiPlj2FeNUzQ==
   dependencies:
     "@prettier/plugin-php" "^0.18.0"
     "@shufo/tailwindcss-class-sorter" "^1.0.3"
@@ -2169,6 +2169,7 @@ blade-formatter@^1.26.17:
     detect-indent "^6.0.0"
     find-config "^1.0.0"
     glob "^8.0.1"
+    html-attribute-sorter "^0.4.0"
     ignore "^5.1.8"
     js-beautify "^1.14.0"
     lodash "^4.17.19"
@@ -3676,6 +3677,11 @@ hosted-git-info@^4.0.0, hosted-git-info@^4.0.1:
   integrity sha512-c9OGXbZ3guC/xOlCg1Ci/VgWlwsqDv1yMQL1CWqXDL0hDjXuNcq0zuR4xqPSuasI3kqFDhqSyTjREz5gzq0fXg==
   dependencies:
     lru-cache "^6.0.0"
+
+html-attribute-sorter@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/html-attribute-sorter/-/html-attribute-sorter-0.4.0.tgz#c9021e51f8170fd971296497884fc32d3fe18db8"
+  integrity sha512-GxGTu1FtmABg/5AUovWnIxmOEJMvZOMqBnmRuut2bLfxy/Tn+pI93l0devqaB9UkG8UoviTLJtOqz1+DBHqtbA==
 
 http-proxy-agent@^4.0.1:
   version "4.0.1"
