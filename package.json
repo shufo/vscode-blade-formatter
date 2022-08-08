@@ -107,6 +107,18 @@
           "default": false,
           "markdownDescription": "Sort Tailwindcss Classes automatically"
         },
+        "bladeFormatter.format.sortHtmlAttributes": {
+          "type": "string",
+          "default": "none",
+          "enum": [
+            "none",
+            "alphabetical",
+            "code-guide",
+            "idiomatic",
+            "vuejs"
+          ],
+          "markdownDescription": "Sort HTML Attributes in the specified order"
+        },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
           "default": false,

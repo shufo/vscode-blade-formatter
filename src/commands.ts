@@ -23,6 +23,7 @@ export const formatFromCommand =
                 wrapAttributes: extConfig.wrapAttributes,
                 useTabs: extConfig.useTabs,
                 sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
+                sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
                 ...runtimeConfig,
             };
             const originalText = editor.document.getText();
