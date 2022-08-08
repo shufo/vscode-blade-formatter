@@ -24,15 +24,17 @@ You can also format by same syntax programmatically with [blade-formatter](https
 
 ## Extension Settings
 
-| setting                                             | description                                                                                                                      | default |
-| :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------ |
-| `Blade Formatter: format Enabled`                   | Whether it enables or not                                                                                                        | true    |
-| `Blade Formatter: format Indent Size`               | An indent size                                                                                                                   | 4       |
-| `Blade Formatter: format Wrap Line Length`          | The length of line wrap size                                                                                                     | 120     |
-| `Blade Formatter: format Wrap Attributes`           | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]` | `auto`  |
-| `Blade Formatter: format use Tabs`                  | Use tab as indentation character                                                                                                 | false   |
-| `Blade Formatter: format Sort Tailwind Css Classes` | Sort Tailwind CSS classes automatically                                                                                          | false   |
-| `Blade Formatter: Dont Show New Version Message`    | If set to 'true', the new version message won't be shown anymore.                                                                | false   |
+| setting                                             | description                                                                                                                                                                                                                                                     | default |
+| :-------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |
+| `Blade Formatter: format Enabled`                   | Whether it enables or not                                                                                                                                                                                                                                       | true    |
+| `Blade Formatter: format Indent Size`               | An indent size                                                                                                                                                                                                                                                  | 4       |
+| `Blade Formatter: format Wrap Line Length`          | The length of line wrap size                                                                                                                                                                                                                                    | 120     |
+| `Blade Formatter: format Wrap Attributes`           | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]`                                                                                                                                | `auto`  |
+| `Blade Formatter: format use Tabs`                  | Use tab as indentation character                                                                                                                                                                                                                                | false   |
+| `Blade Formatter: format Sort Tailwind Css Classes` | Sort Tailwind CSS classes automatically                                                                                                                                                                                                                         | false   |
+| `Blade Formatter: format Sort HTML Attributes`      | Sort HTML Attributes in the specified order. [`none` \| `alphabetical` \| [`code-guide`](https://codeguide.co/) \| [`idiomatic`](https://github.com/necolas/idiomatic-html#attribute-order) \| [`vuejs`](https://eslint.vuejs.org/rules/attributes-order.html)] | `none`  |
+| `Blade Formatter: format No Multiple Empty Lines`   | Collapses multiple blank lines into a single blank line.                                                                                                                                                                                                        | false   |
+| `Blade Formatter: Dont Show New Version Message`    | If set to 'true', the new version message won't be shown anymore.                                                                                                                                                                                               | false   |
 
 ## Configuration file: .bladeformatterrc.json or .bladeformatterrc
 
@@ -47,7 +49,9 @@ Configuration file will like below:
     "wrapLineLength": 120,
     "endWithNewLine": true,
     "useTabs": false,
-    "sortTailwindcssClasses": true
+    "sortTailwindcssClasses": true,
+    "sortHtmlAttributes": "none",
+    "noMultipleEmptyLines": false
 }
 ```
 
