@@ -81,6 +81,7 @@ export function activate(context: ExtensionContext) {
                     useTabs: extConfig.useTabs,
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
+                    noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     ...runtimeConfig,
                 };
 

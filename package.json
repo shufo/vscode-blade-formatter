@@ -119,6 +119,11 @@
           ],
           "markdownDescription": "Sort HTML Attributes in the specified order"
         },
+        "bladeFormatter.format.noMultipleEmptyLines": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Collapses multiple blank lines into a single blank line"
+        },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
           "default": false,

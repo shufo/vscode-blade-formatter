@@ -22,6 +22,7 @@ export interface RuntimeConfig {
     useTabs?: boolean;
     sortTailwindcssClasses?: boolean;
     sortHtmlAttributes?: string;
+    noMultipleEmptyLines?: boolean;
 }
 
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
@@ -54,6 +55,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
             useTabs: { type: 'boolean' },
             sortTailwindcssClasses: { type: 'boolean' },
             sortHtmlAttributes: { type: 'string' },
+            noMultipleEmptyLines: { type: 'boolean' },
         },
         additionalProperties: true,
     };
