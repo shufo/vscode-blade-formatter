@@ -28,6 +28,11 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+      - uses: actions/cache@v3
+        id: vscode-test-cache
+        with:
+          path: .vscode-test
+          key: ${{ runner.os }}-vscode-test-${{ matrix.vscode_version }}
       - name: Install dependencies
         run: yarn install
 
