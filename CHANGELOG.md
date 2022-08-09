@@ -1,5 +1,24 @@
 # ChangeLog
 
+## [0.17.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.16.6...v0.17.0) (2022-08-09)
+
+
+### Features
+
+* 🎸 no multiple empty lines option ([b020f59](https://github.com/shufo/vscode-blade-formatter/commit/b020f594a2a98567bf2f15ced1064cf28bc3ab46))
+* 🎸 sort html attributes option ([6306b15](https://github.com/shufo/vscode-blade-formatter/commit/6306b158e5f086a30c5e7617ac79cfd4be9f4346))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.27.0 ([f8e296d](https://github.com/shufo/vscode-blade-formatter/commit/f8e296d8999339d5098ec8cb75c2961362808700))
+* 🤖 bump blade-formatter to 1.27.1 ([f54cb39](https://github.com/shufo/vscode-blade-formatter/commit/f54cb397f3eb929b8aa80e0b28b7ab9b63b0376c))
+* 🤖 bump blade-formatter to 1.27.2 ([3f4b9ab](https://github.com/shufo/vscode-blade-formatter/commit/3f4b9abb17986ec02dd4f27004b496df2c5eda0f))
+* 🤖 bump blade-formatter to 1.27.3 ([c8e0678](https://github.com/shufo/vscode-blade-formatter/commit/c8e0678fd3098ea4c81e70d924bc34e6a0b95183))
+* **deps:** update akhilmhdh/contributors-readme-action action to v2.3.6 ([d3bdbc8](https://github.com/shufo/vscode-blade-formatter/commit/d3bdbc81f755c5fe0d53be7f4f13d135135c825d))
+* **deps:** update all minor update of dev dependencies ([a94862d](https://github.com/shufo/vscode-blade-formatter/commit/a94862d86d1c444fd660d3761801fbb05527d72c))
+* **deps:** update pozil/auto-assign-issue action to v1.9.0 ([b91d8c9](https://github.com/shufo/vscode-blade-formatter/commit/b91d8c94fc67396dea75dff0abe0b7262fc8fd45))
+
 ## [0.16.6](https://github.com/shufo/vscode-blade-formatter/compare/v0.16.5...v0.16.6) (2022-07-31)
 
 
