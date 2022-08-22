@@ -1,5 +1,14 @@
 # ChangeLog
 
+## [0.17.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.17.1...v0.17.2) (2022-08-22)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.27.5 ([25b6472](https://github.com/shufo/vscode-blade-formatter/commit/25b6472a3c99f5efcf02dc185667dc2f03a5f3c1))
+* **deps:** update all minor update of dev dependencies ([0eccfde](https://github.com/shufo/vscode-blade-formatter/commit/0eccfdeae27839526d0a22ff5c46ebd92ef28693))
+* **deps:** update pozil/auto-assign-issue action to v1.10.0 ([728cf06](https://github.com/shufo/vscode-blade-formatter/commit/728cf066770df4c47aabac29030be0c66e6264e4))
+
 ## [0.17.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.17.0...v0.17.1) (2022-08-15)
 
 
