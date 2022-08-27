@@ -150,7 +150,7 @@
     "publish": "vsce publish --yarn"
   },
   "devDependencies": {
-    "@jest/types": "^28.0.0",
+    "@jest/types": "^29.0.0",
     "@types/find-config": "^1.0.1",
     "@types/glob": "^7.1.1",
     "@types/mocha": "9.1.1",
@@ -161,7 +161,7 @@
     "@vscode/test-electron": "^2.1.4",
     "@zeit/eslint-config-node": "^0.3.0",
     "app-root-path": "^3.0.0",
-    "babel-jest": "^28.0.0",
+    "babel-jest": "^29.0.0",
     "conventional-changelog-cli": "^2.0.34",
     "debug": "4.3.4",
     "dotenv-webpack": "7.1.1",
