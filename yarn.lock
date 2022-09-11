@@ -1347,14 +1347,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@prettier/plugin-php@^0.18.0":
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.18.0.tgz#5dc7224aea5f58cb93d58882b51b6646dcfd81e5"
-  integrity sha512-os1CLqJFUSJpp3hkJ4IARW1h5ZuWhRdPnGaGaJs517uCL57V4C9dJeaSmIUi20qPji+mDhGs7SNZgdyW8VNcuw==
+"@prettier/plugin-php@^0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.19.0.tgz#b70bbfac172d6e76acf8a2376c8c8cdde70f0b75"
+  integrity sha512-WWFd0KDcF1EHsLpxU7DvgHjxdyZSal3ykDaCL9DzJSyIBo9qfk11spJR2svrEc/38CZioYy/OtbdyoQ5YEGASA==
   dependencies:
-    linguist-languages "^7.5.1"
+    linguist-languages "^7.21.0"
     mem "^8.0.0"
-    php-parser "3.1.0-beta.0"
+    php-parser "3.1.0"
 
 "@shufo/tailwindcss-class-sorter@^1.0.3":
   version "1.0.3"
@@ -2195,12 +2195,12 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.27.7:
-  version "1.27.7"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.27.7.tgz#19c4118293c3cc17178a90d489a643428d65edcd"
-  integrity sha512-/RYDgfU+JW0SRBrF0jn/dFleeNDy33g4+VS2bOWqXZolEgph314vYeudvoP/ruEKAo0bpnbDk/b0UdpIgpQJXg==
+blade-formatter@^1.28.0:
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.28.0.tgz#b86ee18816acd59332b0d40e38233ad1e081e0b8"
+  integrity sha512-Y3Dr/pltJ+Tz8F0FX7HWJjz5RG/SekvB/E+STej2CwXuJ4f5odtvGJhfi7lAL8i3v9dDF2GkRp7G4o8rhegULw==
   dependencies:
-    "@prettier/plugin-php" "^0.18.0"
+    "@prettier/plugin-php" "^0.19.0"
     "@shufo/tailwindcss-class-sorter" "^1.0.3"
     aigle "^1.14.1"
     ajv "^8.9.0"
@@ -4272,10 +4272,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-linguist-languages@^7.5.1:
-  version "7.15.0"
-  resolved "https://registry.yarnpkg.com/linguist-languages/-/linguist-languages-7.15.0.tgz#a93bed6b93015d8133622cb05da6296890862bfa"
-  integrity sha512-qkSSNDjDDycZ2Wcw+GziNBB3nNo3ddYUInM/PL8Amgwbd9RQ/BKGj2/1d6mdxKgBFnUqZuaDbkIwkE4KUwwmtQ==
+linguist-languages@^7.21.0:
+  version "7.21.0"
+  resolved "https://registry.yarnpkg.com/linguist-languages/-/linguist-languages-7.21.0.tgz#da0184f622367cb092f1f8ba435937a85534f675"
+  integrity sha512-KrWJJbFOvlDhjlt5OhUipVlXg+plUfRurICAyij1ZVxQcqPt/zeReb9KiUVdGUwwhS/2KS9h3TbyfYLA5MDlxQ==
 
 listenercount@~1.0.1:
   version "1.0.1"
@@ -4952,11 +4952,6 @@ php-parser@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.1.0.tgz#5ca8e0bac9846e85233a26e3162fdfc4fb9a0a58"
   integrity sha512-EwtoPSCqggAgTcPbV4YXsvUjYRQCZCxsQzxa7z8RX8rJ8bWAglMMi1tFNxdzwf5uNPFWFjHYhXA3REuWKzgMuw==
-
-php-parser@3.1.0-beta.0:
-  version "3.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.1.0-beta.0.tgz#e43cb58ca35022f00973daf9dc55170de1f64ebf"
-  integrity sha512-j4v15Zy6pvJKd1N3XR53AUTySr1YEiKer8OlIFvqZTdRwMMmWttPiOZ7oyP53/QHY4DDHUfAtK9ZMomKw0xFlw==
 
 picocolors@^1.0.0:
   version "1.0.0"
