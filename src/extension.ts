@@ -11,7 +11,7 @@ import { findConfigFile, readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
 import { formatFromCommand } from "./commands";
-import { getCoreNodeModule, requireUncached } from "./util";
+import { getCoreNodeModule } from "./util";
 import { resolveTailwindConfig } from "./tailwind";
 
 const { Range, Position } = vscode;
