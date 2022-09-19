@@ -40,6 +40,21 @@
       "description": "Sort Tailwindcss classes automatically",
       "default": false,
       "type": "boolean"
+    },
+    "sortHtmlAttributes": {
+      "description": "Sort HTML Attributes in the specified order. `none`, `alphabetical`, `code-guide`, `idiomatic`, `vuejs`",
+      "default": "none",
+      "type": "string"
+    },
+    "tailwindcssConfigPath": {
+      "description": "Path to custom tailwind config",
+      "default": "",
+      "type": "string"
+    },
+    "noMultipleEmptyLines": {
+      "description": "Collapses multiple blank lines into a single blank line",
+      "default": false,
+      "type": "boolean"
     }
   }
 }
