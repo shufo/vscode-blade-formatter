@@ -61,6 +61,30 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / sortTailwindcssClasses (subdirectory)", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/sortTailwindcssClasses/subdirectory/index.blade.php",
+            "withConfig/sortTailwindcssClasses/subdirectory/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / tailwindcssConfigPath ", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigPath/index.blade.php",
+            "withConfig/tailwindConfigPath/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / tailwindcssConfigPath (subdirectory) ", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigPath/subdirectory/index.blade.php",
+            "withConfig/tailwindConfigPath/subdirectory/formatted.index.blade.php"
+        );
+    });
+
     test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
         this.timeout(20000);
         await formatSameAsBladeFormatter(
