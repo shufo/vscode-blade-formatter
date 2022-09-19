@@ -11,7 +11,7 @@ import { findConfigFile, readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
 import { formatFromCommand } from "./commands";
-import { getCoreNodeModule } from "./util";
+import { getCoreNodeModule, requireUncached } from "./util";
 import { resolveTailwindConfig } from "./tailwind";
 
 const { Range, Position } = vscode;
@@ -73,8 +73,12 @@ export function activate(context: ExtensionContext) {
 
                 const runtimeConfig = readRuntimeConfig(document.uri.fsPath);
 
-                if (runtimeConfig?.tailwindcssConfigPath) {
-                    runtimeConfig.tailwindcssConfigPath = resolveTailwindConfig(document.uri.fsPath, runtimeConfig?.tailwindcssConfigPath ?? '');
+                let tailwindConfig, tailwindConfigPath;
+
+                if (runtimeConfig?.sortTailwindcssClasses) {
+                    tailwindConfigPath = resolveTailwindConfig(document.uri.fsPath, runtimeConfig?.tailwindcssConfigPath ?? '');
+                    tailwindConfig = requireUncached(tailwindConfigPath);
+                    runtimeConfig.tailwindcssConfigPath = '';
                 }
 
                 const options = {
@@ -85,6 +89,7 @@ export function activate(context: ExtensionContext) {
                     wrapAttributes: extConfig.wrapAttributes,
                     useTabs: extConfig.useTabs,
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
+                    tailwindcssConfig: tailwindConfig,
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     ...runtimeConfig, // override all settings by runtime config

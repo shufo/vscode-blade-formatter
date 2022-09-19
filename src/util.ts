@@ -18,3 +18,16 @@ export function getCoreNodeModule(moduleName: string) {
 
     return null;
 }
+
+/**
+ * require module without cache
+ */
+export function requireUncached(moduleName: string) {
+    try {
+        // @ts-ignore
+        delete __non_webpack_require__.cache[__non_webpack_require__.resolve(moduleName)];
+        // @ts-ignore
+        return __non_webpack_require__(moduleName);
+    } catch (err: any) {
+    }
+}
