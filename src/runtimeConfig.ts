@@ -22,6 +22,7 @@ export interface RuntimeConfig {
     useTabs?: boolean;
     sortTailwindcssClasses?: boolean;
     sortHtmlAttributes?: string;
+    tailwindcssConfigPath?: string;
     noMultipleEmptyLines?: boolean;
 }
 
@@ -55,6 +56,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
             useTabs: { type: 'boolean' },
             sortTailwindcssClasses: { type: 'boolean' },
             sortHtmlAttributes: { type: 'string' },
+            tailwindcssConfigPath: { type: 'string' },
             noMultipleEmptyLines: { type: 'boolean' },
         },
         additionalProperties: true,
@@ -63,7 +65,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
     return parse(configFileContent);
 }
 
-function findConfigFile(filePath: string): string | null {
+export function findConfigFile(filePath: string): string | null {
     for (let i = 0; i < configFileNames.length; i++) {
         const result: string | null = findConfig(configFileNames[i], {
             cwd: path.dirname(filePath),

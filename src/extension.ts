@@ -7,11 +7,12 @@ import ignore from "ignore";
 import { Formatter } from "blade-formatter";
 import { setExtensionContext } from './extensionContext';
 import { telemetry, TelemetryEventNames } from './telemetry';
-import { readRuntimeConfig } from './runtimeConfig';
+import { findConfigFile, readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
 import { formatFromCommand } from "./commands";
 import { getCoreNodeModule } from "./util";
+import { resolveTailwindConfig } from "./tailwind";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -72,6 +73,10 @@ export function activate(context: ExtensionContext) {
 
                 const runtimeConfig = readRuntimeConfig(document.uri.fsPath);
 
+                if (runtimeConfig?.tailwindcssConfigPath) {
+                    runtimeConfig.tailwindcssConfigPath = resolveTailwindConfig(document.uri.fsPath, runtimeConfig?.tailwindcssConfigPath ?? '');
+                }
+
                 const options = {
                     vsctm: vsctmModule,
                     oniguruma: onigurumaModule,
@@ -82,7 +87,7 @@ export function activate(context: ExtensionContext) {
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
-                    ...runtimeConfig,
+                    ...runtimeConfig, // override all settings by runtime config
                 };
 
                 const progressMessage = isLargeFile(document) ? messages.largeFileFormattingMessage : messages.formattingMessage;
