@@ -155,6 +155,7 @@
     "@types/glob": "^8.0.0",
     "@types/mocha": "9.1.1",
     "@types/node": "^17.0.23",
+    "@types/tailwindcss": "^3.1.0",
     "@types/vscode": "^1.57.0",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
@@ -182,6 +183,7 @@
     "blade-formatter": "^1.29.4",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8",
+    "tailwindcss": "^3.1.8",
     "vscode-extension-telemetry": "^0.4.5"
   },
   "optionalDependencies": {
