@@ -73,12 +73,17 @@ export function activate(context: ExtensionContext) {
 
                 const runtimeConfig = readRuntimeConfig(document.uri.fsPath);
 
-                let tailwindConfig, tailwindConfigPath;
-
                 if (runtimeConfig?.sortTailwindcssClasses) {
-                    tailwindConfigPath = resolveTailwindConfig(document.uri.fsPath, runtimeConfig?.tailwindcssConfigPath ?? '');
-                    tailwindConfig = requireUncached(tailwindConfigPath);
-                    runtimeConfig.tailwindcssConfigPath = '';
+                    const tailwindConfigPath = resolveTailwindConfig(document.uri.fsPath, runtimeConfig?.tailwindcssConfigPath ?? '');
+                    runtimeConfig.tailwindcssConfigPath = tailwindConfigPath;
+
+                    try {
+                        requireUncached(tailwindConfigPath);
+                    } catch (error) {
+                        // @ts-ignore
+                        // fallback to default config
+                        runtimeConfig.tailwindcssConfigPath = __non_webpack_require__.resolve('tailwindcss/lib/public/default-config');
+                    }
                 }
 
                 const options = {
@@ -89,7 +94,6 @@ export function activate(context: ExtensionContext) {
                     wrapAttributes: extConfig.wrapAttributes,
                     useTabs: extConfig.useTabs,
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
-                    tailwindcssConfig: tailwindConfig,
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     ...runtimeConfig, // override all settings by runtime config

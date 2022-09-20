@@ -1,6 +1,7 @@
 import findConfig from 'find-config';
 import path from 'path';
 import { findConfigFile } from './runtimeConfig';
+import { requireUncached } from './util';
 
 const __config__ = 'tailwind.config.js';
 

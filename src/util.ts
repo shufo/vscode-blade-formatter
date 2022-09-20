@@ -29,5 +29,6 @@ export function requireUncached(moduleName: string) {
         // @ts-ignore
         return __non_webpack_require__(moduleName);
     } catch (err: any) {
+        throw err;
     }
 }
