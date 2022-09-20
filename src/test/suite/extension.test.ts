@@ -85,6 +85,38 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / tailwindcssConfigPath (config does not exists error) ", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigPathNotExists/index.blade.php",
+            "withConfig/tailwindConfigPathNotExists/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / tailwindcssConfigPath (config does not exists on subdirectory) ", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigPathNotExists/subdirectory/index.blade.php",
+            "withConfig/tailwindConfigPathNotExists/subdirectory/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / even if tailwind config has error", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigError/index.blade.php",
+            "withConfig/tailwindConfigError/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file with runtime config / even if tailwind config has error (subdirectory) ", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigError/subdirectory/index.blade.php",
+            "withConfig/tailwindConfigError/subdirectory/formatted.index.blade.php"
+        );
+    });
+
     test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
         this.timeout(20000);
         await formatSameAsBladeFormatter(

@@ -1,0 +1,4 @@
+{
+  "sortTailwindcssClasses": true,
+  "tailwindcssConfigPath": "tailwind.config.not.exists.js"
+}
