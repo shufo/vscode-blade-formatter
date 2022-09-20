@@ -1349,10 +1349,10 @@
     mem "^8.0.0"
     php-parser "3.1.0"
 
-"@shufo/tailwindcss-class-sorter@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@shufo/tailwindcss-class-sorter/-/tailwindcss-class-sorter-1.0.8.tgz#27b04fc743825fb1c14b9b9edafd1dcc6b32cbd0"
-  integrity sha512-m+vOaTJJPiJ8ZJGUBzCRVLPxgHu+yztgIR9ck8M2IgudN0feku6x1uGn193tVgDbbeTBPjTY3PFN1DAzf862jA==
+"@shufo/tailwindcss-class-sorter@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@shufo/tailwindcss-class-sorter/-/tailwindcss-class-sorter-1.0.10.tgz#515e2b68d9d9e0f57671c596d1d9b3f5ddec6c33"
+  integrity sha512-X/GFG71d0vqlfHYbJkbAS1dCbSA01H7RqHT/8IELJE+uXsIfsEFlvEogeBmMsO1R8Rx2zA224+VWC6eFfCrpdw==
   dependencies:
     escalade "^3.1.1"
     object-hash "^3.0.0"
@@ -1527,6 +1527,13 @@
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
+
+"@types/tailwindcss@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@types/tailwindcss/-/tailwindcss-3.1.0.tgz#1185e4b3437c6e0f19d6cc8cd42738a94fd7b64f"
+  integrity sha512-JxPzrm609hzvF4nmOI3StLjbBEP3WWQxDDJESqR1nh94h7gyyy3XSl0hn5RBMJ9mPudlLjtaXs5YEBtLw7CnPA==
+  dependencies:
+    tailwindcss "*"
 
 "@types/vscode@^1.57.0":
   version "1.68.0"
@@ -2178,13 +2185,13 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.29.2:
-  version "1.29.2"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.29.2.tgz#efbf338097373a289e6c1c7a3582dea42d58ee5c"
-  integrity sha512-haQIivRPHu2VZfjHF6R1uDRhxG4bSVkhlt2YE62K5xfSMzCcr95mIaJk/aG0/l/2epLBysOXpIta5VMDjAg9xA==
+blade-formatter@^1.29.4:
+  version "1.29.4"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.29.4.tgz#d9136864bf938d6dcec5eb76e8a642818fede261"
+  integrity sha512-sym/DMUNgIUCpuJ9/PatAxp2kDyiqe/rjdppiU280oSfHNmh26isNJJFw8O9cejOhTTZwUigvFsyglgk39RR7A==
   dependencies:
     "@prettier/plugin-php" "^0.19.0"
-    "@shufo/tailwindcss-class-sorter" "^1.0.8"
+    "@shufo/tailwindcss-class-sorter" "^1.0.10"
     aigle "^1.14.1"
     ajv "^8.9.0"
     chalk "^4.1.0"
@@ -5764,7 +5771,7 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tailwindcss@^3.1.8:
+tailwindcss@*, tailwindcss@^3.1.8:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.8.tgz#4f8520550d67a835d32f2f4021580f9fddb7b741"
   integrity sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==
