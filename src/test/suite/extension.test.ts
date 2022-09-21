@@ -8,7 +8,7 @@ import vscode, { TextDocument } from "vscode";
 import { before } from "mocha";
 import { ExtensionConstants } from "../../constants";
 import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
-// const myExtension = require('../extension');
+import { performance } from 'perf_hooks';
 
 suite("Extension Test Suite", () => {
     vscode.window.showInformationMessage("Start all tests.");
@@ -83,6 +83,18 @@ suite("Extension Test Suite", () => {
             "withConfig/tailwindConfigPath/subdirectory/index.blade.php",
             "withConfig/tailwindConfigPath/subdirectory/formatted.index.blade.php"
         );
+    });
+
+    test("Should format file with runtime config / tailwindcssConfigPath (large file)", async function (this: any) {
+        this.timeout(20000);
+
+        const startTime = performance.now();
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigPath/large_file.blade.php",
+            "withConfig/tailwindConfigPath/formatted.large_file.blade.php"
+        );
+        const endTime = performance.now();
+        assert.strictEqual((endTime - startTime) < 1000, true);
     });
 
     test("Should format file with runtime config / tailwindcssConfigPath (config does not exists error) ", async function (this: any) {
