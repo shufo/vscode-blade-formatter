@@ -129,6 +129,19 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file without runtime config / tailwind config exists", async function (this: any) {
+        this.timeout(20000);
+
+        const config = vscode.workspace.getConfiguration('bladeFormatter.format');
+        config.update('sortTailwindcssClasses', true);
+        await formatSameAsBladeFormatter(
+            "tailwindSortWithoutRuntimeConfig/index.blade.php",
+            "tailwindSortWithoutRuntimeConfig/formatted.index.blade.php",
+            { workspace: "tailwind" }
+        );
+        config.update('sortTailwindcssClasses', false);
+    });
+
     test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
         this.timeout(20000);
         await formatSameAsBladeFormatter(

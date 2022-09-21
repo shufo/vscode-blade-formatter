@@ -1,0 +1,6 @@
+{
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+  },
+  "bladeFormatter.format.sortTailwindcssClasses": true
+}
