@@ -2,6 +2,12 @@
     "folders": [
         {
             "path": "project"
+        },
+        {
+            "path": "tailwind"
         }
-    ]
+    ],
+    "settings": {
+        "bladeFormatter.format.sortTailwindcssClasses": false
+    }
 }

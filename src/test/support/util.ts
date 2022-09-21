@@ -9,8 +9,8 @@ export async function formatSameAsBladeFormatter(
     formattedFile: any,
     options: any = {}
 ) {
-    const { actual, source } = await format("project", file);
-    const formatted = await getContent("project", formattedFile);
+    const { actual, source } = await format(options.workspace ?? "project", file);
+    const formatted = await getContent(options.workspace ?? "project", formattedFile);
     assert.equal(actual, formatted);
 }
 
