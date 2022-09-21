@@ -7,12 +7,12 @@ import ignore from "ignore";
 import { Formatter } from "blade-formatter";
 import { setExtensionContext } from './extensionContext';
 import { telemetry, TelemetryEventNames } from './telemetry';
-import { findConfigFile, readRuntimeConfig } from './runtimeConfig';
+import { readRuntimeConfig } from './runtimeConfig';
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
 import { formatFromCommand } from "./commands";
 import { getCoreNodeModule, requireUncached } from "./util";
-import { resolveTailwindConfig } from "./tailwind";
+import { resolveTailwindConfig, TailwindConfig } from "./tailwind";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -73,16 +73,18 @@ export function activate(context: ExtensionContext) {
 
                 const runtimeConfig = readRuntimeConfig(document.uri.fsPath);
 
-                if (runtimeConfig?.sortTailwindcssClasses) {
+                const tailwindConfig: TailwindConfig = {};
+
+                if (runtimeConfig?.sortTailwindcssClasses || extConfig.sortTailwindcssClasses) {
                     const tailwindConfigPath = resolveTailwindConfig(document.uri.fsPath, runtimeConfig?.tailwindcssConfigPath ?? '');
-                    runtimeConfig.tailwindcssConfigPath = tailwindConfigPath;
+                    tailwindConfig.tailwindcssConfigPath = tailwindConfigPath;
 
                     try {
                         requireUncached(tailwindConfigPath);
                     } catch (error) {
                         // @ts-ignore
                         // fallback to default config
-                        runtimeConfig.tailwindcssConfigPath = __non_webpack_require__.resolve('tailwindcss/lib/public/default-config');
+                        tailwindConfig.tailwindcssConfigPath = __non_webpack_require__.resolve('tailwindcss/lib/public/default-config');
                     }
                 }
 
@@ -97,6 +99,7 @@ export function activate(context: ExtensionContext) {
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     ...runtimeConfig, // override all settings by runtime config
+                    ...tailwindConfig,
                 };
 
                 const progressMessage = isLargeFile(document) ? messages.largeFileFormattingMessage : messages.formattingMessage;

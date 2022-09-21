@@ -5,6 +5,11 @@ import { requireUncached } from './util';
 
 const __config__ = 'tailwind.config.js';
 
+export type TailwindConfig = {
+    tailwindcssConfigPath?: string,
+    tailwindcssConfig?: object,
+};
+
 /**
  * Resolve tailwind config path if resolvable
  *
