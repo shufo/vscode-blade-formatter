@@ -2,6 +2,9 @@
     "folders": [
         {
             "path": "project"
+        },
+        {
+            "path": "tailwind"
         }
     ]
 }
