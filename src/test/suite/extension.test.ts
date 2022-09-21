@@ -94,7 +94,7 @@ suite("Extension Test Suite", () => {
             "withConfig/tailwindConfigPath/formatted.large_file.blade.php"
         );
         const endTime = performance.now();
-        assert.strictEqual((endTime - startTime) < 1000, true);
+        assert.strictEqual((endTime - startTime) < 3000, true);
     });
 
     test("Should format file with runtime config / tailwindcssConfigPath (config does not exists error) ", async function (this: any) {
