@@ -129,6 +129,14 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / even if tailwind config has error (syntax error) ", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigError/syntax/index.blade.php",
+            "withConfig/tailwindConfigError/syntax/formatted.index.blade.php"
+        );
+    });
+
     test("Should format file without runtime config / tailwind config exists", async function (this: any) {
         this.timeout(20000);
 
