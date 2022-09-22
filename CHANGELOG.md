@@ -1,5 +1,31 @@
 # ChangeLog
 
+## [0.18.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.17.5...v0.18.0) (2022-09-21)
+
+
+### Features
+
+* 🎸 add runtime option `tailwindcssConfigPath` ([9fb09fd](https://github.com/shufo/vscode-blade-formatter/commit/9fb09fd352d121346fe44662634d4d4fe6fbec75))
+
+
+### Miscellaneous
+
+* 🤖 add items to runtime schema ([9861ed2](https://github.com/shufo/vscode-blade-formatter/commit/9861ed2664e38d569aadd615af7e413064c4abcd))
+* 🤖 add tailwindcss to dependencies ([5632d9a](https://github.com/shufo/vscode-blade-formatter/commit/5632d9a055c089b4b8778cc88d3f8ca4e7620856))
+* 🤖 bump blade-formatter to 1.29.2 ([9de31d0](https://github.com/shufo/vscode-blade-formatter/commit/9de31d04340500221b06daf4bb9d2e409afb29ab))
+* 🤖 bump blade-formatter to 1.29.4 ([a37c67a](https://github.com/shufo/vscode-blade-formatter/commit/a37c67a1dfd42d841a9d25bb819a3b3babaf863a))
+* 🤖 bump blade-formatter to 1.29.5 ([5187964](https://github.com/shufo/vscode-blade-formatter/commit/5187964f7a889cd3130ee37f4697e5e70255e605))
+* 🤖 bump blade-formatter to 1.29.6 ([1820ad4](https://github.com/shufo/vscode-blade-formatter/commit/1820ad430b3cdab7355363d20a06ed22e0afe65c))
+* 🤖 update yarn.lock ([78bcf37](https://github.com/shufo/vscode-blade-formatter/commit/78bcf37b2f215441e86ce84c2a43f8d088b553fd))
+* **deps:** update all minor update of dev dependencies ([848ffb2](https://github.com/shufo/vscode-blade-formatter/commit/848ffb225bcdf6e970b7f123d5e1496f71fb7231))
+
+
+### Fixes
+
+* 🐛 config changes are not reflecting due to cached config ([16318ab](https://github.com/shufo/vscode-blade-formatter/commit/16318ab4a116091726ae0069ff93a77f5cb88d67))
+* 🐛 fallback to default config if tailwind config has error ([830e124](https://github.com/shufo/vscode-blade-formatter/commit/830e12431fbfcac3260166063716a342668b2216))
+* 🐛 tailwind config ignored when extension config enabled ([faa113d](https://github.com/shufo/vscode-blade-formatter/commit/faa113ddfebbd653f9161b0f6fba4f11d70168e3))
+
 ## [0.17.5](https://github.com/shufo/vscode-blade-formatter/compare/v0.17.4...v0.17.5) (2022-09-11)
 
 
