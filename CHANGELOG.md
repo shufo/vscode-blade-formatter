@@ -1,5 +1,14 @@
 # ChangeLog
 
+## [0.18.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.18.1...v0.18.2) (2022-10-01)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.29.8 ([d2bc9d5](https://github.com/shufo/vscode-blade-formatter/commit/d2bc9d5d0042342ba555b3ec0da16e74b8b499e7))
+* **deps:** update all minor update of dev dependencies ([fc0aa87](https://github.com/shufo/vscode-blade-formatter/commit/fc0aa8768c22200a65c04b8586422bd793f32e37))
+* **deps:** update dependency @types/mocha to v10 ([578bcef](https://github.com/shufo/vscode-blade-formatter/commit/578bcefb951adfcf98da5667f46be65b21e08983))
+
 ## [0.18.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.18.0...v0.18.1) (2022-09-25)
 
 
