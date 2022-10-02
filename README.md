@@ -1,4 +1,4 @@
-[![CI](https://github.com/shufo/vscode-blade-formatter/workflows/CI/badge.svg)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
+[![CI](https://github.com/shufo/vscode-blade-formatter/actions/workflows/test.yml/badge.svg)](https://github.com/shufo/vscode-blade-formatter/actions/workflows/test.yml)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/shufo.vscode-blade-formatter)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
 [![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/shufo.vscode-blade-formatter)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/shufo.vscode-blade-formatter)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter&ssr=false#version-history)
