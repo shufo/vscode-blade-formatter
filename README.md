@@ -34,6 +34,7 @@ You can also format by same syntax programmatically with [blade-formatter](https
 | `Blade Formatter: format use Tabs`                  | Use tab as indentation character                                                                                                                                                                                                                                                | false   |
 | `Blade Formatter: format Sort Tailwind Css Classes` | Sort Tailwind CSS classes automatically                                                                                                                                                                                                                                         | false   |
 | `Blade Formatter: format Sort HTML Attributes`      | Sort HTML Attributes in the specified order. [`none` \| `alphabetical` \| [`code-guide`](https://codeguide.co/#attribute-order) \| [`idiomatic`](https://github.com/necolas/idiomatic-html#attribute-order) \| [`vuejs`](https://eslint.vuejs.org/rules/attributes-order.html)] | `none`  |
+| `Blade Formatter: format No PHP Syntax Check`       | Disable PHP Syntax check. Enabling this will suppress syntax error reporing.                                                                                                                                                                                                    | false   |
 | `Blade Formatter: Dont Show New Version Message`    | If set to 'true', the new version message won't be shown anymore.                                                                                                                                                                                                               | false   |
 
 ## Configuration file: .bladeformatterrc.json or .bladeformatterrc
@@ -51,7 +52,8 @@ Configuration file will like below:
     "noMultipleEmptyLines": false,
     "useTabs": false,
     "sortTailwindcssClasses": true,
-    "sortHtmlAttributes": "none"
+    "sortHtmlAttributes": "none",
+    "noPhpSyntaxCheck": false
 }
 ```
 
