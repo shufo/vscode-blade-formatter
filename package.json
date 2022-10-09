@@ -180,7 +180,7 @@
   },
   "dependencies": {
     "ajv": "^8.11.0",
-    "blade-formatter": "^1.29.8",
+    "blade-formatter": "^1.30.0",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8",
     "tailwindcss": "^3.1.8",
