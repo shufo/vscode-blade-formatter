@@ -124,6 +124,11 @@
           "default": false,
           "markdownDescription": "Collapses multiple blank lines into a single blank line"
         },
+        "bladeFormatter.format.noPhpSyntaxCheck": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Disable PHP syntax check. Enabling this will prevent syntax error reporting even if you write invalid PHP syntax in the Directive."
+        },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
           "default": false,
