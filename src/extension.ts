@@ -98,6 +98,7 @@ export function activate(context: ExtensionContext) {
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
+                    noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
                     ...runtimeConfig, // override all settings by runtime config
                     ...tailwindConfig,
                 };
