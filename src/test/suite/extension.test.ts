@@ -166,6 +166,14 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / noPhpSyntaxCheck", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/noPhpSyntaxCheck/index.blade.php",
+            "withConfig/noPhpSyntaxCheck/formatted.index.blade.php"
+        );
+    });
+
     test("Format command exists in command list", async function () {
         const commands = await vscode.commands.getCommands();
         assert(commands.includes(ExtensionConstants.formatCommandKey));
