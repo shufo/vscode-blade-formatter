@@ -127,7 +127,7 @@
         "bladeFormatter.format.noPhpSyntaxCheck": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Disable PHP syntax check. Enabling this will prevent syntax error reporting even if you write invalid PHP syntax in the Directive."
+          "markdownDescription": "Disable PHP syntax check. Enabling this will suppress PHP syntax error reporting."
         },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
