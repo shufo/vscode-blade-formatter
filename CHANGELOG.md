@@ -1,5 +1,20 @@
 # ChangeLog
 
+## [0.19.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.18.2...v0.19.0) (2022-10-10)
+
+
+### Features
+
+* 🎸 add option `noPhpSyntaxCheck` ([bd69b74](https://github.com/shufo/vscode-blade-formatter/commit/bd69b741cd1b249156ec9131d16547af6fe406be))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.30.0 ([15395f2](https://github.com/shufo/vscode-blade-formatter/commit/15395f282e8bac71557f40835c852277008c1556))
+* 🤖 bump blade-formatter to 1.30.1 ([bf2043c](https://github.com/shufo/vscode-blade-formatter/commit/bf2043c53ccd596495abc33b22711450c1b31dcc))
+* **deps:** update all minor update of dev dependencies ([fe13ab8](https://github.com/shufo/vscode-blade-formatter/commit/fe13ab8fddfd1ec205d421872fcfa977366184c7))
+* **deps:** update pozil/auto-assign-issue action to v1.10.1 ([c698546](https://github.com/shufo/vscode-blade-formatter/commit/c6985463e30ae8a6f0c6d17e6f1f886436d7328a))
+
 ## [0.18.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.18.1...v0.18.2) (2022-10-01)
 
 
