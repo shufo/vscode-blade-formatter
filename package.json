@@ -170,7 +170,7 @@
     "babel-jest": "^29.0.0",
     "conventional-changelog-cli": "^2.0.34",
     "debug": "4.3.4",
-    "dotenv-webpack": "7.1.1",
+    "dotenv-webpack": "8.0.1",
     "eslint": "8.25.0",
     "glob": "8.0.3",
     "mocha": "^10.0.0",
