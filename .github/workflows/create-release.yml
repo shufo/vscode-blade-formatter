@@ -34,9 +34,3 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
-      - run: npm install -g ovsx
-        if: ${{ steps.release.outputs.release_created }}
-      - run: ovsx publish -p $OVSX_TOKEN --yarn
-        if: ${{ steps.release.outputs.release_created }}
-        env:
-          OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
