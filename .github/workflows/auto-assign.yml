@@ -16,3 +16,4 @@ jobs:
         with:
           allowNoAssignees: true
           assignees: shufo
+          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
