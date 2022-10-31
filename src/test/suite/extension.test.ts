@@ -5,12 +5,22 @@ import fs from "fs";
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import vscode, { TextDocument } from "vscode";
-import { before } from "mocha";
+import { before, beforeEach } from "mocha";
 import { ExtensionConstants } from "../../constants";
 import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 import { performance } from 'perf_hooks';
 
 suite("Extension Test Suite", () => {
+
+    beforeEach(async function () {
+        const config = vscode.workspace.getConfiguration('bladeFormatter.format');
+        const configurations = require(path.resolve(__dirname, '../../../package.json')).contributes.configuration.properties;
+        Object.keys(configurations).forEach(async (key: string) => {
+            const name = key.split('.').pop() ?? '';
+            await config.update(name, undefined, true);
+        });
+    });
+
     vscode.window.showInformationMessage("Start all tests.");
 
     test("Should format file with extension", async function (this: any) {
