@@ -143,9 +143,8 @@ suite("Extension Test Suite", () => {
         const config = vscode.workspace.getConfiguration('bladeFormatter.format');
         config.update('sortTailwindcssClasses', true);
         await formatSameAsBladeFormatter(
-            "tailwindSortWithoutRuntimeConfig/index.blade.php",
-            "tailwindSortWithoutRuntimeConfig/formatted.index.blade.php",
-            { workspace: "tailwind" }
+            "withoutConfig/tailwindSortWithoutRuntimeConfig/index.blade.php",
+            "withoutConfig/tailwindSortWithoutRuntimeConfig/formatted.index.blade.php",
         );
         config.update('sortTailwindcssClasses', false);
     });
