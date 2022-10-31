@@ -1,5 +1,18 @@
 # ChangeLog
 
+## [0.20.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.19.2...v0.20.0) (2022-10-31)
+
+
+### Features
+
+* 🎸 add option `Custom Html Attributes Order` ([b5535bc](https://github.com/shufo/vscode-blade-formatter/commit/b5535bc67b83be1882717dd45fc9a0ffc5a052e5))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.31.0 ([4b5ddcc](https://github.com/shufo/vscode-blade-formatter/commit/4b5ddcc04a5db42e3797404c79c69128750c01a5))
+* **deps:** update all minor update of dev dependencies to v5.42.0 ([14f11ce](https://github.com/shufo/vscode-blade-formatter/commit/14f11ce458293e0e280f67bd206e5cd27f5ebcf7))
+
 ## [0.19.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.19.1...v0.19.2) (2022-10-23)
 
 
