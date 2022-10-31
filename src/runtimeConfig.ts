@@ -22,6 +22,7 @@ export interface RuntimeConfig {
     useTabs?: boolean;
     sortTailwindcssClasses?: boolean;
     sortHtmlAttributes?: string;
+    customHtmlAttributesOrder?: string;
     tailwindcssConfigPath?: string;
     noMultipleEmptyLines?: boolean;
     noPhpSyntaxCheck?: boolean;
@@ -57,6 +58,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
             useTabs: { type: 'boolean' },
             sortTailwindcssClasses: { type: 'boolean' },
             sortHtmlAttributes: { type: 'string' },
+            customHtmlAttributesOrder: { type: 'string' },
             tailwindcssConfigPath: { type: 'string' },
             noMultipleEmptyLines: { type: 'boolean' },
             noPhpSyntaxCheck: { type: 'boolean' },

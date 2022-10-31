@@ -115,7 +115,8 @@
             "alphabetical",
             "code-guide",
             "idiomatic",
-            "vuejs"
+            "vuejs",
+            "custom"
           ],
           "markdownDescription": "Sort HTML Attributes in the specified order"
         },
@@ -128,6 +129,11 @@
           "type": "boolean",
           "default": false,
           "markdownDescription": "Disable PHP syntax check. Enabling this will suppress PHP syntax error reporting."
+        },
+        "bladeFormatter.format.customHtmlAttributesOrder": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Comma separated custom HTML attributes order. e.g. `id, data-.+, class, name`. To enable this you must specify sort html attributes option as `custom`. You can use regex for attribute names."
         },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",

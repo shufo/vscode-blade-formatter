@@ -97,6 +97,7 @@ export function activate(context: ExtensionContext) {
                     useTabs: extConfig.useTabs,
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
+                    customHtmlAttributesOrder: extConfig.customHtmlAttributesOrder,
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
                     ...runtimeConfig, // override all settings by runtime config
