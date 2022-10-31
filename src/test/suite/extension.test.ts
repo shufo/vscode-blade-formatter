@@ -174,6 +174,27 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / customHtmlAttributesOrder", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/customHtmlAttributesOrder/index.blade.php",
+            "withConfig/customHtmlAttributesOrder/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file without runtime config / customHtmlAttributesOrder", async function (this: any) {
+        this.timeout(20000);
+        const config = vscode.workspace.getConfiguration('bladeFormatter.format');
+        config.update('sortHtmlAttributes', 'custom');
+        config.update('customHtmlAttributesOrder', 'id, aria-.+, src, class');
+        await formatSameAsBladeFormatter(
+            "withoutConfig/customHtmlAttributesOrder/index.blade.php",
+            "withoutConfig/customHtmlAttributesOrder/formatted.index.blade.php"
+        );
+        config.update('sortHtmlAttributes', 'none');
+        config.update('customHtmlAttributesOrder', '');
+    });
+
     test("Format command exists in command list", async function () {
         const commands = await vscode.commands.getCommands();
         assert(commands.includes(ExtensionConstants.formatCommandKey));
