@@ -7,7 +7,5 @@
             "path": "tailwind"
         }
     ],
-    "settings": {
-        "bladeFormatter.format.sortTailwindcssClasses": false
-    }
+    "settings": {}
 }
