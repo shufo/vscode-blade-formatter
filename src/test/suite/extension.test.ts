@@ -151,12 +151,12 @@ suite("Extension Test Suite", () => {
         this.timeout(20000);
 
         const config = vscode.workspace.getConfiguration('bladeFormatter.format');
-        config.update('sortTailwindcssClasses', true);
+        await config.update('sortTailwindcssClasses', true, true);
         await formatSameAsBladeFormatter(
             "withoutConfig/tailwindSortWithoutRuntimeConfig/index.blade.php",
             "withoutConfig/tailwindSortWithoutRuntimeConfig/formatted.index.blade.php",
         );
-        config.update('sortTailwindcssClasses', false);
+        await config.update('sortTailwindcssClasses', false, true);
     });
 
     test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
@@ -194,14 +194,14 @@ suite("Extension Test Suite", () => {
     test("Should format file without runtime config / customHtmlAttributesOrder", async function (this: any) {
         this.timeout(20000);
         const config = vscode.workspace.getConfiguration('bladeFormatter.format');
-        config.update('sortHtmlAttributes', 'custom');
-        config.update('customHtmlAttributesOrder', 'id, aria-.+, src, class');
+        await config.update('sortHtmlAttributes', 'custom' ,true);
+        await config.update('customHtmlAttributesOrder', 'id, aria-.+, src, class', true);
         await formatSameAsBladeFormatter(
             "withoutConfig/customHtmlAttributesOrder/index.blade.php",
             "withoutConfig/customHtmlAttributesOrder/formatted.index.blade.php"
         );
-        config.update('sortHtmlAttributes', 'none');
-        config.update('customHtmlAttributesOrder', '');
+        await config.update('sortHtmlAttributes', undefined, true);
+        await config.update('customHtmlAttributesOrder', undefined, true);
     });
 
     test("Format command exists in command list", async function () {
