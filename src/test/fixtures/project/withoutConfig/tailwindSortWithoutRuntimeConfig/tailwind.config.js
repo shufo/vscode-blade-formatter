@@ -1,5 +1,6 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: ["*.blade.php"],
   theme: {
     screens: {
       sm: '0',
@@ -8,6 +9,7 @@ module.exports = {
       xl: '1200px',
       xxl: '1440px',
       xxxl: '1900px',
+      ...defaultTheme.screens,
     },
   },
 };

@@ -5,12 +5,22 @@ import fs from "fs";
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import vscode, { TextDocument } from "vscode";
-import { before } from "mocha";
+import { before, beforeEach } from "mocha";
 import { ExtensionConstants } from "../../constants";
 import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 import { performance } from 'perf_hooks';
 
 suite("Extension Test Suite", () => {
+
+    beforeEach(async function () {
+        const config = vscode.workspace.getConfiguration('bladeFormatter.format');
+        const configurations = require(path.resolve(__dirname, '../../../package.json')).contributes.configuration.properties;
+        Object.keys(configurations).forEach(async (key: string) => {
+            const name = key.split('.').pop() ?? '';
+            await config.update(name, undefined, true);
+        });
+    });
+
     vscode.window.showInformationMessage("Start all tests.");
 
     test("Should format file with extension", async function (this: any) {
@@ -141,13 +151,12 @@ suite("Extension Test Suite", () => {
         this.timeout(20000);
 
         const config = vscode.workspace.getConfiguration('bladeFormatter.format');
-        config.update('sortTailwindcssClasses', true);
+        await config.update('sortTailwindcssClasses', true, true);
         await formatSameAsBladeFormatter(
-            "tailwindSortWithoutRuntimeConfig/index.blade.php",
-            "tailwindSortWithoutRuntimeConfig/formatted.index.blade.php",
-            { workspace: "tailwind" }
+            "withoutConfig/tailwindSortWithoutRuntimeConfig/index.blade.php",
+            "withoutConfig/tailwindSortWithoutRuntimeConfig/formatted.index.blade.php",
         );
-        config.update('sortTailwindcssClasses', false);
+        await config.update('sortTailwindcssClasses', false, true);
     });
 
     test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
@@ -172,6 +181,27 @@ suite("Extension Test Suite", () => {
             "withConfig/noPhpSyntaxCheck/index.blade.php",
             "withConfig/noPhpSyntaxCheck/formatted.index.blade.php"
         );
+    });
+
+    test("Should format file with runtime config / customHtmlAttributesOrder", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/customHtmlAttributesOrder/index.blade.php",
+            "withConfig/customHtmlAttributesOrder/formatted.index.blade.php"
+        );
+    });
+
+    test("Should format file without runtime config / customHtmlAttributesOrder", async function (this: any) {
+        this.timeout(20000);
+        const config = vscode.workspace.getConfiguration('bladeFormatter.format');
+        await config.update('sortHtmlAttributes', 'custom' ,true);
+        await config.update('customHtmlAttributesOrder', 'id, aria-.+, src, class', true);
+        await formatSameAsBladeFormatter(
+            "withoutConfig/customHtmlAttributesOrder/index.blade.php",
+            "withoutConfig/customHtmlAttributesOrder/formatted.index.blade.php"
+        );
+        await config.update('sortHtmlAttributes', undefined, true);
+        await config.update('customHtmlAttributesOrder', undefined, true);
     });
 
     test("Format command exists in command list", async function () {
