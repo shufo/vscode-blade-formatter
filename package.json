@@ -194,7 +194,7 @@
     "blade-formatter": "^1.31.0",
     "find-config": "^1.0.0",
     "ignore": "^5.1.8",
-    "tailwindcss": "^3.1.8",
+    "tailwindcss": "^3.2.2",
     "vscode-extension-telemetry": "^0.4.5"
   },
   "optionalDependencies": {
