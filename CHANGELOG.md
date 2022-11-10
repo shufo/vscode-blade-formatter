@@ -1,5 +1,12 @@
 # ChangeLog
 
+## [0.20.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.0...v0.20.1) (2022-11-10)
+
+
+### Miscellaneous
+
+* **deps:** update all minor update of dev dependencies ([f985f22](https://github.com/shufo/vscode-blade-formatter/commit/f985f22bd55f5f6c586256d825485fdc153ce867))
+
 ## [0.20.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.19.2...v0.20.0) (2022-10-31)
 
 
