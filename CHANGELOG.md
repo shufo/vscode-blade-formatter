@@ -1,5 +1,14 @@
 # ChangeLog
 
+## [0.20.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.1...v0.20.2) (2022-11-20)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.31.1 ([0aa80b5](https://github.com/shufo/vscode-blade-formatter/commit/0aa80b5b7820f42cb229cccedb625e52d0498f81))
+* **deps:** update all minor update of dev dependencies ([4ce493d](https://github.com/shufo/vscode-blade-formatter/commit/4ce493de93b98f0bf46296d6a057c7f487796ea5))
+* **deps:** update timonvs/pr-labeler-action action to v4 ([eeeb1b6](https://github.com/shufo/vscode-blade-formatter/commit/eeeb1b65c09cd98e6c81738dd1b6f94e573e3430))
+
 ## [0.20.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.0...v0.20.1) (2022-11-10)
 
 
