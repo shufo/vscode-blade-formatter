@@ -2192,10 +2192,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.31.0:
-  version "1.31.0"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.31.0.tgz#587b4394a8ccc397474985256178dc39595f7f67"
-  integrity sha512-PU5tlHoydJ7HWCdwaXRvdAxHdIraN63abIteGKZujqW3YzHzOkk2H7t3jFjz682mlBsbmjBjjcsguiyd0UTZHg==
+blade-formatter@^1.31.1:
+  version "1.31.1"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.31.1.tgz#fe0040333fdb271db925266d47d9ece4f937eac4"
+  integrity sha512-pnr78eiBToM5ISqmsdDD68jye8AJUiSz+w1dD8NjcT/Qk2gLZGUj4xSrAftxTI4tlDQe6bgqlEWi7kWcNBTeug==
   dependencies:
     "@prettier/plugin-php" "^0.19.0"
     "@shufo/tailwindcss-class-sorter" "^1.0.12"
@@ -2210,7 +2210,7 @@ blade-formatter@^1.31.0:
     ignore "^5.1.8"
     js-beautify "^1.14.0"
     lodash "^4.17.19"
-    php-parser "3.1.1"
+    php-parser "3.1.2"
     prettier "^2.2.0"
     tailwindcss "^3.1.8"
     vscode-oniguruma "1.6.2"
@@ -4950,10 +4950,10 @@ php-parser@3.1.0:
   resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.1.0.tgz#5ca8e0bac9846e85233a26e3162fdfc4fb9a0a58"
   integrity sha512-EwtoPSCqggAgTcPbV4YXsvUjYRQCZCxsQzxa7z8RX8rJ8bWAglMMi1tFNxdzwf5uNPFWFjHYhXA3REuWKzgMuw==
 
-php-parser@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.1.1.tgz#203905e9c7d69851306968334e39458268c99336"
-  integrity sha512-HUxWIWpJoGhnSVzM6nPI1O2RePd7eJKzJoL3VZr6/KUUdcHKBex2Cp7p6pWOV1WxgKI/oYgRPMywwLCP789OYA==
+php-parser@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.1.2.tgz#db704c584ea4085142fc5d3c33218b207d5f9a09"
+  integrity sha512-RRCMK/bCKYPLRhlpfMlVVVsaIesuW+X6UxRqWjm7dTAmTZk8PvD6hCmG/RVeDzse7iqYWJwLJeqEbaGLC+aHeQ==
 
 picocolors@^1.0.0:
   version "1.0.0"
