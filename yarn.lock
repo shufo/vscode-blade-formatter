@@ -2192,10 +2192,10 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.31.1:
-  version "1.31.1"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.31.1.tgz#fe0040333fdb271db925266d47d9ece4f937eac4"
-  integrity sha512-pnr78eiBToM5ISqmsdDD68jye8AJUiSz+w1dD8NjcT/Qk2gLZGUj4xSrAftxTI4tlDQe6bgqlEWi7kWcNBTeug==
+blade-formatter@^1.32.0:
+  version "1.32.0"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.32.0.tgz#1e75e12b2e83055289b1d3a0f4028b12f5f25dfa"
+  integrity sha512-ztWmzNyyPFdRCKDtb67mw8ELa0XBuSMEoEPc+JhmiJA6/HkYhJ/i+g0Qb4vj5fi8af+uHRAfxmYPRrQ8cgFijg==
   dependencies:
     "@prettier/plugin-php" "^0.19.0"
     "@shufo/tailwindcss-class-sorter" "^1.0.12"
@@ -2213,7 +2213,7 @@ blade-formatter@^1.31.1:
     php-parser "3.1.2"
     prettier "^2.2.0"
     tailwindcss "^3.1.8"
-    vscode-oniguruma "1.6.2"
+    vscode-oniguruma "1.7.0"
     vscode-textmate "^7.0.1"
     xregexp "^5.0.1"
     yargs "^17.3.1"
@@ -6215,10 +6215,10 @@ vscode-extension-telemetry@^0.4.5:
   resolved "https://registry.yarnpkg.com/vscode-extension-telemetry/-/vscode-extension-telemetry-0.4.5.tgz#1957d5a8b0cd6ad9a79d4f260fe037fbf98732bb"
   integrity sha512-YhPiPcelqM5xyYWmD46jIcsxLYWkPZhAxlBkzqmpa218fMtTT17ERdOZVCXcs1S5AjvDHlq43yCgi8TaVQjjEg==
 
-vscode-oniguruma@1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.6.2.tgz#aeb9771a2f1dbfc9083c8a7fdd9cccaa3f386607"
-  integrity sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==
+vscode-oniguruma@1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.7.0.tgz#439bfad8fe71abd7798338d1cd3dc53a8beea94b"
+  integrity sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==
 
 vscode-textmate@^7.0.1:
   version "7.0.1"
