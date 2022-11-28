@@ -219,6 +219,14 @@ suite("Extension Test Suite", () => {
         await config.update('eol', 'auto', true);
     });
 
+    test("Should format file without config / endOfLine defaults to LF", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withoutConfig/endOfLineDefault/index.blade.php",
+            "withoutConfig/endOfLineDefault/formatted.index.blade.php"
+        );
+    });
+
     test("Should format file without config / bladeFormatter.format.endOfLine", async function (this: any) {
         this.timeout(20000);
         const config = vscode.workspace.getConfiguration('bladeFormatter.format');
