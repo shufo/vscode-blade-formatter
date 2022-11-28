@@ -206,6 +206,8 @@ suite("Extension Test Suite", () => {
 
     test("Should format file with config / files.eol", async function (this: any) {
         this.timeout(20000);
+        const extConfig = vscode.workspace.getConfiguration('bladeFormatter.format');
+        await extConfig.update('endOfLine', 'auto', true);
         const config = vscode.workspace.getConfiguration('files');
         await config.update('eol', '\r\n', true);
 
