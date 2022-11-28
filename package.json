@@ -135,6 +135,19 @@
           "default": "",
           "markdownDescription": "Comma separated custom HTML attributes order. e.g. `id, data-.+, class, name`. To enable this you must specify sort html attributes option as `custom`. You can use regex for attribute names."
         },
+        "bladeFormatter.format.endOfLine": {
+          "type": "string",
+          "default": "LF",
+          "enum": [
+            "auto",
+            "CRLF",
+            "LF"
+          ],
+          "enumDescriptions": [
+            "Uses operation system specific end of line character."
+          ],
+          "markdownDescription": "End of line character(s)."
+        },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
           "default": false,
@@ -152,6 +165,7 @@
     "pretest": "yarn run compile && yarn run compile-tests",
     "test": "node ./out/test/runTest.js",
     "compile": "webpack --progress",
+    "build": "webpack --progress",
     "watch": "webpack --watch",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -w -p . --outDir out",

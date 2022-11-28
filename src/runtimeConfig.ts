@@ -14,6 +14,11 @@ export type WrapAttributes =
     | 'preserve'
     | 'preserve-aligned';
 
+export type EndOfLine =
+    | 'auto'
+    | 'CRLF'
+    | 'LF';
+
 export interface RuntimeConfig {
     indentSize?: number;
     wrapLineLength?: number;
@@ -26,6 +31,7 @@ export interface RuntimeConfig {
     tailwindcssConfigPath?: string;
     noMultipleEmptyLines?: boolean;
     noPhpSyntaxCheck?: boolean;
+    endOfLine?: EndOfLine;
 }
 
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
@@ -62,6 +68,13 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
             tailwindcssConfigPath: { type: 'string' },
             noMultipleEmptyLines: { type: 'boolean' },
             noPhpSyntaxCheck: { type: 'boolean' },
+            endOfLine: {
+                enum: [
+                    'auto',
+                    'CRLF',
+                    'LF',
+                ]
+            },
         },
         additionalProperties: true,
     };

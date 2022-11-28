@@ -204,6 +204,41 @@ suite("Extension Test Suite", () => {
         await config.update('customHtmlAttributesOrder', undefined, true);
     });
 
+    test("Should format file with config / files.eol", async function (this: any) {
+        this.timeout(20000);
+        const config = vscode.workspace.getConfiguration('files');
+        await config.update('eol', '\r\n', true);
+
+        await formatSameAsBladeFormatter(
+            "withoutConfig/endOfLine/index.blade.php",
+            "withoutConfig/endOfLine/formatted.index.blade.php"
+        );
+
+        await config.update('eol', 'auto', true);
+    });
+
+    test("Should format file without config / bladeFormatter.format.endOfLine", async function (this: any) {
+        this.timeout(20000);
+        const config = vscode.workspace.getConfiguration('bladeFormatter.format');
+        await config.update('endOfLine', 'CRLF', true);
+
+        await formatSameAsBladeFormatter(
+            "withoutConfig/endOfLine/index.blade.php",
+            "withoutConfig/endOfLine/formatted.index.blade.php"
+        );
+
+        await config.update('endOfLine', 'auto', true);
+    });
+
+    test("Should format file with config / endOfLine", async function (this: any) {
+        this.timeout(20000);
+
+        await formatSameAsBladeFormatter(
+            "withConfig/endOfLine/index.blade.php",
+            "withConfig/endOfLine/formatted.index.blade.php"
+        );
+    });
+
     test("Format command exists in command list", async function () {
         const commands = await vscode.commands.getCommands();
         assert(commands.includes(ExtensionConstants.formatCommandKey));
