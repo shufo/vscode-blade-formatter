@@ -135,6 +135,16 @@
           "default": "",
           "markdownDescription": "Comma separated custom HTML attributes order. e.g. `id, data-.+, class, name`. To enable this you must specify sort html attributes option as `custom`. You can use regex for attribute names."
         },
+        "bladeFormatter.format.endOfLine": {
+          "type": "string",
+          "default": "auto",
+          "enum": [
+            "auto",
+            "CRLF",
+            "LF"
+          ],
+          "markdownDescription": "End of line character(s). If you choose 'auto', then operation system's default EOL character will be used."
+        },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
           "default": false,

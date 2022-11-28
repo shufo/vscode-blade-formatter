@@ -13,6 +13,7 @@ import { messages } from "./messages";
 import { formatFromCommand } from "./commands";
 import { getCoreNodeModule, requireUncached } from "./util";
 import { resolveTailwindConfig, TailwindConfig } from "./tailwind";
+import { getEolCharacter } from "./eol";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -115,9 +116,16 @@ export function activate(context: ExtensionContext) {
                 return new Promise((resolve, reject) => {
                     return new Formatter(options)
                         .formatContent(originalText)
-                        .then((text: any) => {
+                        .then(async (text: any) => {
                             statusBarItem.dispose();
-                            resolve([new vscode.TextEdit(range, text)]);
+                            const edit = new vscode.TextEdit(range, text);
+                            const newEol = await getEolCharacter(runtimeConfig);
+
+                            if (newEol !== null) {
+                                edit.newEol = newEol;
+                            }
+
+                            resolve([edit]);
                         })
                         .then(undefined, (err: any) => {
                             statusBarItem.dispose();
