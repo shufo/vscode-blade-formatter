@@ -60,7 +60,7 @@ Configuration file will like below:
 
 ## Ignoring Files: .bladeignore
 
-To exclude files from formatting, create a `.bladeignore` file in the root of your project `.bladeignore` uses [gitignore syntax](https://git-scm.com/docs/gitignore#_pattern_format)
+To exclude files from formatting, create a `.bladeignore` file in the root of your project. `.bladeignore` uses [gitignore syntax](https://git-scm.com/docs/gitignore#_pattern_format)
 
 ```gitignore
 # Ignore email templates
