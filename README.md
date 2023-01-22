@@ -8,12 +8,12 @@
 
 An opinionated Blade file formatter for VSCode. Marketplace page is [here](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter).
 
-You can also format by same syntax programmatically with [blade-formatter](https://github.com/shufo/blade-formatter) that this extension relies on.
+You can also format programmatically with the same syntax using the [blede-formatter](https://github.com/shufo/blade-formatter) that this extension relies on.
 
 ## Features
 
--   Automatically Indents markup inside directives
--   Automatically add spacing to blade templating markers
+-   Automatically indent markup inside directives
+-   Automatically add spacing to blade template markers
 -   PHP 8 support (null safe operator, named arguments) 🐘
 -   PSR-2 support (format inside directives)
 -   Automatically sort Tailwind CSS classes with respect of `tailwind.config.js`
@@ -60,7 +60,7 @@ Configuration file will like below:
 
 ## Ignoring Files: .bladeignore
 
-To exclude files from formatting, create `.bladeignore` file in the root of your project `.bladeignore` uses [gitignore syntax](https://git-scm.com/docs/gitignore#_pattern_format)
+To exclude files from formatting, create a `.bladeignore` file in the root of your project `.bladeignore` uses [gitignore syntax](https://git-scm.com/docs/gitignore#_pattern_format)
 
 ```gitignore
 # Ignore email templates
@@ -78,14 +78,14 @@ To disable formatting in your file, you can use blade comments in the following 
 {{-- blade-formatter-enable --}}
 ```
 
-To disable format on a specific line, you can use comment in the following format:
+To disable formatting on a specific line, you can use comment in the following format:
 
 ```blade
 {{-- blade-formatter-disable-next-line --}}
     {{ $foo }}
 ```
 
-To disable format in an entire file, put a `{{-- blade-formatter-disable --}}` comment at the top of the file:
+To disable formatting for an entire file, put a `{{-- blade-formatter-disable --}}` comment at the beginning of the file:
 
 ```blade
 {{-- blade-formatter-disable --}}
