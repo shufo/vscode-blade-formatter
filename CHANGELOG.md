@@ -1,5 +1,16 @@
 # ChangeLog
 
+## [0.20.8](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.7...v0.20.8) (2023-01-21)
+
+
+### Miscellaneous
+
+* 🤖 add alias command for compile ([f0f68a5](https://github.com/shufo/vscode-blade-formatter/commit/f0f68a5da008dfa0ac08f8eb33a948ef10e5c9bc))
+* 🤖 bump blade-formatter to 1.32.5 ([f0fd657](https://github.com/shufo/vscode-blade-formatter/commit/f0fd65798f84a67505afe852cc82ace0df2c4000))
+* 🤖 merge remote branch ([3c0a6f3](https://github.com/shufo/vscode-blade-formatter/commit/3c0a6f303b5da5d0bf018eef9df77430647f6efd))
+* **deps:** bump tailwindcss from 3.1.8 to 3.2.4 ([cbeafb9](https://github.com/shufo/vscode-blade-formatter/commit/cbeafb9d29952d0df887611284f65aa6a3506e14))
+* **deps:** update all minor update of dev dependencies ([447ac56](https://github.com/shufo/vscode-blade-formatter/commit/447ac5690fc7e8e157bd98b206637e50037c8f31))
+
 ## [0.20.7](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.6...v0.20.7) (2023-01-14)
 
 
