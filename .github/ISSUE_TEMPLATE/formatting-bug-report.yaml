@@ -1,0 +1,87 @@
+name: 🐛 Formatting Bug Report
+description: Report a formatting related bug report
+title: "[Formatting Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - shufo
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which VSCode platform are you using?
+      options:
+        - Windows
+        - MacOS
+        - Linux
+  - type: textarea
+    id: template-before
+    attributes:
+      label: Template before formatting
+      description: Please copy and paste the template you want to format. This will be automatically formatted into code, so no backticks are required.
+      render: blade
+      placeholder: |
+        <html>
+          <head></head>
+          <body>
+            @if ($user)
+              <div>
+                {{ $user->id }}
+              </div>
+            @endif
+          </body>
+        </html>
+    validations:
+      required: true
+  - type: textarea
+    id: template-after
+    attributes:
+      label: Template after formatting
+      description: Please copy and paste the formatted template. This will be automatically formatted into code, so no need for backticks.
+      render: blade
+      placeholder: |
+        <html>
+          <head></head>
+          <body>
+            @if ($user)
+              <div>
+                {{ $user->id }}
+              </div>
+            @endif
+          </body>
+        </html>
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected Behaviour
+      description: Please write expected behaviour.
+      placeholder: |
+        e.g. It shouold be formatting properly.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: blade
+      placeholder: |
+        $ ./node_modules/.bin/blade-formatter test.blade.php
+        <div>
+            @feature('site-redesign')
+                <!-- 'site-redesign' is active -->
+            @else
+                <!-- 'site-redesign' is inactive -->
+            @endfeature
+            @feature('purchase-button', 'blue-sapphire')
+                <!-- 'blue-sapphire' is active -->
+            @elsefeature('purchase-button', 'seafoam-green')
+                <!-- 'seafoam-green' is active -->
+            @elsefeature('purchase-button', 'tart-orange')
+                <!-- 'tart-oranage' is active -->
+            @endfeature
+        </div>
