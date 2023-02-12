@@ -1,18 +1,18 @@
 ---
 name: 🛠️  Feature Request
-description: Suggest an idea to help us improve blade-formatter.
-title: '[Feature]: '
+description: Suggest an idea to help us improve vscode-blade-formatter.
+title: "[Feature]: "
 labels:
-  - 'feature_request'
+  - "feature_request"
 
 body:
   - type: markdown
     attributes:
       value: |
         **Thanks :heart: for taking the time to fill out this feature request report!**
-        We kindly ask that you search to see if an issue [already exists](https://github.com/shufo/blade-formatter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+feature+request) for your feature.
+        We kindly ask that you search to see if an issue [already exists](https://github.com/shufo/vscode-blade-formatter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+feature+request) for your feature.
 
-        We are also happy to accept contributions from our users. For more details see [here](https://github.com/shufo/blade-formatter/blob/main/CONTRIBUTING.md).
+        We are also happy to accept contributions from our users. For more details see [here](https://github.com/shufo/vscode-blade-formatter/blob/main/CONTRIBUTING.md).
 
   - type: textarea
     attributes:
