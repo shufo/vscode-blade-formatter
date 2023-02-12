@@ -18,6 +18,9 @@ body:
         - Windows
         - MacOS
         - Linux
+        - Other
+    validations:
+      required: true
   - type: textarea
     id: template-before
     attributes:
