@@ -1,5 +1,15 @@
 # ChangeLog
 
+## [0.20.13](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.12...v0.20.13) (2023-03-22)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.32.10 ([bd89fbc](https://github.com/shufo/vscode-blade-formatter/commit/bd89fbc6d4bf98abf4901631be34aa80e07b988d))
+* **deps:** bump tailwindcss from 3.2.4 to 3.2.7 ([55ce740](https://github.com/shufo/vscode-blade-formatter/commit/55ce74075af13a1ae59d3dc4169beb9ea0bf4a97))
+* **deps:** update all minor update of dev dependencies ([2978636](https://github.com/shufo/vscode-blade-formatter/commit/29786369237863564b88710dee555d70bfdfe042))
+* **deps:** update dependency typescript to v5 ([3f63494](https://github.com/shufo/vscode-blade-formatter/commit/3f6349455a16c4fd38da9597e2736e478e7b5f60))
+
 ## [0.20.12](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.11...v0.20.12) (2023-02-25)
 
 
