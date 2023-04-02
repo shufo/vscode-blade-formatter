@@ -169,6 +169,13 @@ $ yarn run test
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/1cbyc">
+            <img src="https://avatars.githubusercontent.com/u/35623334?v=4" width="100;" alt="1cbyc"/>
+            <br />
+            <sub><b>Isaac Emmanuel</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/j3j5">
             <img src="https://avatars.githubusercontent.com/u/1239921?v=4" width="100;" alt="j3j5"/>
             <br />
