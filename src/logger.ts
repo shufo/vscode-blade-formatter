@@ -1,108 +1,76 @@
-import { window } from "vscode";
+import * as vscode from "vscode";
 
-type LogLevel = "DEBUG" | "INFO" | "WARN" | "ERROR" | "NONE";
+type LogLevel = "DEBUG" | "INFO" | "WARN" | "ERROR";
 
 export class Logger {
-    private outputChannel = window.createOutputChannel("BladeFormatter");
+  private outputChannel = vscode.window.createOutputChannel("BladeFormatter");
 
-    private logLevel: LogLevel = "INFO";
+  private logLevel: LogLevel = "INFO";
 
-    public setOutputLevel(logLevel: LogLevel) {
-        this.logLevel = logLevel;
+  public setLogLevel(logLevel: LogLevel): void {
+    this.logLevel = logLevel;
+  }
+
+  public logDebug(message: string, data?: unknown): void {
+    if (this.logLevel !== "DEBUG") {
+      return;
     }
-
-    /**
-     * Append messages to the output channel and format it with a title
-     *
-     * @param message The message to append to the output channel
-     */
-    public logDebug(message: string, data?: unknown): void {
-        if (
-            this.logLevel === "NONE" ||
-            this.logLevel === "INFO" ||
-            this.logLevel === "WARN" ||
-            this.logLevel === "ERROR"
-        ) {
-            return;
-        }
-        this.logMessage(message, "DEBUG");
-        if (data) {
-            this.logObject(data);
-        }
+    this.logMessage("DEBUG", message);
+    if (data) {
+      this.logObject(data);
     }
+  }
 
-    /**
-     * Append messages to the output channel and format it with a title
-     *
-     * @param message The message to append to the output channel
-     */
-    public logInfo(message: string, data?: unknown): void {
-        if (
-            this.logLevel === "NONE" ||
-            this.logLevel === "WARN" ||
-            this.logLevel === "ERROR"
-        ) {
-            return;
-        }
-        this.logMessage(message, "INFO");
-        if (data) {
-            this.logObject(data);
-        }
+  public logInfo(message: string, data?: unknown): void {
+    if (this.logLevel === "ERROR" || this.logLevel === "WARN") {
+      return;
     }
-
-    /**
-     * Append messages to the output channel and format it with a title
-     *
-     * @param message The message to append to the output channel
-     */
-    public logWarning(message: string, data?: unknown): void {
-        if (this.logLevel === "NONE" || this.logLevel === "ERROR") {
-            return;
-        }
-        this.logMessage(message, "WARN");
-        if (data) {
-            this.logObject(data);
-        }
+    this.logMessage("INFO", message);
+    if (data) {
+      this.logObject(data);
     }
+  }
 
-    public logError(message: string, error?: unknown) {
-        if (this.logLevel === "NONE") {
-            return;
-        }
-        this.logMessage(message, "ERROR");
-        if (typeof error === "string") {
-            // Errors as a string usually only happen with
-            // plugins that don't return the expected error.
-            this.outputChannel.appendLine(error);
-        } else if (error instanceof Error) {
-            if (error?.message) {
-                this.logMessage(error.message, "ERROR");
-            }
-            if (error?.stack) {
-                this.outputChannel.appendLine(error.stack);
-            }
-        } else if (error) {
-            this.logObject(error);
-        }
+  public logWarning(message: string, data?: unknown): void {
+    if (this.logLevel === "ERROR") {
+      return;
     }
-
-    public show() {
-        this.outputChannel.show();
+    this.logMessage("WARN", message);
+    if (data) {
+      this.logObject(data);
     }
+  }
 
-    private logObject(data: unknown): void {
-        const message = JSON.stringify(data, null, 2); // dont use prettier to keep it simple
-
-        this.outputChannel.appendLine(message);
+  public logError(message: string, error?: unknown): void {
+    if (this.logLevel === "NONE") {
+      return;
     }
-
-    /**
-     * Append messages to the output channel and format it with a title
-     *
-     * @param message The message to append to the output channel
-     */
-    private logMessage(message: string, logLevel: LogLevel): void {
-        const title = new Date().toLocaleTimeString();
-        this.outputChannel.appendLine(`["${logLevel}" - ${title}] ${message}`);
+    this.logMessage("ERROR", message);
+    if (typeof error === "string") {
+      this.outputChannel.appendLine(error);
+    } else if (error instanceof Error) {
+      if (error.message) {
+        this.logMessage("ERROR", error.message);
+      }
+      if (error.stack) {
+        this.outputChannel.appendLine(error.stack);
+      }
+    } else if (error) {
+      this.logObject(error);
     }
+  }
+
+  public show(): void {
+    this.outputChannel.show();
+  }
+
+  private logObject(data: unknown): void {
+    const message = JSON.stringify(data, null, 2);
+    this.outputChannel.appendLine(message);
+  }
+
+  private logMessage(level: LogLevel, message: string): void {
+    const title = new Date().toLocaleTimeString();
+    this.outputChannel.appendLine(`["${level}" - ${title}] ${message}`);
+  }
 }
