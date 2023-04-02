@@ -2210,7 +2210,7 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-blade-formatter@^1.32.12:
+blade-formatter@^1.32.11:
   version "1.32.12"
   resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.32.12.tgz#e06c31cc29ffd41f1e9709a385c9c0ec0cc53f80"
   integrity sha512-Xc1eEy/Adi6DnnUuh9IprD7Kyg2tq/ix3DFnr8AgN3wFg1Ews6vWpA44tuyoigqNHq59ss4JX2cgPkqbMLiurg==
