@@ -42,9 +42,6 @@ export class Logger {
   }
 
   public logError(message: string, error?: unknown): void {
-    if (this.logLevel === "NONE") {
-      return;
-    }
     this.logMessage("ERROR", message);
     if (typeof error === "string") {
       this.outputChannel.appendLine(error);
