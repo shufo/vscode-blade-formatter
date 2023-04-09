@@ -179,7 +179,7 @@
     "debug": "4.3.4",
     "dotenv-webpack": "8.0.1",
     "eslint": "8.37.0",
-    "glob": "8.1.0",
+    "glob": "9.3.5",
     "mocha": "^10.0.0",
     "ts-jest": "29.0.5",
     "ts-loader": "9.4.2",
