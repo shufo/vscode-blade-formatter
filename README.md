@@ -135,6 +135,10 @@ $ yarn run compile
 $ yarn run test
 ```
 
+## Sponsors
+
+<img src="./sponsorkit/sponsors.png"/>
+
 ## Contributors
 
 <!-- readme: collaborators,contributors -start -->
