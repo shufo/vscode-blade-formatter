@@ -137,7 +137,7 @@ $ yarn run test
 
 ## Sponsors
 
-<img src="./sponsorkit/sponsors.png"/>
+![](./sponsorkit/sponsors.png)
 
 ## Contributors
 

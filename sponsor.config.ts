@@ -5,7 +5,7 @@ export default defineConfig({
     tiers: [
         {
             title: "Sponsors",
-            preset: presets.large,
+            preset: presets.xl,
             // to insert custom elements after the tier block
             composeAfter: (composer, _tierSponsors, _config) => {
                 composer.addSpan(10);
@@ -14,7 +14,7 @@ export default defineConfig({
         {
             title: "Past Sponsors",
             monthlyDollars: -1,
-            preset: presets.medium,
+            preset: presets.large,
         },
     ],
 });
