@@ -2,6 +2,7 @@ import { defineConfig, presets } from "sponsorkit";
 
 export default defineConfig({
     // includePrivate: true,
+    formats: ["png"],
     tiers: [
         {
             title: "Sponsors",
