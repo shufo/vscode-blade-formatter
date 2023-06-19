@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: lts/*
 
+      - run: echo APP_INSIGHT_INSTRUMENT_KEY=example_key >> .env
       - run: npm install
 
       - name: Update sponsors
