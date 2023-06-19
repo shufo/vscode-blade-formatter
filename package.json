@@ -181,6 +181,7 @@
     "eslint": "8.42.0",
     "glob": "8.1.0",
     "mocha": "^10.0.0",
+    "sponsorkit": "^0.8.5",
     "ts-jest": "29.1.0",
     "ts-loader": "9.4.3",
     "ts-migrate": "0.1.35",
