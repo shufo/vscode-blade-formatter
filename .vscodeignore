@@ -9,3 +9,8 @@ vsc-extension-quickstart.md
 screencast.gif
 test-resources/**
 out/**
+sponsorkit/**
+sponsor.config.ts
+src/**
+tsconfig.json
+yarn.lock
