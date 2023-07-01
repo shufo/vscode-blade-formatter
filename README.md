@@ -8,7 +8,7 @@
 
 An opinionated Blade file formatter for VSCode. Marketplace page is [here](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter).
 
-You can also format programmatically with the same syntax using the [blede-formatter](https://github.com/shufo/blade-formatter) that this extension relies on.
+You can also format programmatically with the same syntax using the [blade-formatter](https://github.com/shufo/blade-formatter) that this extension relies on.
 
 ## Features
 
