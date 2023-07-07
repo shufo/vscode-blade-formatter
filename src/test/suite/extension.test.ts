@@ -159,6 +159,15 @@ suite("Extension Test Suite", () => {
         await config.update('sortTailwindcssClasses', false, true);
     });
 
+    test("Should format file with runtime config / ES Module tailwind config", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigESModule/index.blade.php",
+            "withConfig/tailwindConfigESModule/formatted.index.blade.php"
+        );
+    });
+
+
     test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
         this.timeout(20000);
         await formatSameAsBladeFormatter(

@@ -27,7 +27,7 @@ export function requireUncached(moduleName: string) {
         // @ts-ignore
         delete __non_webpack_require__.cache[__non_webpack_require__.resolve(moduleName)];
         // @ts-ignore
-        return __non_webpack_require__(moduleName);
+        import(moduleName);
     } catch (err: any) {
         throw err;
     }
