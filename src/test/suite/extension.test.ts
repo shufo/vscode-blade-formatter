@@ -167,6 +167,13 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / ES Module tailwind config (Syntax Error)", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/tailwindConfigESModuleSyntaxError/index.blade.php",
+            "withConfig/tailwindConfigESModuleSyntaxError/formatted.index.blade.php"
+        );
+    });
 
     test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
         this.timeout(20000);
