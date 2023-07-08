@@ -23,7 +23,7 @@ const REPORT_ISSUE = "Report Issue";
 
 const knownIssuesUrl = "https://github.com/shufo/vscode-blade-formatter/issues";
 const newIssueUrl =
-    "https://github.com/shufo/vscode-blade-formatter/issues/new";
+    "https://github.com/shufo/vscode-blade-formatter/issues/new/choose";
 
 const WASM_ERROR_MESSAGE = "Must invoke loadWASM first.";
 
