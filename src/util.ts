@@ -1,4 +1,6 @@
 import vscode from "vscode";
+import fs from 'fs';
+import { transform } from 'sucrase';
 
 /**
  * Returns a node module installed with VSCode, or null if it fails.
@@ -26,8 +28,10 @@ export function requireUncached(moduleName: string) {
     try {
         // @ts-ignore
         delete __non_webpack_require__.cache[__non_webpack_require__.resolve(moduleName)];
-        // @ts-ignore
-        import(moduleName);
+
+        const fileContent = fs.readFileSync(moduleName, 'utf8');
+
+        return transform(fileContent, { transforms: ['imports'] });
     } catch (err: any) {
         throw err;
     }
