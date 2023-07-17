@@ -1,5 +1,25 @@
 # ChangeLog
 
+## [0.21.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.15...v0.21.0) (2023-07-08)
+
+
+### Fixes
+
+* 🐛 can not apply ESM tailwind config ([19fde08](https://github.com/shufo/vscode-blade-formatter/commit/19fde08f5e3c6cd1fc14aa154bd143ece3502211))
+* 🐛 rollback tailwind config load behaviour ([5c61c86](https://github.com/shufo/vscode-blade-formatter/commit/5c61c8651302660a17ccc14807aaeab5f037d563))
+
+
+### Miscellaneous
+
+* 🤖 add sucrase to dependencies ([2bf384d](https://github.com/shufo/vscode-blade-formatter/commit/2bf384d7ed9b73b4eb2be1f195c6d0127e172507))
+* 🤖 bump blade-formatter to 1.33.1 ([bb3a7f7](https://github.com/shufo/vscode-blade-formatter/commit/bb3a7f71e5f45b24791507fe1d397fd8dd950648))
+* 🤖 bump tailwindcss to 3.3.2 ([ce84213](https://github.com/shufo/vscode-blade-formatter/commit/ce84213fff6d8393aa4011ba1806a84a3ff89377))
+* add sponsorkit ([#734](https://github.com/shufo/vscode-blade-formatter/issues/734)) ([3b2a38f](https://github.com/shufo/vscode-blade-formatter/commit/3b2a38fdcf27b6a92a9acd06d70f0c3ea4153382))
+* **deps:** update all minor update of dev dependencies ([c7e74e2](https://github.com/shufo/vscode-blade-formatter/commit/c7e74e25a9d1d5e9d8530b9bd74d6dc7abf3e53d))
+* **deps:** update all minor update of dev dependencies ([1076967](https://github.com/shufo/vscode-blade-formatter/commit/1076967abad7480af767a9221c57036f84fd66c2))
+* **deps:** update endbug/add-and-commit action to v9 ([d7dfcc9](https://github.com/shufo/vscode-blade-formatter/commit/d7dfcc904e5bdcf77e520d26da064061c2557864))
+* release 0.21.0 ([8a95208](https://github.com/shufo/vscode-blade-formatter/commit/8a9520814bbc04c39fdfd43b29f5e582b2e6f6bd))
+
 ## [0.20.15](https://github.com/shufo/vscode-blade-formatter/compare/v0.20.14...v0.20.15) (2023-06-12)
 
 
