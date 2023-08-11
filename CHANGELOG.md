@@ -1,5 +1,24 @@
 # ChangeLog
 
+## [0.22.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.21.2...v0.22.0) (2023-08-11)
+
+
+### Features
+
+* 🎸 add option indentInnerHtml ([#758](https://github.com/shufo/vscode-blade-formatter/issues/758)) ([47a8075](https://github.com/shufo/vscode-blade-formatter/commit/47a807582c6372c9ddca989522ec615f795cdf22))
+
+
+### Miscellaneous
+
+* 🤖 add @types/webpack-env to dev dependencies ([ec937ff](https://github.com/shufo/vscode-blade-formatter/commit/ec937ff4e66cf815893ef0c991a0d3ea49253441))
+* 🤖 add prettier to dev dependencies ([f802f3a](https://github.com/shufo/vscode-blade-formatter/commit/f802f3a5afb8cdb7147d73e562e006ef31f0a404))
+* 🤖 bump blade-formatter to 1.37.0 ([b971658](https://github.com/shufo/vscode-blade-formatter/commit/b971658813ce22dad894c552264879ed5cfe3e71))
+* **deps:** bump sucrase from 3.32.0 to 3.34.0 ([002f518](https://github.com/shufo/vscode-blade-formatter/commit/002f5187a0c3ccfd5d6178b42ca83719221c2d5f))
+* **deps:** bump tailwindcss from 3.3.2 to 3.3.3 ([b4fe54f](https://github.com/shufo/vscode-blade-formatter/commit/b4fe54fbdfe3588d5c87dd77e44701b0e4691f29))
+* **deps:** update dependency conventional-changelog-cli to v3 ([5284743](https://github.com/shufo/vscode-blade-formatter/commit/5284743eb3130a95aad12f36bba36af226034bc5))
+* **deps:** update typescript-eslint monorepo to v6 ([d67e6ee](https://github.com/shufo/vscode-blade-formatter/commit/d67e6eec42b892db91f8737d7a4e6d73f094a494))
+* update sponsors.png ([c688732](https://github.com/shufo/vscode-blade-formatter/commit/c688732524f418cd5e82c3acca4ce6efad79f8bb))
+
 ## [0.21.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.21.1...v0.21.2) (2023-07-30)
 
 
