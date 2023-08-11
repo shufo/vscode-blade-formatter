@@ -1,5 +1,12 @@
 # ChangeLog
 
+## [0.22.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.22.0...v0.22.1) (2023-08-11)
+
+
+### Miscellaneous
+
+* 🤖 delete prettier from dev dependencies ([a336e6f](https://github.com/shufo/vscode-blade-formatter/commit/a336e6fd339046e1309f01edb8cc9428eec832c5))
+
 ## [0.22.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.21.2...v0.22.0) (2023-08-11)
 
 
