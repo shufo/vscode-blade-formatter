@@ -60,7 +60,6 @@ export function activate(context: ExtensionContext) {
                 );
 
                 if (!wasmInitialized) {
-                    // onigurumaModule.initCalled = false;
                     wasmInitialized = true;
                 }
 
