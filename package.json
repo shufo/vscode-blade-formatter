@@ -175,7 +175,7 @@
     "@zeit/eslint-config-node": "^0.3.0",
     "app-root-path": "^3.0.0",
     "babel-jest": "^29.0.0",
-    "conventional-changelog-cli": "^2.0.34",
+    "conventional-changelog-cli": "^3.0.0",
     "debug": "4.3.4",
     "dotenv-webpack": "8.0.1",
     "eslint": "8.45.0",
