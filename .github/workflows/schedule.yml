@@ -30,7 +30,7 @@ jobs:
       - name: Commit
         uses: EndBug/add-and-commit@v9
         with:
-          message: "chore: update sponsors.svg"
-          add: "sponsors.*"
+          message: "chore: update sponsors.png"
+          add: "sponsorkit/sponsors.png"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
