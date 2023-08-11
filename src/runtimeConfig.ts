@@ -1,18 +1,18 @@
-import findConfig from 'find-config';
-import path from 'path';
-import fs from 'fs';
-import Ajv, { JTDSchemaType } from 'ajv/dist/jtd';
+import findConfig from "find-config";
+import path from "path";
+import fs from "fs";
+import Ajv, { JTDSchemaType } from "ajv/dist/jtd";
 
 const ajv = new Ajv();
 
 export type WrapAttributes =
-    | 'auto'
-    | 'force'
-    | 'force-aligned '
-    | 'force-expand-multiline'
-    | 'aligned-multiple'
-    | 'preserve'
-    | 'preserve-aligned';
+    | "auto"
+    | "force"
+    | "force-aligned "
+    | "force-expand-multiline"
+    | "aligned-multiple"
+    | "preserve"
+    | "preserve-aligned";
 
 export interface RuntimeConfig {
     indentSize?: number;
@@ -31,7 +31,6 @@ export interface RuntimeConfig {
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
 
 export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
-
     const configFilePath: string | null = findConfigFile(filePath);
 
     if (configFilePath === null) {
@@ -45,23 +44,23 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
             wrapLineLength: { type: "int32" },
             wrapAttributes: {
                 enum: [
-                    'auto',
-                    'force',
-                    'force-aligned ',
-                    'force-expand-multiline',
-                    'aligned-multiple',
-                    'preserve',
-                    'preserve-aligned'
-                ]
+                    "auto",
+                    "force",
+                    "force-aligned ",
+                    "force-expand-multiline",
+                    "aligned-multiple",
+                    "preserve",
+                    "preserve-aligned",
+                ],
             },
-            endWithNewline: { type: 'boolean' },
-            useTabs: { type: 'boolean' },
-            sortTailwindcssClasses: { type: 'boolean' },
-            sortHtmlAttributes: { type: 'string' },
-            customHtmlAttributesOrder: { type: 'string' },
-            tailwindcssConfigPath: { type: 'string' },
-            noMultipleEmptyLines: { type: 'boolean' },
-            noPhpSyntaxCheck: { type: 'boolean' },
+            endWithNewline: { type: "boolean" },
+            useTabs: { type: "boolean" },
+            sortTailwindcssClasses: { type: "boolean" },
+            sortHtmlAttributes: { type: "string" },
+            customHtmlAttributesOrder: { type: "string" },
+            tailwindcssConfigPath: { type: "string" },
+            noMultipleEmptyLines: { type: "boolean" },
+            noPhpSyntaxCheck: { type: "boolean" },
         },
         additionalProperties: true,
     };

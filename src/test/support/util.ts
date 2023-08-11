@@ -7,10 +7,16 @@ import { ExtensionConstants } from "../../constants";
 export async function formatSameAsBladeFormatter(
     file: any,
     formattedFile: any,
-    options: any = {}
+    options: any = {},
 ) {
-    const { actual, source } = await format(options.workspace ?? "project", file);
-    const formatted = await getContent(options.workspace ?? "project", formattedFile);
+    const { actual, source } = await format(
+        options.workspace ?? "project",
+        file,
+    );
+    const formatted = await getContent(
+        options.workspace ?? "project",
+        formattedFile,
+    );
     assert.equal(actual, formatted);
 }
 
@@ -75,11 +81,11 @@ const getWorkspaceFolderUri = (workspaceFolderName: any) => {
     const workspaceFolder = vscode.workspace?.workspaceFolders?.find(
         (folder: any) => {
             return folder.name === workspaceFolderName;
-        }
+        },
     );
     if (!workspaceFolder) {
         throw new Error(
-            "Folder not found in workspace. Did you forget to add the test folder to test.code-workspace?"
+            "Folder not found in workspace. Did you forget to add the test folder to test.code-workspace?",
         );
     }
     return workspaceFolder.uri;

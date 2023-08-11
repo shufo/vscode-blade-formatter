@@ -5,9 +5,9 @@ import findConfig from "find-config";
 import fs from "fs";
 import ignore from "ignore";
 import { Formatter } from "blade-formatter";
-import { setExtensionContext } from './extensionContext';
-import { telemetry, TelemetryEventNames } from './telemetry';
-import { readRuntimeConfig } from './runtimeConfig';
+import { setExtensionContext } from "./extensionContext";
+import { telemetry, TelemetryEventNames } from "./telemetry";
+import { readRuntimeConfig } from "./runtimeConfig";
 import { ExtensionConstants } from "./constants";
 import { messages } from "./messages";
 import { formatFromCommand } from "./commands";
@@ -38,25 +38,35 @@ export function activate(context: ExtensionContext) {
 
     telemetry.send(TelemetryEventNames.Startup);
 
-    if (context.globalState.get(ExtensionConstants.firstActivationStorageKey) === undefined) {
+    if (
+        context.globalState.get(
+            ExtensionConstants.firstActivationStorageKey,
+        ) === undefined
+    ) {
         telemetry.send(TelemetryEventNames.NewInstall);
-        context.globalState.update(ExtensionConstants.firstActivationStorageKey, false);
+        context.globalState.update(
+            ExtensionConstants.firstActivationStorageKey,
+            false,
+        );
     }
 
     commands.registerTextEditorCommand(
         ExtensionConstants.formatCommandKey,
-        formatFromCommand
+        formatFromCommand,
     );
 
     context.subscriptions.push(
         vscode.languages.registerDocumentFormattingEditProvider("blade", {
-            provideDocumentFormattingEdits(document: vscode.TextDocument, vscodeOpts: vscode.FormattingOptions): any {
+            provideDocumentFormattingEdits(
+                document: vscode.TextDocument,
+                vscodeOpts: vscode.FormattingOptions,
+            ): any {
                 if (shouldIgnore(document.uri.fsPath)) {
                     return document;
                 }
 
                 const extConfig = vscode.workspace.getConfiguration(
-                    "bladeFormatter.format"
+                    "bladeFormatter.format",
                 );
 
                 if (!wasmInitialized) {
@@ -74,8 +84,14 @@ export function activate(context: ExtensionContext) {
 
                 const tailwindConfig: TailwindConfig = {};
 
-                if (runtimeConfig?.sortTailwindcssClasses || extConfig.sortTailwindcssClasses) {
-                    const tailwindConfigPath = resolveTailwindConfig(document.uri.fsPath, runtimeConfig?.tailwindcssConfigPath ?? '');
+                if (
+                    runtimeConfig?.sortTailwindcssClasses ||
+                    extConfig.sortTailwindcssClasses
+                ) {
+                    const tailwindConfigPath = resolveTailwindConfig(
+                        document.uri.fsPath,
+                        runtimeConfig?.tailwindcssConfigPath ?? "",
+                    );
                     tailwindConfig.tailwindcssConfigPath = tailwindConfigPath;
 
                     try {
@@ -83,7 +99,10 @@ export function activate(context: ExtensionContext) {
                     } catch (error) {
                         // @ts-ignore
                         // fallback to default config
-                        tailwindConfig.tailwindcssConfigPath = __non_webpack_require__.resolve('tailwindcss/lib/public/default-config');
+                        tailwindConfig.tailwindcssConfigPath =
+                            __non_webpack_require__.resolve(
+                                "tailwindcss/lib/public/default-config",
+                            );
                     }
                 }
 
@@ -95,16 +114,22 @@ export function activate(context: ExtensionContext) {
                     wrapAttributes: extConfig.wrapAttributes,
                     useTabs: extConfig.useTabs,
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
-                    sortHtmlAttributes: extConfig.sortHtmlAttributes ?? 'none',
-                    customHtmlAttributesOrder: extConfig.customHtmlAttributesOrder,
+                    sortHtmlAttributes: extConfig.sortHtmlAttributes ?? "none",
+                    customHtmlAttributesOrder:
+                        extConfig.customHtmlAttributesOrder,
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
                     ...runtimeConfig, // override all settings by runtime config
                     ...tailwindConfig,
                 };
 
-                const progressMessage = isLargeFile(document) ? messages.largeFileFormattingMessage : messages.formattingMessage;
-                const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 1000);
+                const progressMessage = isLargeFile(document)
+                    ? messages.largeFileFormattingMessage
+                    : messages.formattingMessage;
+                const statusBarItem = vscode.window.createStatusBarItem(
+                    vscode.StatusBarAlignment.Right,
+                    1000,
+                );
                 statusBarItem.text = `$(loading~spin) ${progressMessage}`;
                 statusBarItem.show();
                 setTimeout(() => {
@@ -124,13 +149,22 @@ export function activate(context: ExtensionContext) {
                                 return reject(err);
                             }
 
-                            vscode.window?.showErrorMessage(err.message, KNOWN_ISSUES, REPORT_ISSUE)
+                            vscode.window
+                                ?.showErrorMessage(
+                                    err.message,
+                                    KNOWN_ISSUES,
+                                    REPORT_ISSUE,
+                                )
                                 .then((selected: any) => {
                                     if (selected === KNOWN_ISSUES) {
-                                        vscode.env.openExternal(vscode.Uri.parse(knownIssuesUrl));
+                                        vscode.env.openExternal(
+                                            vscode.Uri.parse(knownIssuesUrl),
+                                        );
                                     }
                                     if (selected === REPORT_ISSUE) {
-                                        vscode.env.openExternal(vscode.Uri.parse(newIssueUrl));
+                                        vscode.env.openExternal(
+                                            vscode.Uri.parse(newIssueUrl),
+                                        );
                                     }
                                 });
 
@@ -138,11 +172,11 @@ export function activate(context: ExtensionContext) {
                         });
                 });
             },
-        })
+        }),
     );
 }
 
-export function deactivate() { }
+export function deactivate() {}
 
 function shouldIgnore(filepath: any) {
     const ignoreFilename = ".bladeignore";
@@ -163,7 +197,9 @@ function shouldIgnore(filepath: any) {
 }
 
 function showWelcomeMessage(context: vscode.ExtensionContext) {
-    const extConfig: WorkspaceConfiguration = vscode.workspace.getConfiguration("bladeFormatter.misc");
+    const extConfig: WorkspaceConfiguration = vscode.workspace.getConfiguration(
+        "bladeFormatter.misc",
+    );
 
     if (extConfig.dontShowNewVersionMessage) {
         return;
@@ -171,35 +207,62 @@ function showWelcomeMessage(context: vscode.ExtensionContext) {
 
     let message: string | null = null;
 
-    const previousVersion = context.globalState.get<string>(ExtensionConstants.globalVersionKey);
-    const currentVersion = vscode.extensions.getExtension(ExtensionConstants.extensionId)?.packageJSON?.version;
-    const previousVersionArray = previousVersion ? previousVersion.split('.').map((s: string) => Number(s)) : [0, 0, 0];
-    const currentVersionArray = currentVersion.split('.').map((s: string) => Number(s));
+    const previousVersion = context.globalState.get<string>(
+        ExtensionConstants.globalVersionKey,
+    );
+    const currentVersion = vscode.extensions.getExtension(
+        ExtensionConstants.extensionId,
+    )?.packageJSON?.version;
+    const previousVersionArray = previousVersion
+        ? previousVersion.split(".").map((s: string) => Number(s))
+        : [0, 0, 0];
+    const currentVersionArray = currentVersion
+        .split(".")
+        .map((s: string) => Number(s));
 
     if (previousVersion === undefined || previousVersion.length === 0) {
         message = `Thanks for using ${ExtensionConstants.displayName}.`;
-    } else if (currentVersion !== previousVersion && (
+    } else if (
+        currentVersion !== previousVersion &&
         // patch update
-        (previousVersionArray[0] === currentVersionArray[0] && previousVersionArray[1] === currentVersionArray[1] && previousVersionArray[2] < currentVersionArray[2]) ||
-        // minor update
-        (previousVersionArray[0] === currentVersionArray[0] && previousVersionArray[1] < currentVersionArray[1]) ||
-        // major update
-        (previousVersionArray[0] < currentVersionArray[0])
-    )
+        ((previousVersionArray[0] === currentVersionArray[0] &&
+            previousVersionArray[1] === currentVersionArray[1] &&
+            previousVersionArray[2] < currentVersionArray[2]) ||
+            // minor update
+            (previousVersionArray[0] === currentVersionArray[0] &&
+                previousVersionArray[1] < currentVersionArray[1]) ||
+            // major update
+            previousVersionArray[0] < currentVersionArray[0])
     ) {
         message = `${ExtensionConstants.displayName} updated to ${currentVersion}.`;
     }
 
     if (message) {
-        vscode.window.showInformationMessage(message, '⭐️ Star on Github', '🐞 Report Bug')
+        vscode.window
+            .showInformationMessage(
+                message,
+                "⭐️ Star on Github",
+                "🐞 Report Bug",
+            )
             .then(function (val: string | undefined) {
-                if (val === '🐞 Report Bug') {
-                    vscode.env.openExternal(vscode.Uri.parse('https://github.com/shufo/vscode-blade-formatter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc'));
-                } else if (val === '⭐️ Star on Github') {
-                    vscode.env.openExternal(vscode.Uri.parse('https://github.com/shufo/vscode-blade-formatter'));
+                if (val === "🐞 Report Bug") {
+                    vscode.env.openExternal(
+                        vscode.Uri.parse(
+                            "https://github.com/shufo/vscode-blade-formatter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc",
+                        ),
+                    );
+                } else if (val === "⭐️ Star on Github") {
+                    vscode.env.openExternal(
+                        vscode.Uri.parse(
+                            "https://github.com/shufo/vscode-blade-formatter",
+                        ),
+                    );
                 }
             });
-        context.globalState.update(ExtensionConstants.globalVersionKey, currentVersion);
+        context.globalState.update(
+            ExtensionConstants.globalVersionKey,
+            currentVersion,
+        );
     }
 }
 

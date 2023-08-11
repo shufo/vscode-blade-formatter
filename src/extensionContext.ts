@@ -1,4 +1,4 @@
-import { ExtensionContext, Uri } from 'vscode';
+import { ExtensionContext, Uri } from "vscode";
 
 let extensionContext: ExtensionContext;
 
@@ -6,14 +6,14 @@ let extensionContext: ExtensionContext;
  * Save a referece for this extension's context
  */
 export function setExtensionContext(context: ExtensionContext) {
-	extensionContext = context;
+    extensionContext = context;
 }
 
 /**
  * Return a reference for this extension's context
  */
 export function getExtensionContext(): ExtensionContext {
-	return extensionContext;
+    return extensionContext;
 }
 
 /**
@@ -23,5 +23,5 @@ export function getExtensionContext(): ExtensionContext {
  * @returns Uri of the file
  */
 export function asAbsolutePath(relativePath: string): Uri {
-	return Uri.file(extensionContext.asAbsolutePath(relativePath));
+    return Uri.file(extensionContext.asAbsolutePath(relativePath));
 }
