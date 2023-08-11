@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+    {
+      "type": "npm",
+      "script": "watch",
+      "group": "build",
+      "label": "npm: watch",
+      "detail": "yarn run watch",
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "never"
+      },
+      "problemMatcher": [
+        "$tsc-watch"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "problemMatcher": ["$tsc"],
+      "label": "npm: test",
+      "detail": "yarn run build && node --experimental-vm-modules node_modules/.bin/jest",
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "always"
+      }
+    }
+  ]
+}
