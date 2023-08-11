@@ -5,7 +5,8 @@
     "target": "ES6",
     "sourceMap": true,
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["node", "webpack-env"],
   },
   "exclude": ["node_modules", ".vscode-test"],
   "include": ["src/**/*"]

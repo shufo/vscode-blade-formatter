@@ -97,7 +97,6 @@ export function activate(context: ExtensionContext) {
                     try {
                         requireUncached(tailwindConfigPath);
                     } catch (error) {
-                        // @ts-ignore
                         // fallback to default config
                         tailwindConfig.tailwindcssConfigPath =
                             __non_webpack_require__.resolve(

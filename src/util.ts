@@ -28,7 +28,6 @@ export function getCoreNodeModule(moduleName: string) {
  */
 export function requireUncached(moduleName: string) {
     try {
-        // @ts-ignore
         delete __non_webpack_require__.cache[
             __non_webpack_require__.resolve(moduleName)
         ];
