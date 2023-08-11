@@ -135,6 +135,11 @@
           "default": "",
           "markdownDescription": "Comma separated custom HTML attributes order. e.g. `id, data-.+, class, name`. To enable this you must specify sort html attributes option as `custom`. You can use regex for attribute names."
         },
+        "bladeFormatter.format.indentInnerHtml": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Indent \\<head\\> and \\<body\\> tag sections in html"
+        },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
           "default": false,

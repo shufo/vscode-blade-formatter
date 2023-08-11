@@ -118,6 +118,7 @@ export function activate(context: ExtensionContext) {
                         extConfig.customHtmlAttributesOrder,
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
+                    indentInnerHtml: extConfig.indentInnerHtml,
                     ...runtimeConfig, // override all settings by runtime config
                     ...tailwindConfig,
                 };

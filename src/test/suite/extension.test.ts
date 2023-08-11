@@ -236,6 +236,31 @@ suite("Extension Test Suite", () => {
         await config.update("customHtmlAttributesOrder", undefined, true);
     });
 
+    test("Should format file with runtime config / indentInnerHtml", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/indentInnerHtml/index.blade.php",
+            "withConfig/indentInnerHtml/formatted.index.blade.php",
+        );
+    });
+
+    test("Should format file without runtime config / indentInnerHtml", async function (this: any) {
+        this.timeout(20000);
+        const config = vscode.workspace.getConfiguration(
+            "bladeFormatter.format",
+        );
+        await config.update(
+            "indentInnerHtml",
+            true,
+            true,
+        );
+        await formatSameAsBladeFormatter(
+            "withoutConfig/indentInnerHtml/index.blade.php",
+            "withoutConfig/indentInnerHtml/formatted.index.blade.php",
+        );
+        await config.update("indentInnerHtml", undefined, true);
+    });
+
     test("Format command exists in command list", async function () {
         const commands = await vscode.commands.getCommands();
         assert(commands.includes(ExtensionConstants.formatCommandKey));
