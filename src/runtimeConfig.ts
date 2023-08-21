@@ -26,6 +26,7 @@ export interface RuntimeConfig {
     tailwindcssConfigPath?: string;
     noMultipleEmptyLines?: boolean;
     noPhpSyntaxCheck?: boolean;
+    noSingleQuote?: boolean;
 }
 
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
@@ -61,6 +62,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
             tailwindcssConfigPath: { type: "string" },
             noMultipleEmptyLines: { type: "boolean" },
             noPhpSyntaxCheck: { type: "boolean" },
+            noSingleQuote: { type: "boolean" },
         },
         additionalProperties: true,
     };

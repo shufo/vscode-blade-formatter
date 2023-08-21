@@ -119,6 +119,7 @@ export function activate(context: ExtensionContext) {
                     noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
                     noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
                     indentInnerHtml: extConfig.indentInnerHtml,
+                    noSingleQuote: extConfig.noSingleQuote,
                     ...runtimeConfig, // override all settings by runtime config
                     ...tailwindConfig,
                 };
