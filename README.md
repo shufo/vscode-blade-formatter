@@ -37,6 +37,7 @@ You can also format programmatically with the same syntax using the [blade-forma
 | `Blade Formatter: format Custom Html Attributes Order` | Comma separated custom HTML attributes order. e.g. `id, data-.+, class, name`. To enable this you must specify sort html attributes option as `custom`. You can use regex for attribute names.                                                                                  | `none`  |
 | `Blade Formatter: format No Multiple Empty Lines`      | Collapses multiple blank lines into a single blank line.                                                                                                                                                                                                                        | false   |
 | `Blade Formatter: format No PHP Syntax Check`          | Disable PHP Syntax check. Enabling this will suppress syntax error reporing.                                                                                                                                                                                                    | ""      |
+| `Blade Formatter: format No Single Quote`              | Use double quotes instead of single quotes for php expression.                                                                                                                                                                                                                  | false   |
 | `Blade Formatter: Dont Show New Version Message`       | If set to 'true', the new version message won't be shown anymore.                                                                                                                                                                                                               | false   |
 
 ## Configuration file: .bladeformatterrc.json or .bladeformatterrc
@@ -55,7 +56,8 @@ Configuration file will like below:
     "useTabs": false,
     "sortTailwindcssClasses": true,
     "sortHtmlAttributes": "none",
-    "noPhpSyntaxCheck": false
+    "noPhpSyntaxCheck": false,
+    "noSingleQuote": false
 }
 ```
 
