@@ -1,5 +1,18 @@
 # ChangeLog
 
+## [0.23.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.22.1...v0.23.0) (2023-08-22)
+
+
+### Features
+
+* 🎸 add option `noSingleQuote` ([1342e94](https://github.com/shufo/vscode-blade-formatter/commit/1342e94ef1402828235cc17ec582deec13a6f011))
+
+
+### Miscellaneous
+
+* 🤖 fix version ([c9f5a3f](https://github.com/shufo/vscode-blade-formatter/commit/c9f5a3ff14adca8b8a80a24d7bc43f2cb98240fc))
+* **main:** release 0.22.1 ([c9f5a3f](https://github.com/shufo/vscode-blade-formatter/commit/c9f5a3ff14adca8b8a80a24d7bc43f2cb98240fc))
+
 ## [0.22.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.22.0...v0.22.1) (2023-08-11)
 
 
