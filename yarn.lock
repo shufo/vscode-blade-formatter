@@ -2178,10 +2178,10 @@ bl@^4.0.3:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-blade-formatter@^1.37.0:
-  version "1.37.0"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.37.0.tgz#8e9e7a850a371ce46ce011d9fbe62ef16fcbe4e9"
-  integrity sha512-54XglGjcBQBzZr076CVmZLCrlHP77ojN2Ee+MkTrnZu3DUwWk+YP5sYIPFS5bRoVLND8IW4v5eEhwVN1imU26Q==
+blade-formatter@^1.37.1:
+  version "1.37.1"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.37.1.tgz#57785bc276a18bf96472558af1cfe8eb534a1013"
+  integrity sha512-zleMl3aWQwqbGqzqd0CR52GdiI98Ak9guKpgj/enDDsrD1GBw2ieeGJUN3G0RjcYkRDsdKiauD2gOh6hKIFwjQ==
   dependencies:
     "@prettier/plugin-php" "^0.19.0"
     "@shufo/tailwindcss-class-sorter" "3.0.1"
