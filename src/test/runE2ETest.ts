@@ -17,7 +17,7 @@ async function main() {
 
         console.log(`Using VS Code at ${codePath}`);
 
-        let codeExecPath = path.resolve(codePath, "bin", "code");
+        let codeExecPath = path.resolve(codePath, "../", "bin", "code");
 
         if (platform() === "darwin") {
             codeExecPath = codePath;
