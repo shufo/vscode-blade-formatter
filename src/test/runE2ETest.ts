@@ -17,16 +17,7 @@ async function main() {
 
         console.log(`Using VS Code at ${codePath}`);
 
-        let codeExecPath = path.resolve(codePath, "../", "bin", "code");
-
-        if (platform() === "darwin") {
-            codeExecPath = codePath;
-        }
-
-        // list files in codePath
-        const dir = dirname(codePath);
-        const files = fs.readdirSync(dir);
-        console.log(files);
+        const codeExecPath = path.resolve(codePath, "../", "bin", "code");
 
         const extensionsDir = getExtensionsDir();
 
