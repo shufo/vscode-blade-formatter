@@ -1,3 +1,4 @@
+.github
 .vscode/**
 .vscode-test/**
 test/**
@@ -14,3 +15,4 @@ sponsor.config.ts
 src/**
 tsconfig.json
 yarn.lock
+*.vsix
