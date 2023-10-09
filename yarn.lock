@@ -1240,14 +1240,14 @@
   resolved "https://registry.yarnpkg.com/@one-ini/wasm/-/wasm-0.1.1.tgz#6013659736c9dbfccc96e8a9c2b3de317df39323"
   integrity sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==
 
-"@prettier/plugin-php@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.npmjs.org/@prettier/plugin-php/-/plugin-php-0.19.0.tgz"
-  integrity sha512-WWFd0KDcF1EHsLpxU7DvgHjxdyZSal3ykDaCL9DzJSyIBo9qfk11spJR2svrEc/38CZioYy/OtbdyoQ5YEGASA==
+"@prettier/plugin-php@^0.19.7":
+  version "0.19.7"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.19.7.tgz#c11b710f319f83c276b6b3f8ab3f70f612302785"
+  integrity sha512-QOzBs05nwuR92uak7xBHf7RCZCFXml+6Sk3cjTp2ahQlilBtupqlNjitlTXsOfPIAYwlFgLP1oSfyapS6DN00w==
   dependencies:
     linguist-languages "^7.21.0"
     mem "^8.0.0"
-    php-parser "3.1.0"
+    php-parser "^3.1.5"
 
 "@shufo/tailwindcss-class-sorter@3.0.1":
   version "3.0.1"
@@ -2177,12 +2177,12 @@ bl@^4.0.3:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-blade-formatter@^1.37.1:
-  version "1.37.1"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.37.1.tgz#57785bc276a18bf96472558af1cfe8eb534a1013"
-  integrity sha512-zleMl3aWQwqbGqzqd0CR52GdiI98Ak9guKpgj/enDDsrD1GBw2ieeGJUN3G0RjcYkRDsdKiauD2gOh6hKIFwjQ==
+blade-formatter@^1.38.3:
+  version "1.38.3"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.38.3.tgz#96f30e7334c883d559d9b0488f0d5225d4a813ec"
+  integrity sha512-EWChTJrk9tFxP1S/QxCSpVjWubCJa5jeCZ1WzqfaX+n9NMAxIW849aRY0FRfr6NT65WlfacqDBnxfZSGzjXuLw==
   dependencies:
-    "@prettier/plugin-php" "^0.19.0"
+    "@prettier/plugin-php" "^0.19.7"
     "@shufo/tailwindcss-class-sorter" "3.0.1"
     aigle "^1.14.1"
     ajv "^8.9.0"
@@ -5479,12 +5479,7 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==
 
-php-parser@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/php-parser/-/php-parser-3.1.0.tgz"
-  integrity sha512-EwtoPSCqggAgTcPbV4YXsvUjYRQCZCxsQzxa7z8RX8rJ8bWAglMMi1tFNxdzwf5uNPFWFjHYhXA3REuWKzgMuw==
-
-php-parser@3.1.5:
+php-parser@3.1.5, php-parser@^3.1.5:
   version "3.1.5"
   resolved "https://registry.npmjs.org/php-parser/-/php-parser-3.1.5.tgz"
   integrity sha512-jEY2DcbgCm5aclzBdfW86GM6VEIWcSlhTBSHN1qhJguVePlYe28GhwS0yoeLYXpM2K8y6wzLwrbq814n2PHSoQ==
