@@ -1,7 +1,7 @@
 import fs from "fs";
 import path, { dirname } from "path";
 import { spawnSync } from "child_process";
-import { tmpdir } from "os";
+import { platform, tmpdir } from "os";
 import { randomBytes } from "crypto";
 
 import { downloadAndUnzipVSCode, runTests } from "@vscode/test-electron";
@@ -17,7 +17,11 @@ async function main() {
 
         console.log(`Using VS Code at ${codePath}`);
 
-        const codeExecPath = path.resolve(codePath, "../", "bin", "code");
+        let codeExecPath = path.resolve(codePath, "bin", "code");
+
+        if (platform() === "darwin") {
+            codeExecPath = codePath;
+        }
 
         // list files in codePath
         const dir = dirname(codePath);
