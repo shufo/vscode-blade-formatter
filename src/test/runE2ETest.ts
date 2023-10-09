@@ -1,5 +1,5 @@
 import fs from "fs";
-import path from "path";
+import path, { dirname } from "path";
 import { spawnSync } from "child_process";
 import { tmpdir } from "os";
 import { randomBytes } from "crypto";
@@ -14,7 +14,15 @@ async function main() {
         // vscode version
         const version = VSCODE_VERSION;
         const codePath = await downloadAndUnzipVSCode(version);
+
+        console.log(`Using VS Code at ${codePath}`);
+
         const codeExecPath = path.resolve(codePath, "../", "bin", "code");
+
+        // list files in codePath
+        const dir = dirname(codePath);
+        const files = fs.readdirSync(dir);
+        console.log(files);
 
         const extensionsDir = getExtensionsDir();
 
