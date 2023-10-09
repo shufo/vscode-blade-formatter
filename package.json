@@ -183,6 +183,7 @@
     "@typescript-eslint/eslint-plugin": "6.4.1",
     "@typescript-eslint/parser": "6.4.1",
     "@vscode/test-electron": "^2.1.4",
+    "@vscode/vsce": "^2.21.1",
     "@zeit/eslint-config-node": "^0.3.0",
     "app-root-path": "^3.0.0",
     "babel-jest": "^29.0.0",
