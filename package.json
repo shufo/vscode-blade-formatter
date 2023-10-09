@@ -161,6 +161,8 @@
     "fix": "eslint src --ext ts --fix",
     "pretest": "yarn run compile && yarn run compile-tests",
     "test": "node ./out/test/runTest.js",
+    "pretest:e2e": "yarn run compile && yarn run compile-tests",
+    "test:e2e": "node ./out/test/runE2ETest.js",
     "compile": "webpack --progress",
     "build": "webpack --progress",
     "watch": "webpack --watch",
