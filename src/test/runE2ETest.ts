@@ -43,7 +43,7 @@ async function main() {
         // Download VS Code, unzip it and run the integration test
         await runTests({
             version,
-            extensionDevelopmentPath: "./support",
+            extensionDevelopmentPath: "./support", // set directory that has no package.json
             extensionTestsPath,
             launchArgs,
         });
