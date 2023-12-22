@@ -210,7 +210,7 @@
     "blade-formatter": "^1.38.6",
     "find-config": "^1.0.0",
     "ignore": "^5.2.4",
-    "sucrase": "^3.34.0",
+    "sucrase": "^3.35.0",
     "tailwindcss": "^3.3.3",
     "vscode-extension-telemetry": "^0.4.5"
   },
