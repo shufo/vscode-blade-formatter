@@ -18,6 +18,7 @@ export interface RuntimeConfig {
     indentSize?: number;
     wrapLineLength?: number;
     wrapAttributes?: WrapAttributes;
+    wrapAttributesMinAttrs?: number;
     endWithNewline?: boolean;
     useTabs?: boolean;
     sortTailwindcssClasses?: boolean;
@@ -54,6 +55,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
                     "preserve-aligned",
                 ],
             },
+            wrapAttributesMinAttrs: { type: "int32" },
             endWithNewline: { type: "boolean" },
             useTabs: { type: "boolean" },
             sortTailwindcssClasses: { type: "boolean" },
