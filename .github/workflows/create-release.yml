@@ -11,7 +11,7 @@ jobs:
         id: release
         with:
           release-type: node
-          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+          changelog-sections: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
       - name: Setup Node.js
         if: ${{ steps.release.outputs.release_created }}
         uses: actions/setup-node@v4
