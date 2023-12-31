@@ -1,8 +1,12 @@
 test:
-  - __tests__/**/*
+  - changed-files:
+    - any-glob-to-any-file: __tests__/**/*
 bin:
-  - bin/**/*
+  - changed-files:
+    - any-glob-to-any-file: bin/**/*
 application:
-  - src/**/*
+  - changed-files:
+    - any-glob-to-any-file: src/**/*
 github:
-  - .github/**/*
+  - changed-files:
+    - any-glob-to-any-file: .github/**/*
