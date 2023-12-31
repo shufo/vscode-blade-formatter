@@ -30,6 +30,7 @@ You can also format programmatically with the same syntax using the [blade-forma
 | `Blade Formatter: format Indent Size`                  | An indent size                                                                                                                                                                                                                                                                  | 4       |
 | `Blade Formatter: format Wrap Line Length`             | The length of line wrap size                                                                                                                                                                                                                                                    | 120     |
 | `Blade Formatter: format Wrap Attributes`              | The way to wrap attributes. `[auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned]`                                                                                                                                                | `auto`  |
+| `Blade Formatter: format Wrap Attributes Min Attrs`    | Minimum number of html tag attributes for force wrap attribute options. Wrap the first attribute only if `force-expand-multiline` is specified in wrap attributes                                                                                                               | 2       |
 | `Blade Formatter: format Sort Tailwind Css Classes`    | Sort Tailwind CSS classes automatically                                                                                                                                                                                                                                         | false   |
 | `Blade Formatter: format Sort HTML Attributes`         | Sort HTML Attributes in the specified order. [`none` \| `alphabetical` \| [`code-guide`](https://codeguide.co/#attribute-order) \| [`idiomatic`](https://github.com/necolas/idiomatic-html#attribute-order) \| [`vuejs`](https://eslint.vuejs.org/rules/attributes-order.html)] | `none`  |
 | `Blade Formatter: format Indent Inner Html`            | Indent `<head>` and `<body>` sections in html.                                                                                                                                                                                                                                  | false   |
@@ -50,6 +51,7 @@ Configuration file will like below:
 {
     "indentSize": 4,
     "wrapAttributes": "auto",
+    "wrapAttributesMinAttrs": 2,
     "wrapLineLength": 120,
     "endWithNewLine": true,
     "noMultipleEmptyLines": false,
