@@ -184,7 +184,7 @@
     "@types/webpack-env": "^1.18.1",
     "@typescript-eslint/eslint-plugin": "6.7.5",
     "@typescript-eslint/parser": "6.7.5",
-    "@vscode/test-electron": "^2.1.4",
+    "@vscode/test-electron": "^2.3.8",
     "@vscode/vsce": "^2.21.1",
     "@zeit/eslint-config-node": "^0.3.0",
     "app-root-path": "^3.0.0",
