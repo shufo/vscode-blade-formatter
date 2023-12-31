@@ -1,5 +1,24 @@
 # ChangeLog
 
+## [0.24.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.23.5...v0.24.0) (2023-12-31)
+
+
+### Features
+
+* 🎸 option `wrapAttributesMinAttrs` ([114c2ba](https://github.com/shufo/vscode-blade-formatter/commit/114c2ba4ab64b04c7733ab506437e84e224efa7f))
+
+
+### Miscellaneous
+
+* 🤖 bump @microsoft/test-electron to 2.3.8 ([cc9b429](https://github.com/shufo/vscode-blade-formatter/commit/cc9b429438fbf5dd49198531eab4b78aeb263b71))
+* **deps:** bump @babel/traverse from 7.16.7 to 7.23.7 ([1e03e58](https://github.com/shufo/vscode-blade-formatter/commit/1e03e584378823d7e6bca109c6d70b8045427e18))
+* **deps:** bump sharp from 0.32.1 to 0.32.6 ([977fe0f](https://github.com/shufo/vscode-blade-formatter/commit/977fe0f7e69926187cb5d42dda211dd854329dd4))
+* **deps:** bump sucrase from 3.34.0 to 3.35.0 ([520a00e](https://github.com/shufo/vscode-blade-formatter/commit/520a00e243c04e3983b9c9fba40b0e81a3132896))
+* **deps:** update actions/labeler action to v5 ([6ce54cf](https://github.com/shufo/vscode-blade-formatter/commit/6ce54cf9fbd510d0c5d0b0e0f71b2427b42471cb))
+* **deps:** update actions/stale action to v9 ([ec84619](https://github.com/shufo/vscode-blade-formatter/commit/ec84619fa9e4169bd8ba1e0bcdfbf44886716721))
+* **deps:** update dependency conventional-changelog-cli to v4 ([99734b2](https://github.com/shufo/vscode-blade-formatter/commit/99734b2bbd522273e20e39f386e6bbdb34d3d047))
+* **deps:** update googlecloudplatform/release-please-action action to v4 ([65ef9bf](https://github.com/shufo/vscode-blade-formatter/commit/65ef9bff6da3cf08a544cc01e8154aa22c6018ff))
+
 ## [0.23.5](https://github.com/shufo/vscode-blade-formatter/compare/v0.23.4...v0.23.5) (2023-11-11)
 
 
