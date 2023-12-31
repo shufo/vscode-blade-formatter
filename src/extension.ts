@@ -111,6 +111,7 @@ export function activate(context: ExtensionContext) {
                     indentSize: extConfig.indentSize,
                     wrapLineLength: extConfig.wrapLineLength,
                     wrapAttributes: extConfig.wrapAttributes,
+                    wrapAttributesMinAttrs: extConfig.wrapAttributesMinAttrs,
                     useTabs: extConfig.useTabs,
                     sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
                     sortHtmlAttributes: extConfig.sortHtmlAttributes ?? "none",

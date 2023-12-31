@@ -63,6 +63,39 @@ suite("Extension Test Suite", () => {
         );
     });
 
+    test("Should format file with runtime config / wrapAttributesMinAttrs", async function (this: any) {
+        this.timeout(20000);
+        await formatSameAsBladeFormatter(
+            "withConfig/wrapAttributesMinAttrs/index.blade.php",
+            "withConfig/wrapAttributesMinAttrs/formatted.index.blade.php",
+        );
+    });
+
+    test("Should format file without runtime config / wrapAttributesMinAttrs", async function (this: any) {
+        this.timeout(20000);
+
+        const config = vscode.workspace.getConfiguration(
+            "bladeFormatter.format",
+        );
+        await config.update("sortHtmlAttributes", "custom", true);
+        await config.update(
+            "wrapAttributesMinAttrs",
+            0,
+            true,
+        );
+        await config.update(
+            "wrapAttributes",
+            "force-expand-multiline",
+            true,
+        );
+
+        await formatSameAsBladeFormatter(
+            "withoutConfig/wrapAttributesMinAttrs/index.blade.php",
+            "withoutConfig/wrapAttributesMinAttrs/formatted.index.blade.php",
+        );
+    });
+
+
     test("Should format file with runtime config / wrapLineLength", async function (this: any) {
         this.timeout(20000);
         await formatSameAsBladeFormatter(

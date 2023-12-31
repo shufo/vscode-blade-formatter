@@ -97,6 +97,11 @@
           ],
           "markdownDescription": "The way to wrap attributes"
         },
+        "bladeFormatter.format.wrapAttributesMinAttrs": {
+          "type": "number",
+          "default": 2,
+          "markdownDescription": "Minimum number of html tag attributes for force wrap attribute options. Wrap the first attribute only if `force-expand-multiline` is specified in wrap attributes"
+        },
         "bladeFormatter.format.useTabs": {
           "type": "boolean",
           "default": false,
