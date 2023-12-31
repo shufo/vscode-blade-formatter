@@ -138,7 +138,7 @@
         "bladeFormatter.format.indentInnerHtml": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Indent \\<head\\> and \\<body\\> tag sections in html"
+          "markdownDescription": "Indent `<head>` and `<body>` tag sections in html"
         },
         "bladeFormatter.format.noSingleQuote": {
           "type": "boolean",
