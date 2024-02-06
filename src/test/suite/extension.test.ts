@@ -93,6 +93,18 @@ suite("Extension Test Suite", () => {
             "withoutConfig/wrapAttributesMinAttrs/index.blade.php",
             "withoutConfig/wrapAttributesMinAttrs/formatted.index.blade.php",
         );
+
+        // Reset config
+        await config.update(
+            "wrapAttributesMinAttrs",
+            2,
+            true,
+        );
+        await config.update(
+            "wrapAttributes",
+            "auto",
+            true,
+        );
     });
 
 
