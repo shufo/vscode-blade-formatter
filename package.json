@@ -222,7 +222,7 @@
   "optionalDependencies": {
     "fsevents": "*",
     "kind-of": "*",
-    "sharp": "*"
+    "sharp": "^0.33.2"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/shufo"
