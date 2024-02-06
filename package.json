@@ -200,7 +200,7 @@
     "eslint": "8.56.0",
     "glob": "8.1.0",
     "mocha": "^10.0.0",
-    "sponsorkit": "^0.9.0",
+    "sponsorkit": "0.8.5",
     "ts-jest": "29.1.2",
     "ts-loader": "9.5.1",
     "ts-migrate": "0.1.35",
@@ -221,8 +221,7 @@
   },
   "optionalDependencies": {
     "fsevents": "*",
-    "kind-of": "*",
-    "sharp": "0.32.6"
+    "kind-of": "*"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/shufo"
