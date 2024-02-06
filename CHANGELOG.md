@@ -1,5 +1,20 @@
 # ChangeLog
 
+## [0.24.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.0...v0.24.1) (2024-02-06)
+
+
+### Fixes
+
+* 🐛 runtime config does not support indentInnerHtml option ([a413028](https://github.com/shufo/vscode-blade-formatter/commit/a413028a81659cb5ceaf8d8052a1d878ae243b57))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.40.1 ([377efea](https://github.com/shufo/vscode-blade-formatter/commit/377efeae0fd0817b2a45445b487bcbba872daad2))
+* **deps:** bump ignore from 5.2.4 to 5.3.1 ([9acf5bd](https://github.com/shufo/vscode-blade-formatter/commit/9acf5bda04aa4a66bbb40d331b3a3dd802c53d71))
+* **deps:** update actions/cache action to v4 ([533f4c4](https://github.com/shufo/vscode-blade-formatter/commit/533f4c4f598fb168b14714edfcc2c982167b31bc))
+* **deps:** update all minor update of dev dependencies ([86b2326](https://github.com/shufo/vscode-blade-formatter/commit/86b2326672c2ccc087b24ebe92ba92223b7a241c))
+
 ## [0.24.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.23.5...v0.24.0) (2023-12-31)
 
 
