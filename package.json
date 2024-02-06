@@ -221,7 +221,8 @@
   },
   "optionalDependencies": {
     "fsevents": "*",
-    "kind-of": "*"
+    "kind-of": "*",
+    "sharp": "*"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/shufo"
