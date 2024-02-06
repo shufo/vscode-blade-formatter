@@ -16,6 +16,7 @@ export type WrapAttributes =
 
 export interface RuntimeConfig {
     indentSize?: number;
+    indentInnerHtml?: boolean;
     wrapLineLength?: number;
     wrapAttributes?: WrapAttributes;
     wrapAttributesMinAttrs?: number;
@@ -43,6 +44,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
     const schema: JTDSchemaType<RuntimeConfig> = {
         optionalProperties: {
             indentSize: { type: "int32" },
+            indentInnerHtml: { type: "boolean" },
             wrapLineLength: { type: "int32" },
             wrapAttributes: {
                 enum: [
