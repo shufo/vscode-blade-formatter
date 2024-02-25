@@ -1,7 +1,7 @@
-import findConfig from "find-config";
-import path from "path";
 import fs from "fs";
+import path from "path";
 import Ajv, { JTDSchemaType } from "ajv/dist/jtd";
+import findConfig from "find-config";
 
 const ajv = new Ajv();
 

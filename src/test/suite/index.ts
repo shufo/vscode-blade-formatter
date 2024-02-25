@@ -1,6 +1,6 @@
 import path from "path";
-import Mocha from "mocha";
 import glob from "glob";
+import Mocha from "mocha";
 
 export function run() {
 	// Create the mocha test

@@ -1,3 +1,4 @@
+import { Formatter } from "blade-formatter";
 import vscode, {
 	commands,
 	TextEditor,
@@ -5,10 +6,9 @@ import vscode, {
 	window,
 	WorkspaceConfiguration,
 } from "vscode";
+import { Logger } from "./logger";
 import { readRuntimeConfig } from "./runtimeConfig";
 import { getCoreNodeModule } from "./util";
-import { Formatter } from "blade-formatter";
-import { Logger } from "./logger";
 
 const vsctmModule = getCoreNodeModule("vscode-textmate");
 const onigurumaModule = getCoreNodeModule("vscode-oniguruma");

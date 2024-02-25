@@ -1,18 +1,18 @@
 import assert from "assert";
-import path from "path";
 import fs from "fs";
+import path from "path";
 
+import { before, beforeEach } from "mocha";
+import { performance } from "perf_hooks";
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import vscode, { TextDocument } from "vscode";
-import { before, beforeEach } from "mocha";
 import { ExtensionConstants } from "../../constants";
 import {
 	formatSameAsBladeFormatter,
 	getContent,
 	getDoc,
 } from "../support/util";
-import { performance } from "perf_hooks";
 
 suite("Extension Test Suite", () => {
 	beforeEach(async () => {

@@ -1,8 +1,8 @@
-import fs from "fs";
-import path, { dirname } from "path";
 import { spawnSync } from "child_process";
-import { platform, tmpdir } from "os";
 import { randomBytes } from "crypto";
+import fs from "fs";
+import { platform, tmpdir } from "os";
+import path, { dirname } from "path";
 
 import { downloadAndUnzipVSCode, runTests } from "@vscode/test-electron";
 

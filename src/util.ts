@@ -1,6 +1,6 @@
-import vscode from "vscode";
 import fs from "fs";
 import { transform } from "sucrase";
+import vscode from "vscode";
 
 /**
  * Returns a node module installed with VSCode, or null if it fails.
