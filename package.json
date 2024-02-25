@@ -162,8 +162,8 @@
     "onLanguage:blade"
   ],
   "scripts": {
-    "lint": "eslint src --ext ts",
-    "fix": "eslint src --ext ts --fix",
+    "lint": "biome lint .",
+    "fix": "biome lint . --apply",
     "pretest": "yarn run compile && yarn run compile-tests",
     "test": "node ./out/test/runTest.js",
     "pretest:e2e": "yarn run compile && yarn run compile-tests",
