@@ -164,6 +164,8 @@
   "scripts": {
     "lint": "biome lint .",
     "fix": "biome lint . --apply",
+    "format": "biome format . --write",
+    "format:check": "biome format . --test",
     "pretest": "yarn run compile && yarn run compile-tests",
     "test": "node ./out/test/runTest.js",
     "pretest:e2e": "yarn run compile && yarn run compile-tests",
