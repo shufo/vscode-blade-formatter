@@ -179,6 +179,7 @@
     "publish": "vsce publish --yarn"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.5.3",
     "@jest/types": "^29.0.0",
     "@types/find-config": "^1.0.1",
     "@types/glob": "^8.0.0",
