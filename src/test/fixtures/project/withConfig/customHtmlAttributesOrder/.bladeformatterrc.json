@@ -1,4 +1,4 @@
 {
-  "sortHtmlAttributes": "custom",
-  "customHtmlAttributesOrder": "id, aria-.+, src, class"
+	"sortHtmlAttributes": "custom",
+	"customHtmlAttributesOrder": "id, aria-.+, src, class"
 }

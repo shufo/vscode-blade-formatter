@@ -1,9 +1,9 @@
 declare global {
-    namespace NodeJS {
-        interface ProcessEnv {
-            APP_INSIGHT_INSTRUMENT_KEY: string;
-        }
-    }
+	namespace NodeJS {
+		interface ProcessEnv {
+			APP_INSIGHT_INSTRUMENT_KEY: string;
+		}
+	}
 }
 
 // If this file has no import/export statements (i.e. is a script)
