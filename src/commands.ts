@@ -14,10 +14,10 @@ const vsctmModule = getCoreNodeModule("vscode-textmate");
 const onigurumaModule = getCoreNodeModule("vscode-oniguruma");
 const { Range, Position } = vscode;
 
-export const formatFromCommand = async function (
+export const formatFromCommand = async (
     editor: TextEditor,
     edit: TextEditorEdit,
-) {
+) => {
     try {
         const extConfig = vscode.workspace.getConfiguration(
             "bladeFormatter.format",

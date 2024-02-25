@@ -15,7 +15,7 @@ import {
 import { performance } from "perf_hooks";
 
 suite("Extension Test Suite", () => {
-    beforeEach(async function () {
+    beforeEach(async () => {
         const config = vscode.workspace.getConfiguration(
             "bladeFormatter.format",
         );
@@ -331,12 +331,12 @@ suite("Extension Test Suite", () => {
         await config.update("noSingleQuote", undefined, true);
     });
 
-    test("Format command exists in command list", async function () {
+    test("Format command exists in command list", async () => {
         const commands = await vscode.commands.getCommands();
         assert(commands.includes(ExtensionConstants.formatCommandKey));
     });
 
-    test("Format command", async function () {
+    test("Format command", async () => {
         const doc = await getDoc("index.blade.php");
         await vscode.commands.executeCommand(
             ExtensionConstants.formatCommandKey,

@@ -4,7 +4,7 @@ import { getExtensionContext } from "./extensionContext";
 
 type ErrorEvent = "UNCAUGHT_EXCEPTION" | "CAUGHT_ERROR";
 
-export const enum TelemetryEventNames {
+export enum TelemetryEventNames {
     /**
      * Extension startup event.
      */

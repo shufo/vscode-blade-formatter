@@ -246,7 +246,7 @@ function showWelcomeMessage(context: vscode.ExtensionContext) {
                 "⭐️ Star on Github",
                 "🐞 Report Bug",
             )
-            .then(function (val: string | undefined) {
+            .then((val: string | undefined) => {
                 if (val === "🐞 Report Bug") {
                     vscode.env.openExternal(
                         vscode.Uri.parse(
