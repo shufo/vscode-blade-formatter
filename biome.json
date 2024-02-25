@@ -25,7 +25,6 @@
 			"./src/test/**/*SyntaxError*/*",
 			"./src/test/**/*Error*/*",
 			"./.vscode",
-			"./.vscode",
 			"./dist"
 		]
 	}
