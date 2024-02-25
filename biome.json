@@ -12,6 +12,7 @@
 			"./.vscode-test",
 			"./out",
 			"./src/test/**/*SyntaxError*/*",
+			"./src/test/**/*Error*/*",
 			"./.vscode",
 			"./dist"
 		]
@@ -22,6 +23,8 @@
 			"./.vscode-test",
 			"./out",
 			"./src/test/**/*SyntaxError*/*",
+			"./src/test/**/*Error*/*",
+			"./.vscode",
 			"./.vscode",
 			"./dist"
 		]
