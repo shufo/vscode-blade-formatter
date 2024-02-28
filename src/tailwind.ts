@@ -5,8 +5,8 @@ import { findConfigFile } from "./runtimeConfig";
 const __config__ = "tailwind.config.js";
 
 export type TailwindConfig = {
-    tailwindcssConfigPath?: string;
-    tailwindcssConfig?: object;
+	tailwindcssConfigPath?: string;
+	tailwindcssConfig?: object;
 };
 
 /**
@@ -16,21 +16,18 @@ export type TailwindConfig = {
  * @param optionPath string
  */
 export function resolveTailwindConfig(
-    filepath: string,
-    optionPath: string,
+	filepath: string,
+	optionPath: string,
 ): string {
-    if (!optionPath) {
-        return findConfig(__config__, { cwd: path.dirname(filepath) }) ?? "";
-    }
+	if (!optionPath) {
+		return findConfig(__config__, { cwd: path.dirname(filepath) }) ?? "";
+	}
 
-    if (path.isAbsolute(optionPath ?? "")) {
-        return optionPath;
-    }
+	if (path.isAbsolute(optionPath ?? "")) {
+		return optionPath;
+	}
 
-    const runtimeConfigPath = findConfigFile(filepath);
+	const runtimeConfigPath = findConfigFile(filepath);
 
-    return path.resolve(
-        path.dirname(runtimeConfigPath ?? ""),
-        optionPath ?? "",
-    );
+	return path.resolve(path.dirname(runtimeConfigPath ?? ""), optionPath ?? "");
 }

@@ -1,23 +1,23 @@
 {
-  "extends": ["config:base", ":preserveSemverRanges"],
-  "assigneesFromCodeOwners": true,
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "excludePackageNames": ["@types/vscode"],
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "schedule": ["every weekend"],
-      "groupName": "all minor update of dev dependencies",
-      "groupSlug": "all-minor-dependencies",
-      "labels": ["dependencies"]
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "excludePackageNames": ["@types/vscode"],
-      "schedule": ["every weekend"],
-      "matchUpdateTypes": ["major"],
-      "labels": ["dependencies", "breaking"]
-    }
-  ]
+	"extends": ["config:base", ":preserveSemverRanges"],
+	"assigneesFromCodeOwners": true,
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["*"],
+			"excludePackageNames": ["@types/vscode"],
+			"matchDepTypes": ["devDependencies"],
+			"matchUpdateTypes": ["minor", "patch"],
+			"schedule": ["every weekend"],
+			"groupName": "all minor update of dev dependencies",
+			"groupSlug": "all-minor-dependencies",
+			"labels": ["dependencies"]
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"excludePackageNames": ["@types/vscode"],
+			"schedule": ["every weekend"],
+			"matchUpdateTypes": ["major"],
+			"labels": ["dependencies", "breaking"]
+		}
+	]
 }

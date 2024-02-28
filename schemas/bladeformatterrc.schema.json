@@ -1,60 +1,60 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Schema for .bladeformatterrc.json",
-  "properties": {
-    "indentSize": {
-      "description": "An indent size",
-      "default": 4,
-      "type": "integer"
-    },
-    "wrapLineLength": {
-      "description": "The length of line wrap size",
-      "default": 120,
-      "type": "integer"
-    },
-    "wrapAttributes": {
-      "default": "auto",
-      "description": "The way to wrap attributes",
-      "type": "string",
-      "enum": [
-        "auto",
-        "force",
-        "force-aligned",
-        "force-expand-multiline",
-        "aligned-multiple",
-        "preserve",
-        "preserve-aligned"
-      ]
-    },
-    "endWithNewLine": {
-      "description": "End output with newline",
-      "default": true,
-      "type": "boolean"
-    },
-    "useTabs": {
-      "description": "Indent with tabs instead of spaces",
-      "default": false,
-      "type": "boolean"
-    },
-    "sortTailwindcssClasses": {
-      "description": "Sort Tailwindcss classes automatically",
-      "default": false,
-      "type": "boolean"
-    },
-    "sortHtmlAttributes": {
-      "description": "Sort HTML Attributes in the specified order. `none`, `alphabetical`, `code-guide`, `idiomatic`, `vuejs`",
-      "default": "none",
-      "type": "string"
-    },
-    "tailwindcssConfigPath": {
-      "description": "Path to custom tailwind config",
-      "default": "",
-      "type": "string"
-    },
-    "noMultipleEmptyLines": {
-      "description": "Collapses multiple blank lines into a single blank line",
-      "default": false,
-      "type": "boolean"
-    }
-  }
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Schema for .bladeformatterrc.json",
+	"properties": {
+		"indentSize": {
+			"description": "An indent size",
+			"default": 4,
+			"type": "integer"
+		},
+		"wrapLineLength": {
+			"description": "The length of line wrap size",
+			"default": 120,
+			"type": "integer"
+		},
+		"wrapAttributes": {
+			"default": "auto",
+			"description": "The way to wrap attributes",
+			"type": "string",
+			"enum": [
+				"auto",
+				"force",
+				"force-aligned",
+				"force-expand-multiline",
+				"aligned-multiple",
+				"preserve",
+				"preserve-aligned"
+			]
+		},
+		"endWithNewLine": {
+			"description": "End output with newline",
+			"default": true,
+			"type": "boolean"
+		},
+		"useTabs": {
+			"description": "Indent with tabs instead of spaces",
+			"default": false,
+			"type": "boolean"
+		},
+		"sortTailwindcssClasses": {
+			"description": "Sort Tailwindcss classes automatically",
+			"default": false,
+			"type": "boolean"
+		},
+		"sortHtmlAttributes": {
+			"description": "Sort HTML Attributes in the specified order. `none`, `alphabetical`, `code-guide`, `idiomatic`, `vuejs`",
+			"default": "none",
+			"type": "string"
+		},
+		"tailwindcssConfigPath": {
+			"description": "Path to custom tailwind config",
+			"default": "",
+			"type": "string"
+		},
+		"noMultipleEmptyLines": {
+			"description": "Collapses multiple blank lines into a single blank line",
+			"default": false,
+			"type": "boolean"
+		}
+	}
 }
