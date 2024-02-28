@@ -1,5 +1,20 @@
 # ChangeLog
 
+## [0.24.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.1...v0.24.2) (2024-02-28)
+
+
+### Fixes
+
+* 🐛 add start year for copyright ([ba93756](https://github.com/shufo/vscode-blade-formatter/commit/ba9375698fe95adbe5e2cf6b2f73e8f5bcb5e635))
+* **deps:** update dependency blade-formatter to v1.41.0 ([03b0614](https://github.com/shufo/vscode-blade-formatter/commit/03b0614a485f813013513492b56da71746abb7fd))
+
+
+### Miscellaneous
+
+* 🤖 add sharp as optional dependency ([4839204](https://github.com/shufo/vscode-blade-formatter/commit/4839204ac32336ef5cbc74b85ecbd84592fe31df))
+* 🤖 bump blade-formatter to 1.41.1 ([2dae14f](https://github.com/shufo/vscode-blade-formatter/commit/2dae14f28a23c7d92124bfe2c987fc9026aa1577))
+* 🤖 specify sharp version ([3345ffd](https://github.com/shufo/vscode-blade-formatter/commit/3345ffd0b286b5f892462846c327d2f3e5e93a3a))
+
 ## [0.24.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.0...v0.24.1) (2024-02-06)
 
 
