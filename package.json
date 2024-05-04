@@ -194,7 +194,7 @@
     "@vscode/vsce": "^2.21.1",
     "app-root-path": "^3.0.0",
     "babel-jest": "^29.0.0",
-    "conventional-changelog-cli": "^4.0.0",
+    "conventional-changelog-cli": "^5.0.0",
     "debug": "4.3.4",
     "dotenv-webpack": "8.0.1",
     "glob": "8.1.0",
