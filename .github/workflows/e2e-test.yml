@@ -37,7 +37,7 @@ jobs:
         run: yarn install
 
       - name: Run headless test
-        uses: GabrielBB/xvfb-action@v1.6
+        uses: GabrielBB/xvfb-action@v1.7
         with:
           run: yarn run test:e2e
         env:
