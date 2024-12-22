@@ -1,5 +1,27 @@
 # ChangeLog
 
+## [0.24.3](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.2...v0.24.3) (2024-12-22)
+
+
+### Fixes
+
+* **deps:** update dependency blade-formatter to v1.42.0 ([57fe116](https://github.com/shufo/vscode-blade-formatter/commit/57fe116d6098b187b16abbae2bd309b0d2e61a04))
+* **deps:** update dependency ignore to v6 ([aeea318](https://github.com/shufo/vscode-blade-formatter/commit/aeea318adce3b16c4e6864417e4d3b672a75b83a))
+* package.json & yarn.lock to reduce vulnerabilities ([a7d5feb](https://github.com/shufo/vscode-blade-formatter/commit/a7d5febd578c0797e4e3ba2cbc140cfb53eb5e3e))
+
+
+### Miscellaneous
+
+* **deps:** bump cross-spawn from 7.0.3 to 7.0.6 ([6b266cf](https://github.com/shufo/vscode-blade-formatter/commit/6b266cf00713d0ba9062d641b7a655288b090287))
+* **deps:** bump tailwindcss from 3.3.3 to 3.4.17 ([1469d4c](https://github.com/shufo/vscode-blade-formatter/commit/1469d4c778ff5d66ff3d27ba661d89f71864d5ff))
+* **deps:** update all minor update of dev dependencies ([9cecd35](https://github.com/shufo/vscode-blade-formatter/commit/9cecd3558321e04b5045f613c9faaa8396524c2c))
+* **deps:** update dependency @types/node to v22 ([2db15ba](https://github.com/shufo/vscode-blade-formatter/commit/2db15bad9a2461d695461ac44fab8330cb16cdbc))
+* **deps:** update dependency @vscode/vsce to v3 ([40fae78](https://github.com/shufo/vscode-blade-formatter/commit/40fae78671369902c301413d72e0810a866833f0))
+* **deps:** update dependency mocha to v11 ([430e730](https://github.com/shufo/vscode-blade-formatter/commit/430e73050a017dee1e2e1487cceda457a2f1c63e))
+* **deps:** update dependency webpack-cli to v6 ([6ccd2c2](https://github.com/shufo/vscode-blade-formatter/commit/6ccd2c278d2f7824e650673e6fd021a90bc48191))
+* **deps:** update gabrielbb/xvfb-action action to v1.7 ([d2d7a04](https://github.com/shufo/vscode-blade-formatter/commit/d2d7a04a144519177bac9299b79362339abe09a2))
+* **deps:** update timonvs/pr-labeler-action action to v5 ([d5b6bd1](https://github.com/shufo/vscode-blade-formatter/commit/d5b6bd1a0755f8286c36ad01528da2f9ed666307))
+
 ## [0.24.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.1...v0.24.2) (2024-02-28)
 
 
