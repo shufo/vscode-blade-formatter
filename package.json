@@ -197,7 +197,7 @@
     "conventional-changelog-cli": "^4.0.0",
     "debug": "4.3.4",
     "dotenv-webpack": "8.0.1",
-    "glob": "8.1.0",
+    "glob": "11.0.0",
     "mocha": "^11.0.0",
     "sponsorkit": "0.8.5",
     "ts-jest": "29.1.2",
