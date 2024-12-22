@@ -191,6 +191,14 @@ $ yarn run test
             <sub><b>Julio J. Foulquie</b></sub>
         </a>
     </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/snyk-bot">
+            <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
+            <br />
+            <sub><b>Snyk Bot</b></sub>
+        </a>
+    </td></tr>
 </table>
 <!-- readme: collaborators,contributors -end -->
 
