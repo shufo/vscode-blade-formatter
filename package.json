@@ -215,7 +215,7 @@
     "find-config": "^1.0.0",
     "ignore": "^6.0.0",
     "sucrase": "^3.35.0",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^4.0.0",
     "vscode-extension-telemetry": "^0.4.5"
   },
   "optionalDependencies": {
