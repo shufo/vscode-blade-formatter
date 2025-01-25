@@ -24,6 +24,7 @@
 			"./out",
 			"./src/test/**/*SyntaxError*/*",
 			"./src/test/**/*Error*/*",
+			"./package.json",
 			"./.vscode",
 			"./dist"
 		]
