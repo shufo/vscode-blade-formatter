@@ -33,6 +33,10 @@ export const formatFromCommand = async (
 			sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
 			sortHtmlAttributes: extConfig.sortHtmlAttributes ?? "none",
 			noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
+			noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
+			indentInnerHtml: extConfig.indentInnerHtml,
+			noSingleQuote: extConfig.noSingleQuote,
+			componentPrefix: extConfig.componentPrefix,
 			...runtimeConfig,
 		};
 		const originalText = editor.document.getText();

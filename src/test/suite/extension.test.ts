@@ -290,6 +290,25 @@ suite("Extension Test Suite", () => {
 		await config.update("noSingleQuote", undefined, true);
 	});
 
+	test("Should format file with runtime config / componentPrefix", async function (this: any) {
+		this.timeout(20000);
+		await formatSameAsBladeFormatter(
+			"withConfig/componentPrefix/index.blade.php",
+			"withConfig/componentPrefix/formatted.index.blade.php",
+		);
+	});
+
+	test("Should format file without runtime config / componentPrefix", async function (this: any) {
+		this.timeout(20000);
+		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
+		await config.update("componentPrefix", "foo");
+		await formatSameAsBladeFormatter(
+			"withoutConfig/componentPrefix/index.blade.php",
+			"withoutConfig/componentPrefix/formatted.index.blade.php",
+		);
+		await config.update("componentPrefix", "x-,livewire");
+	});
+
 	test("Format command exists in command list", async () => {
 		const commands = await vscode.commands.getCommands();
 		assert(commands.includes(ExtensionConstants.formatCommandKey));
