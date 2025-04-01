@@ -303,4 +303,24 @@ suite("Extension Test Suite", () => {
 
 		assert.equal(formatted, expected);
 	});
+
+	test("Should format file with componentPrefix option / with config", async function (this: any) {
+		this.timeout(20000);
+		await formatSameAsBladeFormatter(
+			"withConfig/componentPrefix/index.blade.php",
+			"withConfig/componentPrefix/formatted.index.blade.php",
+		);
+	});
+
+	test("Should format file with componentPrefix option / without config", async function (this: any) {
+		this.timeout(20000);
+		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
+		await config.update("componentPrefix", ["flux:"], true);
+
+		await formatSameAsBladeFormatter(
+			"withoutConfig/componentPrefix/index.blade.php",
+			"withoutConfig/componentPrefix/formatted.index.blade.php",
+		);
+		await config.update("componentPrefix", "x-,livewire:", true);
+	});
 });

@@ -154,6 +154,11 @@
           "type": "boolean",
           "default": false,
           "markdownDescription": "If set to 'true', the new version message won't be shown anymore."
+        },
+        "bladeFormatter.format.componentPrefix": {
+          "type": "array",
+          "default": ["x-", "livewire:"],
+          "markdownDescription": "Specify custom prefixes for component names. This changes the format rules applied to custom components e.g. preserve style in attributes."
         }
       }
     }

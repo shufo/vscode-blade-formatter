@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import Ajv, { JTDSchemaType } from "ajv/dist/jtd";
+import Ajv, { type JTDSchemaType } from "ajv/dist/jtd";
 import findConfig from "find-config";
 
 const ajv = new Ajv();
@@ -29,6 +29,7 @@ export interface RuntimeConfig {
 	noMultipleEmptyLines?: boolean;
 	noPhpSyntaxCheck?: boolean;
 	noSingleQuote?: boolean;
+	componentPrefix?: string[];
 }
 
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
@@ -67,6 +68,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
 			noMultipleEmptyLines: { type: "boolean" },
 			noPhpSyntaxCheck: { type: "boolean" },
 			noSingleQuote: { type: "boolean" },
+			componentPrefix: { elements: { type: "string" } },
 		},
 		additionalProperties: true,
 	};

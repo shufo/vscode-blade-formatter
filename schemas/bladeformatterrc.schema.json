@@ -55,6 +55,11 @@
 			"description": "Collapses multiple blank lines into a single blank line",
 			"default": false,
 			"type": "boolean"
+		},
+		"componentPrefix": {
+			"description": "Specify custom prefixes for component names. This changes the format rules applied to custom components e.g. preserve style in attributes.",
+			"default": "",
+			"type": "array"
 		}
 	}
 }

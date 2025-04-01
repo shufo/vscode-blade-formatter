@@ -1,8 +1,8 @@
 import { Formatter } from "blade-formatter";
 import vscode, {
 	commands,
-	TextEditor,
-	TextEditorEdit,
+	type TextEditor,
+	type TextEditorEdit,
 	window,
 	WorkspaceConfiguration,
 } from "vscode";
@@ -33,6 +33,7 @@ export const formatFromCommand = async (
 			sortTailwindcssClasses: extConfig.sortTailwindcssClasses,
 			sortHtmlAttributes: extConfig.sortHtmlAttributes ?? "none",
 			noMultipleEmptyLines: extConfig.noMultipleEmptyLines,
+			componentPrefix: extConfig.componentPrefix,
 			...runtimeConfig,
 		};
 		const originalText = editor.document.getText();
