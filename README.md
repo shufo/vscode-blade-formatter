@@ -59,7 +59,8 @@ Configuration file will like below:
     "sortTailwindcssClasses": true,
     "sortHtmlAttributes": "none",
     "noPhpSyntaxCheck": false,
-    "noSingleQuote": false
+    "noSingleQuote": false,
+    "componentPrefix"": ["x-", "livewire:"]
 }
 ```
 
