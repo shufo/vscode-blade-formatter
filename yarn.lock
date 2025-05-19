@@ -6730,7 +6730,12 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tailwindcss@*, tailwindcss@^3.1.8, tailwindcss@^3.3.2, tailwindcss@^3.4.17:
+tailwindcss@*, tailwindcss@^4.1.7:
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.7.tgz#949f76d50667946ddd7291e0c7a4b5a7dfc9e765"
+  integrity sha512-kr1o/ErIdNhTz8uzAYL7TpaUuzKIE6QPQ4qmSdxnoX/lo+5wmUHQA6h3L5yIqEImSRnAAURDirLu/BgiXGPAhg==
+
+tailwindcss@^3.1.8, tailwindcss@^3.3.2:
   version "3.4.17"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.17.tgz#ae8406c0f96696a631c790768ff319d46d5e5a63"
   integrity sha512-w33E2aCvSDP0tW9RZuNXadXlkHXqFzSkQew/aIa2i/Sj8fThxwovwlXHSPXTbAHwEIhBFXAedUhP2tueAKP8Og==
