@@ -2559,10 +2559,10 @@ bl@^4.0.3:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-blade-formatter@1.42.2:
-  version "1.42.2"
-  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.42.2.tgz#a8451ad4a84fc57c60c164c769f276274d16a9be"
-  integrity sha512-mbjnget+vJ8fcKiEn0Et1IepMdiKoDGxSROt6qFKF3UW+tmRuvr/v/CK8GECJL+RE6jsJo8x3mFXrDZk+RgjDQ==
+blade-formatter@1.42.3:
+  version "1.42.3"
+  resolved "https://registry.yarnpkg.com/blade-formatter/-/blade-formatter-1.42.3.tgz#22d430c08f01c116d410690fc1067feb3b0fcf5f"
+  integrity sha512-yHyyrKP4oIzrMHRSeU2zniMISiJJiqsY/OSQib/7kVksapaWt7R985YjVQrh0XPmZka9xTRsWkXBbjHJriqV+g==
   dependencies:
     "@prettier/plugin-php" "^0.22.4"
     "@shufo/tailwindcss-class-sorter" "3.0.1"
@@ -2577,7 +2577,7 @@ blade-formatter@1.42.2:
     ignore "^6.0.0"
     js-beautify "^1.14.8"
     lodash "^4.17.19"
-    php-parser "3.2.2"
+    php-parser "3.2.5"
     prettier "^3.2.5"
     string-replace-async "^2.0.0"
     tailwindcss "^3.1.8"
@@ -5762,7 +5762,12 @@ pend@~1.2.0:
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
   integrity sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==
 
-php-parser@3.2.2, php-parser@^3.1.5:
+php-parser@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.2.5.tgz#24ff4b4f3e1788967f7737e43c273a5a8e7cd0ac"
+  integrity sha512-M1ZYlALFFnESbSdmRtTQrBFUHSriHgPhgqtTF/LCbZM4h7swR5PHtUceB2Kzby5CfqcsYwBn7OXTJ0+8Sajwkw==
+
+php-parser@^3.1.5:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.2.2.tgz#49c6fac29fbf8f995e1b8609ad52bd41b1ecda07"
   integrity sha512-voj3rzCJmEbwHwH3QteON28wA6K+JbcaJEofyUZkUXmcViiXofjbSbcE5PtqtjX6nstnnAEYCFoRq0mkjP5/cg==
