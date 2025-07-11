@@ -29,6 +29,7 @@ export interface RuntimeConfig {
 	noMultipleEmptyLines?: boolean;
 	noPhpSyntaxCheck?: boolean;
 	noSingleQuote?: boolean;
+	componentPrefix?: string[];
 }
 
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
@@ -67,6 +68,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
 			noMultipleEmptyLines: { type: "boolean" },
 			noPhpSyntaxCheck: { type: "boolean" },
 			noSingleQuote: { type: "boolean" },
+			componentPrefix: { elements: { type: "string" } },
 		},
 		additionalProperties: true,
 	};

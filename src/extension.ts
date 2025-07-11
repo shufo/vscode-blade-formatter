@@ -119,6 +119,7 @@ export function activate(context: ExtensionContext) {
 					noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
 					indentInnerHtml: extConfig.indentInnerHtml,
 					noSingleQuote: extConfig.noSingleQuote,
+					componentPrefix: extConfig.componentPrefix.split(",") ?? null,
 					...runtimeConfig, // override all settings by runtime config
 					...tailwindConfig,
 				};
