@@ -187,7 +187,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.1",
-    "@jest/types": "^29.0.0",
+    "@jest/types": "^30.0.0",
     "@types/find-config": "^1.0.1",
     "@types/glob": "^8.0.0",
     "@types/mocha": "10.0.10",
@@ -198,7 +198,7 @@
     "@vscode/test-electron": "^2.3.8",
     "@vscode/vsce": "^3.0.0",
     "app-root-path": "^3.0.0",
-    "babel-jest": "^29.0.0",
+    "babel-jest": "^30.0.0",
     "conventional-changelog-cli": "^4.0.0",
     "debug": "4.4.1",
     "dotenv-webpack": "8.1.1",
