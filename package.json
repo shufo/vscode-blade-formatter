@@ -3,7 +3,7 @@
   "publisher": "shufo",
   "displayName": "Laravel Blade formatter",
   "description": "Laravel Blade formatter for VSCode",
-  "version": "0.24.4",
+  "version": "0.24.6",
   "license": "MIT",
   "engines": {
     "vscode": "^1.57.0",
@@ -206,19 +206,19 @@
     "mocha": "^11.0.0",
     "sponsorkit": "0.16.2",
     "ts-jest": "29.2.5",
-    "ts-loader": "9.5.1",
+    "ts-loader": "9.5.2",
     "ts-migrate": "0.1.35",
     "ts-node": "10.9.2",
-    "typescript": "5.7.2",
+    "typescript": "5.7.3",
     "webpack": "5.90.1",
     "webpack-cli": "6.0.1",
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
     "ajv": "^8.12.0",
-    "blade-formatter": "1.42.0",
+    "blade-formatter": "1.42.3",
     "find-config": "^1.0.0",
-    "ignore": "^6.0.0",
+    "ignore": "^7.0.0",
     "sucrase": "^3.35.0",
     "tailwindcss": "^3.4.17",
     "vscode-extension-telemetry": "^0.4.5"
