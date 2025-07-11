@@ -1,5 +1,17 @@
 # ChangeLog
 
+## [0.25.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.6...v0.25.0) (2025-07-11)
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.42.3 ([653980b](https://github.com/shufo/vscode-blade-formatter/commit/653980b1071f8f878266a134356592a35b73886f))
+* **deps:** update all minor update of dev dependencies ([e5c2486](https://github.com/shufo/vscode-blade-formatter/commit/e5c248657a1df1f41efdd9e36680339893968afc))
+* **deps:** update dependency @biomejs/biome to v2 ([a8c1a2f](https://github.com/shufo/vscode-blade-formatter/commit/a8c1a2f6b8445eb3cb6900f658e11b4c9e14219b))
+* **deps:** update dependency sponsorkit to v16 ([3413d1f](https://github.com/shufo/vscode-blade-formatter/commit/3413d1f0da3bb90ae4e077fc4cce3c0630926abe))
+* **deps:** update jest monorepo to v30 ([014634f](https://github.com/shufo/vscode-blade-formatter/commit/014634f514ab329df315a98f8e71c22bc6263d24))
+* release 0.25.0 ([1df6476](https://github.com/shufo/vscode-blade-formatter/commit/1df6476d9c63b987d2fc0bcae0f84508072109bf))
+
 ## [0.24.6](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.5...v0.24.6) (2025-02-16)
 
 
