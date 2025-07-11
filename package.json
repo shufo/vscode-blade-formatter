@@ -153,7 +153,7 @@
         "bladeFormatter.format.componentPrefix": {
           "type": "string",
           "default": "x-,livewire",
-          "markdownDescription": "Specify custom prefixes for component names. This changes the format rules applied to custom components e.g. preserve style in attributes."
+          "markdownDescription": "Specify custom prefixes for component names separated by comma. e.g. `x-,livewire`. This changes the format rules applied to custom components e.g. preserve style in attributes."
         },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",
