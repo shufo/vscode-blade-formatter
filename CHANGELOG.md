@@ -1,5 +1,12 @@
 # ChangeLog
 
+## [0.25.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.25.0...v0.25.1) (2025-07-12)
+
+
+### Miscellaneous
+
+* **deps:** bump @babel/runtime-corejs3 from 7.16.7 to 7.28.0 ([667b155](https://github.com/shufo/vscode-blade-formatter/commit/667b155bff7fcb51d0e2e074a58a112a8eca80f8))
+
 ## [0.25.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.6...v0.25.0) (2025-07-11)
 
 
