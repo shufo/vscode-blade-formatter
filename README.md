@@ -61,7 +61,7 @@ Configuration file will like below:
     "sortHtmlAttributes": "none",
     "noPhpSyntaxCheck": false,
     "noSingleQuote": false,
-    "componentPrefix"": ["x-", "livewire:"]
+    "componentPrefix": ["x-", "livewire:"]
 }
 ```
 
