@@ -306,7 +306,45 @@ suite("Extension Test Suite", () => {
 			"withoutConfig/componentPrefix/index.blade.php",
 			"withoutConfig/componentPrefix/formatted.index.blade.php",
 		);
-		await config.update("componentPrefix", "x-,livewire");
+		await config.update("componentPrefix", undefined);
+	});
+
+	test("Should format file with runtime config / noTrailingCommaPhp", async function (this: any) {
+		this.timeout(20000);
+		await formatSameAsBladeFormatter(
+			"withConfig/noTrailingCommaPhp/index.blade.php",
+			"withConfig/noTrailingCommaPhp/formatted.index.blade.php",
+		);
+	});
+
+	test("Should format file without runtime config / noTrailingCommaPhp", async function (this: any) {
+		this.timeout(20000);
+		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
+		await config.update("noTrailingCommaPhp", true);
+		await formatSameAsBladeFormatter(
+			"withoutConfig/noTrailingCommaPhp/index.blade.php",
+			"withoutConfig/noTrailingCommaPhp/formatted.index.blade.php",
+		);
+		await config.update("noTrailingCommaPhp", undefined);
+	});
+
+	test("Should format file with runtime config / phpVersion", async function (this: any) {
+		this.timeout(20000);
+		await formatSameAsBladeFormatter(
+			"withConfig/phpVersion/index.blade.php",
+			"withConfig/phpVersion/formatted.index.blade.php",
+		);
+	});
+
+	test("Should format file without runtime config / phpVersion", async function (this: any) {
+		this.timeout(20000);
+		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
+		await config.update("phpVersion", "8.2");
+		await formatSameAsBladeFormatter(
+			"withoutConfig/phpVersion/index.blade.php",
+			"withoutConfig/phpVersion/formatted.index.blade.php",
+		);
+		await config.update("phpVersion", undefined);
 	});
 
 	test("Format command exists in command list", async () => {
