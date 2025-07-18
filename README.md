@@ -39,7 +39,9 @@ You can also format programmatically with the same syntax using the [blade-forma
 | `Blade Formatter: format No Multiple Empty Lines`      | Collapses multiple blank lines into a single blank line.                                                                                                                                                                                                                        | false         |
 | `Blade Formatter: format No PHP Syntax Check`          | Disable PHP Syntax check. Enabling this will suppress syntax error reporing.                                                                                                                                                                                                    | ""            |
 | `Blade Formatter: format No Single Quote`              | Use double quotes instead of single quotes for php expression.                                                                                                                                                                                                                  | false         |
-| `Blade Formatter: Component Prefix`                    | Specify custom prefixes for component names separated by comma. e.g. `x-,livewire`. This changes the format rules applied to custom components e.g. preserve style in attributes.                                                                                               | `x-,livewire` |
+| `Blade Formatter: format No Trailing Comma Php`        | If set to true, no trailing commas are printed for php expression.                                                                                                                                                                                                              | false         |
+| `Blade Formatter: format Component Prefix`             | Specify custom prefixes for component names separated by comma. e.g. `x-,livewire`. This changes the format rules applied to custom components e.g. preserve style in attributes.                                                                                               | `x-,livewire` |
+| `Blade Formatter: format PHP Version`                  | A php version using for syntax compatibility.                                                                                                                                                                                                                                   | `8.4`         |
 | `Blade Formatter: Dont Show New Version Message`       | If set to 'true', the new version message won't be shown anymore.                                                                                                                                                                                                               | false         |
 
 ## Configuration file: .bladeformatterrc.json or .bladeformatterrc
@@ -61,7 +63,9 @@ Configuration file will like below:
     "sortHtmlAttributes": "none",
     "noPhpSyntaxCheck": false,
     "noSingleQuote": false,
-    "componentPrefix": ["x-", "livewire:"]
+    "noTrailingCommaPhp": false,
+    "componentPrefix": ["x-", "livewire:"],
+    "phpVersion": "8.4"
 }
 ```
 
