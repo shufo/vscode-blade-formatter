@@ -25,13 +25,15 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: yarn run compile
         if: ${{ steps.release.outputs.release_created }}
-      - run: yarn run vsce publish -p $VSCE_TOKEN --yarn --allow-package-env-file
+      - run: yarn run vsce package --yarn --allow-package-env-file -o artifact.vsix
+        if: ${{ steps.release.outputs.release_created }}
+      - run: yarn run vsce publish -p $VSCE_TOKEN --yarn -i artifact.vsix
         if: ${{ steps.release.outputs.release_created }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
       - run: npm install -g ovsx
         if: ${{ steps.release.outputs.release_created }}
-      - run: ovsx publish -p $OVSX_TOKEN --yarn --allow-package-env-file
+      - run: ovsx publish -p $OVSX_TOKEN --yarn -i artifact.vsix
         if: ${{ steps.release.outputs.release_created }}
         env:
           OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
