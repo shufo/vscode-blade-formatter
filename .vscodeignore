@@ -16,3 +16,11 @@ src/**
 tsconfig.json
 yarn.lock
 *.vsix
+node_modules/linguist-languages/data/FreeBasic.mjs
+node_modules/linguist-languages/data/FreeBASIC.mjs
+node_modules/linguist-languages/data/FreeBasic.js
+node_modules/linguist-languages/data/FreeBASIC.js
+node_modules/linguist-languages/data/FreeBasic.d.ts
+node_modules/linguist-languages/data/FreeBASIC.d.ts
+node_modules/linguist-languages/data/FreeBasic.d.mts
+node_modules/linguist-languages/data/FreeBASIC.d.mts
