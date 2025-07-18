@@ -1,5 +1,21 @@
 # ChangeLog
 
+## [0.26.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.25.0...v0.26.0) (2025-07-18)
+
+
+### Features
+
+* 🎸 add option `no trailing comma php` ([5c95dc1](https://github.com/shufo/vscode-blade-formatter/commit/5c95dc1bd5f3cd378f0f61659530a33c54867447))
+* 🎸 add option `php version` ([0fd86a4](https://github.com/shufo/vscode-blade-formatter/commit/0fd86a4e0f8d67c79f4913e287c283932ec9ff0b))
+
+
+### Miscellaneous
+
+* 🤖 bump `@vscode/test-electron` to 2.5.2 ([20469fc](https://github.com/shufo/vscode-blade-formatter/commit/20469fc56b00c09f1cd84e0f22e549bdb3898add))
+* 🤖 bump `@vscode/vsce` to 3.6.0 ([d914d5f](https://github.com/shufo/vscode-blade-formatter/commit/d914d5f675cd97ab0e851b7166220711f17f0bfc))
+* 🤖 bump blade-formatter to 1.43.0 ([45d4cec](https://github.com/shufo/vscode-blade-formatter/commit/45d4cec21d295c0a8f17c125bc3527f979c42938))
+* **deps:** bump @babel/runtime-corejs3 from 7.16.7 to 7.28.0 ([667b155](https://github.com/shufo/vscode-blade-formatter/commit/667b155bff7fcb51d0e2e074a58a112a8eca80f8))
+
 ## [0.25.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.24.6...v0.25.0) (2025-07-11)
 
 
