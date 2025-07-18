@@ -39,3 +39,7 @@ export function requireUncached(moduleName: string) {
 		throw err;
 	}
 }
+
+export function parsePhpVersion(version: string): number {
+	return Number.parseFloat(version);
+}

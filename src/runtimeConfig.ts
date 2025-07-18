@@ -29,6 +29,7 @@ export interface RuntimeConfig {
 	noMultipleEmptyLines?: boolean;
 	noPhpSyntaxCheck?: boolean;
 	noSingleQuote?: boolean;
+	noTrailingCommaPhp?: boolean;
 	componentPrefix?: string[];
 }
 
@@ -68,6 +69,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
 			noMultipleEmptyLines: { type: "boolean" },
 			noPhpSyntaxCheck: { type: "boolean" },
 			noSingleQuote: { type: "boolean" },
+			noTrailingCommaPhp: { type: "boolean" },
 			componentPrefix: { elements: { type: "string" } },
 		},
 		additionalProperties: true,

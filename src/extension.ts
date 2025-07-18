@@ -12,7 +12,7 @@ import { messages } from "./messages";
 import { readRuntimeConfig } from "./runtimeConfig";
 import { TailwindConfig, resolveTailwindConfig } from "./tailwind";
 import { TelemetryEventNames, telemetry } from "./telemetry";
-import { getCoreNodeModule, requireUncached } from "./util";
+import { getCoreNodeModule, requireUncached, parsePhpVersion } from "./util";
 
 const { Range, Position } = vscode;
 const vsctmModule = getCoreNodeModule("vscode-textmate");
@@ -119,6 +119,9 @@ export function activate(context: ExtensionContext) {
 					noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
 					indentInnerHtml: extConfig.indentInnerHtml,
 					noSingleQuote: extConfig.noSingleQuote,
+					noTrailingCommaPhp:
+						extConfig.noTrailingCommaPhp ||
+						parsePhpVersion(extConfig.phpVersion) <= 7.2,
 					componentPrefix: extConfig.componentPrefix.split(",") ?? null,
 					...runtimeConfig, // override all settings by runtime config
 					...tailwindConfig,
