@@ -150,10 +150,39 @@
           "default": false,
           "markdownDescription": "Use double quotes instead of single quotes for php expression."
         },
+        "bladeFormatter.format.noTrailingCommaPhp": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "If set to true, no trailing commas are printed for php expression."
+        },
         "bladeFormatter.format.componentPrefix": {
           "type": "string",
           "default": "x-,livewire",
           "markdownDescription": "Specify custom prefixes for component names separated by comma. e.g. `x-,livewire`. This changes the format rules applied to custom components e.g. preserve style in attributes."
+        },
+        "bladeFormatter.format.phpVersion": {
+          "type": "string",
+          "default": "8.4",
+          "enum": [
+            "8.4",
+            "8.3",
+            "8.2",
+            "8.1",
+            "8.0",
+            "7.4",
+            "7.3",
+            "7.2",
+            "7.1",
+            "7.0",
+            "5.6",
+            "5.5",
+            "5.4",
+            "5.3",
+            "5.2",
+            "5.1",
+            "5.0"
+          ],
+          "markdownDescription": "A php version using for syntax compatibility."
         },
         "bladeFormatter.misc.dontShowNewVersionMessage": {
           "type": "boolean",

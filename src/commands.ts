@@ -8,7 +8,7 @@ import vscode, {
 } from "vscode";
 import { Logger } from "./logger";
 import { readRuntimeConfig } from "./runtimeConfig";
-import { getCoreNodeModule } from "./util";
+import { getCoreNodeModule, parsePhpVersion } from "./util";
 
 const vsctmModule = getCoreNodeModule("vscode-textmate");
 const onigurumaModule = getCoreNodeModule("vscode-oniguruma");
@@ -36,7 +36,11 @@ export const formatFromCommand = async (
 			noPhpSyntaxCheck: extConfig.noPhpSyntaxCheck,
 			indentInnerHtml: extConfig.indentInnerHtml,
 			noSingleQuote: extConfig.noSingleQuote,
+			noTrailingCommaPhp:
+				extConfig.noTrailingCommaPhp ||
+				parsePhpVersion(extConfig.phpVersion) <= 7.2,
 			componentPrefix: extConfig.componentPrefix,
+			phpVersion: extConfig.phpVersion,
 			...runtimeConfig,
 		};
 		const originalText = editor.document.getText();
