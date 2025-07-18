@@ -31,6 +31,7 @@ export interface RuntimeConfig {
 	noSingleQuote?: boolean;
 	noTrailingCommaPhp?: boolean;
 	componentPrefix?: string[];
+	phpVersion?: string;
 }
 
 const configFileNames = [".bladeformatterrc.json", ".bladeformatterrc"];
@@ -71,6 +72,7 @@ export function readRuntimeConfig(filePath: string): RuntimeConfig | undefined {
 			noSingleQuote: { type: "boolean" },
 			noTrailingCommaPhp: { type: "boolean" },
 			componentPrefix: { elements: { type: "string" } },
+			phpVersion: { type: "string" },
 		},
 		additionalProperties: true,
 	};

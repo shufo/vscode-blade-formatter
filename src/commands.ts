@@ -40,6 +40,7 @@ export const formatFromCommand = async (
 				extConfig.noTrailingCommaPhp ||
 				parsePhpVersion(extConfig.phpVersion) <= 7.2,
 			componentPrefix: extConfig.componentPrefix,
+			phpVersion: extConfig.phpVersion,
 			...runtimeConfig,
 		};
 		const originalText = editor.document.getText();

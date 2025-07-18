@@ -123,6 +123,7 @@ export function activate(context: ExtensionContext) {
 						extConfig.noTrailingCommaPhp ||
 						parsePhpVersion(extConfig.phpVersion) <= 7.2,
 					componentPrefix: extConfig.componentPrefix.split(",") ?? null,
+					phpVersion: extConfig.phpVersion,
 					...runtimeConfig, // override all settings by runtime config
 					...tailwindConfig,
 				};
