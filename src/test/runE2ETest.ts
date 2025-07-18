@@ -68,7 +68,7 @@ function makePackagePath(): string {
 }
 
 async function createPackage(packagePath: string) {
-	const result = spawnSync("yarn", ["run", "package", "--out", packagePath]);
+	const result = spawnSync("yarn", ["run", "package", "--out", packagePath, "--allow-package-env-file"]);
 
 	if (result.status === 0) {
 		console.log("Package command succeeded");
