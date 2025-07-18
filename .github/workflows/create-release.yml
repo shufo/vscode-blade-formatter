@@ -25,9 +25,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: yarn run compile
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm install -g vsce
-        if: ${{ steps.release.outputs.release_created }}
-      - run: vsce publish -p $VSCE_TOKEN --yarn --allow-package-env-file
+      - run: yarn run vsce publish -p $VSCE_TOKEN --yarn --allow-package-env-file
         if: ${{ steps.release.outputs.release_created }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
