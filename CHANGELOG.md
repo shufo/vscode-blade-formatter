@@ -1,5 +1,12 @@
 # ChangeLog
 
+## [0.26.1](https://github.com/shufo/vscode-blade-formatter/compare/v0.26.0...v0.26.1) (2025-07-18)
+
+
+### Fixes
+
+* 🐛 release workflow ([a771f1a](https://github.com/shufo/vscode-blade-formatter/commit/a771f1acd642ef68972baf87c57b8bef17a43d87))
+
 ## [0.26.0](https://github.com/shufo/vscode-blade-formatter/compare/v0.25.0...v0.26.0) (2025-07-18)
 
 
