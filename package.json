@@ -245,7 +245,7 @@
   },
   "dependencies": {
     "ajv": "^8.12.0",
-    "blade-formatter": "1.44.0",
+    "blade-formatter": "1.44.1",
     "find-config": "^1.0.0",
     "ignore": "^7.0.5",
     "sucrase": "^3.35.0",
