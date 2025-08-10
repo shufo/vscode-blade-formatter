@@ -211,8 +211,8 @@
     "watch-tests": "tsc -w -p . --outDir out",
     "package-extension": "webpack --mode production --devtool hidden-source-map --progress",
     "changelog": "conventional-changelog -i CHANGELOG.md -p eslint -s -r 0",
-    "package": "vsce package --yarn",
-    "publish": "vsce publish --yarn"
+    "package": "vsce package --allow-package-env-file --yarn",
+    "publish": "vsce publish --allow-package-env-file --yarn"
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.1",
