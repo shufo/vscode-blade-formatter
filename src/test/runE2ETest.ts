@@ -17,7 +17,7 @@ async function main() {
 
     console.log(`Using VS Code at ${codePath}`);
 
-    const codeExecPath = path.resolve(codePath, "../", "bin", "code");
+    const codeExecPath = getCodeExecutablePath(codePath);
 
     const tmpDir = TMP_DIR || tmpdir();
 
@@ -54,6 +54,16 @@ async function main() {
     console.error("Failed to run tests");
     process.exit(1);
   }
+}
+
+function getCodeExecutablePath(codePath: string): string {
+  // MacOS
+  if (platform() === "darwin") {
+    return path.resolve(codePath, "../../", "Resources", "app", "bin", "code");
+  }
+
+  // Linux, Windows
+  return path.resolve(codePath, "../", "bin", "code");
 }
 
 function makePackagePath(tmpDir: string): string {
