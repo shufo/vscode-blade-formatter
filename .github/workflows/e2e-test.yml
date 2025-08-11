@@ -5,7 +5,7 @@ jobs:
     name: E2E Test
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         vscode_version: ["stable"]
     runs-on: ${{ matrix.os }}
     steps:
