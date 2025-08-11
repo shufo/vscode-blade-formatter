@@ -88,6 +88,8 @@ async function createPackage(packagePath: string) {
     console.error("Package command failed");
     console.error(result.stderr.toString());
   }
+
+  console.log(result);
 }
 
 async function installExtension(
