@@ -73,13 +73,11 @@ function makePackagePath(tmpDir: string): string {
 }
 
 async function createPackage(packagePath: string) {
-  const result = spawnSync("yarn", [
-    "run",
-    "package",
-    "--out",
-    packagePath,
-    "--allow-package-env-file",
-  ]);
+  const result = spawnSync(
+    "yarn",
+    ["run", "package", "--out", packagePath, "--allow-package-env-file"],
+    { shell: true },
+  );
 
   if (result.status === 0) {
     console.log("Package command succeeded");
@@ -97,11 +95,11 @@ async function installExtension(
   packagePath: string,
   args: string[],
 ) {
-  const result = spawnSync(executablePath, [
-    "--install-extension",
-    packagePath,
-    ...args,
-  ]);
+  const result = spawnSync(
+    executablePath,
+    ["--install-extension", packagePath, ...args],
+    { shell: true },
+  );
 
   if (result.status === 0) {
     console.log("install package succeeded");
