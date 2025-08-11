@@ -108,6 +108,8 @@ async function installExtension(
     console.error("install package failed");
     console.error(result.stderr.toString());
   }
+
+  console.log(result);
 }
 
 function getExtensionsDir(tmpDir: string): string {
