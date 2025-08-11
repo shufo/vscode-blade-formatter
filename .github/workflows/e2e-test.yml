@@ -5,7 +5,7 @@ jobs:
     name: E2E Test
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         vscode_version: ["stable"]
     runs-on: ${{ matrix.os }}
     steps:
@@ -43,3 +43,4 @@ jobs:
           run: yarn run test:e2e
         env:
           VSCODE_VERSION: ${{ matrix.vscode_version }}
+          TMP_DIR: ${{ runner.temp }}
