@@ -43,3 +43,4 @@ jobs:
           run: yarn run test:e2e
         env:
           VSCODE_VERSION: ${{ matrix.vscode_version }}
+          TMP_DIR: ${{ runner.temp }}
