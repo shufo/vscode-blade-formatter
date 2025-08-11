@@ -1,38 +1,58 @@
 import path from "path";
-import glob from "glob";
+import fs from "fs";
 import Mocha from "mocha";
 
+function findTestFiles(dir: string, pattern: RegExp = /\.test\.js$/): string[] {
+  const testFiles: string[] = [];
+
+  function walkDirectory(currentDir: string) {
+    const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const fullPath = path.join(currentDir, entry.name);
+
+      if (entry.isDirectory()) {
+        walkDirectory(fullPath);
+      } else if (entry.isFile() && pattern.test(entry.name)) {
+        testFiles.push(path.relative(dir, fullPath));
+      }
+    }
+  }
+
+  walkDirectory(dir);
+  return testFiles;
+}
+
 export function run() {
-	// Create the mocha test
-	const mocha = new Mocha({
-		ui: "tdd",
-		color: true,
-	});
+  // Create the mocha test
+  const mocha = new Mocha({
+    ui: "tdd",
+    color: true,
+  });
+  const testsRoot = path.resolve(__dirname, "..");
 
-	const testsRoot = path.resolve(__dirname, "..");
+  return new Promise((c, e) => {
+    try {
+      const files = findTestFiles(testsRoot);
 
-	return new Promise((c, e) => {
-		glob("**/**.test.js", { cwd: testsRoot }, (err: any, files: any) => {
-			if (err) {
-				return e(err);
-			}
+      if (files.length === 0) {
+        console.warn("No test files found matching pattern *.test.js");
+      }
 
-			// Add files to the test suite
-			files.forEach((f: any) => mocha.addFile(path.resolve(testsRoot, f)));
+      // Add files to the test suite
+      files.forEach((f: string) => mocha.addFile(path.resolve(testsRoot, f)));
 
-			try {
-				// Run the mocha test
-				mocha.run((failures) => {
-					if (failures > 0) {
-						e(new Error(`${failures} tests failed.`));
-					} else {
-						c("");
-					}
-				});
-			} catch (err) {
-				console.error(err);
-				e(err);
-			}
-		});
-	});
+      // Run the mocha test
+      mocha.run((failures) => {
+        if (failures > 0) {
+          e(new Error(`${failures} tests failed.`));
+        } else {
+          c("");
+        }
+      });
+    } catch (err) {
+      console.error(err);
+      e(err);
+    }
+  });
 }
