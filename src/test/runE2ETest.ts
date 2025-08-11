@@ -106,7 +106,7 @@ async function installExtension(
   args: string[],
 ) {
   const result = spawnSync(
-    executablePath,
+    `'${executablePath}'`,
     ["--install-extension", packagePath, ...args],
     { shell: true },
   );
