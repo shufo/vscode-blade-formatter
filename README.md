@@ -154,57 +154,61 @@ $ yarn run test
 
 <!-- readme: collaborators,contributors -start -->
 <table>
-<tr>
-    <td align="center">
-        <a href="https://github.com/shufo">
-            <img src="https://avatars.githubusercontent.com/u/1641039?v=4" width="100;" alt="shufo"/>
-            <br />
-            <sub><b>Shuhei Hayashibara</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/slovenianGooner">
-            <img src="https://avatars.githubusercontent.com/u/1257629?v=4" width="100;" alt="slovenianGooner"/>
-            <br />
-            <sub><b>SlovenianGooner</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/yaegassy">
-            <img src="https://avatars.githubusercontent.com/u/188642?v=4" width="100;" alt="yaegassy"/>
-            <br />
-            <sub><b>Yaegassy</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/notdian">
-            <img src="https://avatars.githubusercontent.com/u/4225509?v=4" width="100;" alt="notdian"/>
-            <br />
-            <sub><b>Null</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/1cbyc">
-            <img src="https://avatars.githubusercontent.com/u/35623334?v=4" width="100;" alt="1cbyc"/>
-            <br />
-            <sub><b>Isaac Emmanuel</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/j3j5">
-            <img src="https://avatars.githubusercontent.com/u/1239921?v=4" width="100;" alt="j3j5"/>
-            <br />
-            <sub><b>Julio J. Foulquie</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/snyk-bot">
-            <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
-            <br />
-            <sub><b>Snyk Bot</b></sub>
-        </a>
-    </td></tr>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/shufo">
+                    <img src="https://avatars.githubusercontent.com/u/1641039?v=4" width="100;" alt="shufo"/>
+                    <br />
+                    <sub><b>Shuhei Hayashibara</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/slovenianGooner">
+                    <img src="https://avatars.githubusercontent.com/u/1257629?v=4" width="100;" alt="slovenianGooner"/>
+                    <br />
+                    <sub><b>SlovenianGooner</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/yaegassy">
+                    <img src="https://avatars.githubusercontent.com/u/188642?v=4" width="100;" alt="yaegassy"/>
+                    <br />
+                    <sub><b>Yaegassy</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/notdian">
+                    <img src="https://avatars.githubusercontent.com/u/4225509?v=4" width="100;" alt="notdian"/>
+                    <br />
+                    <sub><b>Null</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/1cbyc">
+                    <img src="https://avatars.githubusercontent.com/u/35623334?v=4" width="100;" alt="1cbyc"/>
+                    <br />
+                    <sub><b>Isaac Emmanuel</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/j3j5">
+                    <img src="https://avatars.githubusercontent.com/u/1239921?v=4" width="100;" alt="j3j5"/>
+                    <br />
+                    <sub><b>Julio J. Foulquie</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/snyk-bot">
+                    <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
+                    <br />
+                    <sub><b>Snyk Bot</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
 
