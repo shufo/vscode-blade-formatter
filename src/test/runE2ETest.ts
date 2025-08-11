@@ -110,7 +110,7 @@ async function installExtension(
 
 function getExtensionsDir(tmpDir: string): string {
   const randomBytesStr = randomBytes(4).toString("hex");
-  const extensionsDir = `${tmpDir}/extensions_${randomBytesStr}`;
+  const extensionsDir = path.resolve(tmpDir, `extensions_${randomBytesStr}`);
 
   console.log(`Using extensions dir: ${extensionsDir}`);
 
