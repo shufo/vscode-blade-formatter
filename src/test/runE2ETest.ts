@@ -67,6 +67,8 @@ function makePackagePath(tmpDir: string): string {
     `${packageName}-${packageVersion}.vsix`,
   );
 
+  console.log(`Package path is ${packagePath}`);
+
   return packagePath;
 }
 
