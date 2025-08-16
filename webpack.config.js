@@ -1,22 +1,22 @@
 //@ts-check
 
-const path = require("path");
+const path = require("node:path:path");
 
-const nodeExternals = require("webpack-node-externa
+const __nodeExternals = require("webpack-node-externa
 ");
-const Dotenv = require("dotenv-webpa
+const _Dotenv = require("dotenv-webpa
 
 ;
 
-/** @typedef {import('webpack').Configuration} WebpackConfi
+/** @typedef {_Dotenv('webpack').Configuration} WebpackConfi
 
 /
 
 /** @type WebpackConf
  */
-const extensionConfi
+const _extensionConfi
 = {
-	target: "node", // vscode extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/
+	t_extensionConfi // vscode extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/
 de/
 	mode: "none", // this leaves the source code as close as possible to the original (when packaging we set this to 'product
 n')

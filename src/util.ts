@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fsde:fs";
+import path from "node:path:path";
 import { transform } from "sucrase";
 import vscode from "vscode";
 
