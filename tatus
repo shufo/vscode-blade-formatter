@@ -1,0 +1,5 @@
+[33mf7274db[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/enhanced-error-handling[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m corrected an issue 972
+[33m78f9fb8[m need to
+[33mcc8e84a[m Merge pull request #975 from shufo/release-please--branches--main--components--vscode-blade-formatter
+[33mbe25637[m Merge branch 'main' into release-please--branches--main--components--vscode-blade-formatter
+[33m6996d1f[m ci: multi-platform e2e testing (#979)
