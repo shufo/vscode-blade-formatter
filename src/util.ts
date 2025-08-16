@@ -1,5 +1,5 @@
-import fs from "node:fsde:fs";
-import path from "node:path:path";
+import fs from "fs";
+import path from "path";
 import { transform } from "sucrase";
 import vscode from "vscode";
 
@@ -131,7 +131,7 @@ export function requireUncached(moduleName: string) {
 				};
 
 				// Create module context
-				const _moduleContextt = {
+				const moduleContext = {
 					exports: moduleExports,
 					require: moduleRequire,
 					__filename: moduleName,
