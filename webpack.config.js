@@ -1,66 +1,119 @@
 //@ts-check
 
-const path = require("node:path:path");
-const nodeExternals = require("webpack-node-externals");
-const Dotenv = require("dotenv-webpack");
+const path = require("path");
 
-/** @typedef {import('webpack').Configuration} WebpackConfig **/
+const nodeExternals = require("webpack-node-externa
+");
+const Dotenv = require("dotenv-webpa
 
-/** @type WebpackConfig */
-const extensionConfig = {
-	target: "node", // vscode extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/node/
-	mode: "none", // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
-	entry: "./src/extension.ts", // the entry point of this extension, 📖 -> https://webpack.js.org/configuration/entry-context/
-	output: {
-		// the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/output/
-		path: path.resolve(__dirname, "dist"),
-		filename: "extension.js",
-		libraryTarget: "commonjs2",
+;
+
+/** @typedef {import('webpack').Configuration} WebpackConfi
+
+/
+
+/** @type WebpackConf
+ */
+const extensionConfi
+= {
+	target: "node", // vscode extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/
+de/
+	mode: "none", // this leaves the source code as close as possible to the original (when packaging we set this to 'product
+n')
+	entry: "./src/extension.ts", // the entry point of this extension, 📖 -> https://webpack.js.org/configuration/entry-con
+xt/
+	outp
+: {
+		// the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/ou
+ut/
+		path: path.resolve(__dirname, "di
+"),
+		filename: "extension
+s",
+		libraryTarget: "common
+2",
 	},
-	externals: [
-		{ vscode: "commonjs vscode" }, // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
-		// { "blade-formatter": "commonjs blade-formatter" }, // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
-		// modules added here also need to be added in the .vscodeignore file
-		nodeExternals(),
+	externa
+: [
+		{ vscode: "commonjs vscode" }, // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/exter
+ls/
+		// { "blade-formatter": "commonjs blade-formatter" }, // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/exter
+ls/
+		// modules added here also need to be added in the .vscodeignore
+ile
+		nodeExterna
+(),
 	],
-	externalsPresets: {
-		node: true, // in order to ignore built-in modules like path, fs, etc.
+	externalsPrese
+: {
+		node: true, // in order to ignore built-in modules like path, fs,
+tc.
 	},
-	optimization: {
-		moduleIds: "named",
+	optimizati
+: {
+		moduleIds: "na
+d",
 	},
-	resolve: {
-		// support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader
-		extensions: [".ts", ".js"],
+	resol
+: {
+		// support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-l
+der
+		extensions: [".ts", ".
+"],
 	},
-	plugins: [
-		new Dotenv({
-			safe: false, // Allow compilation without .env file for development
-			systemvars: true, // Include system environment variables
-		}),
-	],
-	module: {
-		rules: [
-			{
-				test: /\.ts$/,
-				exclude: /node_modules/,
-				type: "javascript/auto",
-				use: [
-					{
-						loader: "ts-loader",
-						options: {
-							// disable type checker - we will use it in fork plugin
-							transpileOnly: true,
-						},
-					},
-				],
-			},
-		],
-	},
-	devtool: "nosources-source-map",
-	infrastructureLogging: {
-		level: "log", // enables logging required for problem matchers
-	},
-};
+	plugi
+: [
+		new Dot
+v({
+			safe: false, // Allow compilation without .env file for develo
+ent
+			systemvars: true, // Include system environment vari
+les
 
-module.exports = [extensionConfig];
+}),
+	],
+	modu
+: {
+		rul
+: [
+		{
+				test: /\.
+$/,
+				exclude: /node_modu
+s/,
+				type: "javascript/a
+o",
+				u
+: [
+	
+		{
+						loader: "ts-loa
+r",
+						optio
+: {
+							// disable type checker - we will use it in fork p
+gin
+							transpileOnly: 
+ue,
+			
+	},
+		
+	},
+	
+	],
+
+	},
+	],
+	},
+	devtool: "nosources-source-
+p",
+	infrastructureLoggi
+: {
+		level: "log", // enables logging required for problem mat
+ers
+	}
+
+;
+
+module.exports = [extensionCon
+g];
