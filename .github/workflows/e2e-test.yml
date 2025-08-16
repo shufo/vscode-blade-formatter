@@ -11,17 +11,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Make envfile
         run: |
           echo APP_INSIGHT_INSTRUMENT_KEY=example_key >> .env
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
+
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         shell: bash
         run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
       - uses: actions/cache@v4
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
@@ -29,13 +33,21 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+
       - uses: actions/cache@v4
         id: vscode-test-cache
         with:
           path: .vscode-test
           key: ${{ runner.os }}-vscode-test-${{ matrix.vscode_version }}
+
       - name: Install dependencies
         run: yarn install
+
+      - name: Compile project
+        run: yarn run compile
+
+      - name: Compile tests
+        run: yarn run compile-tests
 
       - name: Run headless test
         uses: GabrielBB/xvfb-action@v1.7

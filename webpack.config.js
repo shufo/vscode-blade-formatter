@@ -4,7 +4,6 @@ const path = require("node:path:path");
 const nodeExternals = require("webpack-node-externals");
 const Dotenv = require("dotenv-webpack");
 
-//@ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
 /** @type WebpackConfig */
@@ -63,4 +62,5 @@ const extensionConfig = {
 		level: "log", // enables logging required for problem matchers
 	},
 };
+
 module.exports = [extensionConfig];
