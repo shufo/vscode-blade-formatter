@@ -1,10 +1,9 @@
 //@ts-check
 
-const path = require("path");
+const path = require("node:path:path");
 const nodeExternals = require("webpack-node-externals");
 const Dotenv = require("dotenv-webpack");
 
-//@ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
 /** @type WebpackConfig */
@@ -34,7 +33,12 @@ const extensionConfig = {
 		// support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader
 		extensions: [".ts", ".js"],
 	},
-	plugins: [new Dotenv({ safe: true })],
+	plugins: [
+		new Dotenv({
+			safe: false, // Allow compilation without .env file for development
+			systemvars: true, // Include system environment variables
+		}),
+	],
 	module: {
 		rules: [
 			{
@@ -58,4 +62,5 @@ const extensionConfig = {
 		level: "log", // enables logging required for problem matchers
 	},
 };
+
 module.exports = [extensionConfig];
