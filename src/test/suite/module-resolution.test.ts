@@ -1,18 +1,29 @@
-import assert from "assert";
-import { getCoreNodeModule, requireUncached, parsePhpVersion } from "../../util";
+import assert from "node:assert";
+import {
+	getCoreNodeModule,
+	parsePhpVersion,
+	requireUncached,
+} from "../../util";
 
 suite("Module Resolution Test Suite", () => {
 	test("getCoreNodeModule should handle missing modules gracefully", () => {
 		// Test with a non-existent module
 		const result = getCoreNodeModule("non-existent-module");
-		assert.strictEqual(result, null, "Should return null for non-existent modules");
+		assert.strictEqual(
+			result,
+			null,
+			"Should return null for non-existent modules",
+		);
 	});
 
 	test("getCoreNodeModule should try multiple resolution strategies", () => {
 		// Test with a module that might exist in one of the locations
 		const result = getCoreNodeModule("vscode-textmate");
 		// Should either return the module or null, but not throw
-		assert.ok(result === null || typeof result === "object", "Should return module or null");
+		assert.ok(
+			result === null || typeof result === "object",
+			"Should return module or null",
+		);
 	});
 
 	test("requireUncached should handle file not found", () => {

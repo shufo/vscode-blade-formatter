@@ -1,11 +1,7 @@
-import path from "path";
-
+import path from "node:path";
 import { runTests } from "@vscode/test-electron";
 
 const VSCODE_VERSION = process.env.VSCODE_VERSION;
-
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 
 async function main() {
 	try {
@@ -34,7 +30,7 @@ async function main() {
 			extensionTestsPath,
 			launchArgs,
 		});
-	} catch (err) {
+	} catch (_err) {
 		console.error("Failed to run tests");
 		process.exit(1);
 	}

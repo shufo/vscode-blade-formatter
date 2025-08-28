@@ -1,12 +1,12 @@
 {
-    "folders": [
-        {
-            "path": "project"
-        },
-        {
-            "path": "tailwind"
-        }
-    ],
-    "settings": {
-    }
+	"folders": [
+		{
+			"path": "project"
+		},
+		{
+			"path": "tailwind"
+		}
+	],
+	"settings": {
+	}
 }

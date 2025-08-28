@@ -1,4 +1,4 @@
-import { ExtensionContext, Uri } from "vscode";
+import { type ExtensionContext, Uri } from "vscode";
 
 let extensionContext: ExtensionContext;
 

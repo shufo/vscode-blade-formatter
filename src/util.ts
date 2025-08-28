@@ -1,10 +1,13 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import { transform } from "sucrase";
 import vscode from "vscode";
 
 // Type declaration for webpack's non-webpack require
 declare const __non_webpack_require__: any;
+
+// Cache for module resolution to improve performance
+const moduleCache = new Map<string, any>();
 
 /**
  * Returns a node module installed with VSCode, or null if it fails.
@@ -19,6 +22,11 @@ declare const __non_webpack_require__: any;
  * @returns The loaded module or null if not found
  */
 export function getCoreNodeModule(moduleName: string) {
+	// Check cache first
+	if (moduleCache.has(moduleName)) {
+		return moduleCache.get(moduleName);
+	}
+
 	// Strategy 1: Try VSCode's asar bundle (most common case)
 	try {
 		const module = __non_webpack_require__(
@@ -84,6 +92,11 @@ export function getCoreNodeModule(moduleName: string) {
  * @throws Error if module cannot be loaded
  */
 export function requireUncached(moduleName: string) {
+	// Check cache first for non-file modules
+	if (!moduleName.includes('/') && !moduleName.includes('\\') && moduleCache.has(moduleName)) {
+		return moduleCache.get(moduleName);
+	}
+
 	try {
 		// Strategy 1: Clear cache and try direct require
 		try {
@@ -102,7 +115,12 @@ export function requireUncached(moduleName: string) {
 		// Strategy 2: Try direct require first
 		try {
 			// @ts-ignore
-			return __non_webpack_require__(moduleName);
+			const module = __non_webpack_require__(moduleName);
+			// Cache successful loads for non-file modules
+			if (!moduleName.includes('/') && !moduleName.includes('\\')) {
+				moduleCache.set(moduleName, module);
+			}
+			return module;
 		} catch (requireError: any) {
 			console.debug(
 				`Direct require failed for ${moduleName}:`,
@@ -117,48 +135,62 @@ export function requireUncached(moduleName: string) {
 			// Check if it's an ES module (has import/export statements)
 			if (fileContent.includes("import ") || fileContent.includes("export ")) {
 				// Transform ES module to CommonJS
-				const transformed = transform(fileContent, {
-					transforms: ["imports"],
+				const transformedCode = transform(fileContent, {
+					transforms: ["imports", "typescript"],
 					jsxPragma: "React.createElement",
 					jsxFragmentPragma: "React.Fragment",
-				});
+				}).code;
 
-				// Create a temporary module context to evaluate the transformed code
+				// Create a module context
 				const moduleExports = {};
-				const moduleRequire = (path: string) => {
-					// @ts-ignore
-					return __non_webpack_require__(path);
+				const moduleRequire = (name: string) => {
+					// Handle relative imports
+					if (name.startsWith('.')) {
+						const resolvedPath = path.resolve(path.dirname(moduleName), name);
+						return requireUncached(resolvedPath);
+					}
+					return getCoreNodeModule(name) || __non_webpack_require__(name);
 				};
 
 				// Create module context
-				const moduleContext = {
+				const _moduleContext = {
 					exports: moduleExports,
 					require: moduleRequire,
-					__filename: moduleName,
 					__dirname: path.dirname(moduleName),
+					__filename: moduleName,
 				};
 
-				// Evaluate the transformed code
+				// Execute the transformed code
 				const evalCode = `
-					(function(exports, require, __filename, __dirname) {
-						${transformed.code}
+					(function(exports, require, __dirname, __filename) {
+						${transformedCode}
+						return exports;
 					})
 				`;
 
 				const moduleFunction = eval(evalCode);
-				moduleFunction(
+				const result = moduleFunction(
 					moduleExports,
 					moduleRequire,
-					moduleName,
 					path.dirname(moduleName),
+					moduleName,
 				);
 
-				return moduleExports;
+				// Cache successful loads for non-file modules
+				if (!moduleName.includes('/') && !moduleName.includes('\\')) {
+					moduleCache.set(moduleName, result);
+				}
+				return result;
 			} else {
-				// CommonJS module, try to require it again
+				// CommonJS module, try to require it
 				try {
 					// @ts-ignore
-					return __non_webpack_require__(moduleName);
+					const module = __non_webpack_require__(moduleName);
+					// Cache successful loads for non-file modules
+					if (!moduleName.includes('/') && !moduleName.includes('\\')) {
+						moduleCache.set(moduleName, module);
+					}
+					return module;
 				} catch (finalError: any) {
 					throw new Error(
 						`Failed to load module ${moduleName}: ${finalError.message}`,

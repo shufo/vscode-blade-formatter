@@ -1,32 +1,32 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
+	"$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true
 		},
-		"ignore": [
-			"./.vscode-test",
-			"./out",
-			"./src/test/**/*SyntaxError*/*",
-			"./src/test/**/*Error*/*",
-			"./.vscode",
-			"./dist"
+		"includes": [
+			"**",
+			"!.vscode-test",
+			"!out",
+			"!src/test/**/*SyntaxError*/*",
+			"!src/test/**/*Error*/*",
+			"!.vscode",
+			"!dist"
 		]
 	},
 	"formatter": {
 		"enabled": true,
-		"ignore": [
-			"./.vscode-test",
-			"./out",
-			"./src/test/**/*SyntaxError*/*",
-			"./src/test/**/*Error*/*",
-			"./package.json",
-			"./.vscode",
-			"./dist"
+		"includes": [
+			"**",
+			"!.vscode-test",
+			"!out",
+			"!src/test/**/*SyntaxError*/*",
+			"!src/test/**/*Error*/*",
+			"!package.json",
+			"!.vscode",
+			"!dist"
 		]
 	}
 }
