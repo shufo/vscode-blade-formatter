@@ -1,4 +1,4 @@
-it import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 import { transform } from "sucrase";
 import vscode from "vscode";
