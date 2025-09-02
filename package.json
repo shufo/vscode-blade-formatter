@@ -231,7 +231,7 @@
     "debug": "4.4.1",
     "dotenv-webpack": "8.1.1",
     "mocha": "^11.0.0",
-    "sponsorkit": "16.5.0",
+    "sponsorkit": "17.0.0",
     "ts-jest": "29.4.0",
     "ts-loader": "9.5.2",
     "ts-migrate": "0.1.35",
