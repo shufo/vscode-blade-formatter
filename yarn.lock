@@ -3433,10 +3433,10 @@ dotenv-webpack@8.1.1:
   dependencies:
     dotenv-defaults "^2.0.2"
 
-dotenv@^16.5.0:
-  version "16.6.1"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.6.1.tgz#773f0e69527a8315c7285d5ee73c4459d20a8020"
-  integrity sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==
+dotenv@^17.2.1:
+  version "17.2.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.2.1.tgz#6f32e10faf014883515538dc922a0fb8765d9b32"
+  integrity sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==
 
 dotenv@^8.2.0:
   version "8.6.0"
@@ -6382,7 +6382,7 @@ shallow-clone@^3.0.0:
   dependencies:
     kind-of "^6.0.2"
 
-sharp@^0.34.2:
+sharp@^0.34.3:
   version "0.34.3"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.34.3.tgz#10a03bcd15fb72f16355461af0b9245ccb8a5da3"
   integrity sha512-eX2IQ6nFohW4DbvHIOLRB3MHFpYqaqvXd3Tp5e/T/dSH83fxaNJQRvDMhASmkNTsNTVF2/OOopzRCt7xokgPfg==
@@ -6628,17 +6628,17 @@ split2@^4.0.0:
   resolved "https://registry.yarnpkg.com/split2/-/split2-4.2.0.tgz#c9c5920904d148bab0b9f67145f245a86aadbfa4"
   integrity sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==
 
-sponsorkit@16.5.0:
-  version "16.5.0"
-  resolved "https://registry.yarnpkg.com/sponsorkit/-/sponsorkit-16.5.0.tgz#ca7d52e73283a302e514e38045a876eb3864dde3"
-  integrity sha512-GvlLg88eAEbKzROwAspT+PQTMfHN9KQ+zgPqBBvV1W2jQmKxOtnv9vjgByXvXA2dvTjnksdvbTuwqhJZllyLQA==
+sponsorkit@17.0.0:
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/sponsorkit/-/sponsorkit-17.0.0.tgz#041a9fb45f9667f6ed990dd1cbc98ae3cfff10c7"
+  integrity sha512-wu6YQRNEXMh7IRTWGO/ZyrH4W7jecADea7wjRn9D+gZ5PewDbvSsbncFRofBTtnqyZ1n1MQElIvkF/VlVll8Jw==
   dependencies:
     ansis "^4.1.0"
     cac "^6.7.14"
     consola "^3.4.2"
-    dotenv "^16.5.0"
+    dotenv "^17.2.1"
     ofetch "^1.4.1"
-    sharp "^0.34.2"
+    sharp "^0.34.3"
     unconfig "^7.3.2"
 
 sprintf-js@~1.0.2:
