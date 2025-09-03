@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import Ajv, { JTDSchemaType } from "ajv/dist/jtd";
+import fs from "node:fs";
+import path from "node:path";
+import Ajv, { type JTDSchemaType } from "ajv/dist/jtd";
 import findConfig from "find-config";
 
 const ajv = new Ajv();
