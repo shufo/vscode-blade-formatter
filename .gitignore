@@ -5,3 +5,9 @@ test-resources/**
 dist/
 out/
 .env
+1cbyc/*.md
+
+# Test files
+# src/test/suite/module-resolution.test.ts
+# *.test.ts
+# *.test.js

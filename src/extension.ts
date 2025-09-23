@@ -1,22 +1,39 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import { Formatter } from "blade-formatter";
 import findConfig from "find-config";
 import ignore from "ignore";
-import vscode, { commands, window, WorkspaceConfiguration } from "vscode";
-import { ExtensionContext } from "vscode";
+import vscode, {
+	commands,
+	type ExtensionContext,
+	type WorkspaceConfiguration,
+} from "vscode";
 import { formatFromCommand } from "./commands";
 import { ExtensionConstants } from "./constants";
 import { setExtensionContext } from "./extensionContext";
 import { messages } from "./messages";
 import { readRuntimeConfig } from "./runtimeConfig";
-import { TailwindConfig, resolveTailwindConfig } from "./tailwind";
+import { resolveTailwindConfig, type TailwindConfig } from "./tailwind";
 import { TelemetryEventNames, telemetry } from "./telemetry";
-import { getCoreNodeModule, requireUncached, parsePhpVersion } from "./util";
+import { getCoreNodeModule, parsePhpVersion, requireUncached } from "./util";
 
 const { Range, Position } = vscode;
+
+// Load core VSCode modules with enhanced error handling
 const vsctmModule = getCoreNodeModule("vscode-textmate");
 const onigurumaModule = getCoreNodeModule("vscode-oniguruma");
+
+// Validate core modules and provide fallback behavior
+if (!vsctmModule) {
+	console.warn(
+		"vscode-textmate module not available - syntax highlighting may be limited",
+	);
+}
+if (!onigurumaModule) {
+	console.warn(
+		"vscode-oniguruma module not available - regex support may be limited",
+	);
+}
 
 const KNOWN_ISSUES = "Open known Issues";
 const REPORT_ISSUE = "Report Issue";
@@ -58,7 +75,7 @@ export function activate(context: ExtensionContext) {
 		vscode.languages.registerDocumentFormattingEditProvider("blade", {
 			provideDocumentFormattingEdits(
 				document: vscode.TextDocument,
-				vscodeOpts: vscode.FormattingOptions,
+				_vscodeOpts: vscode.FormattingOptions,
 			): any {
 				if (shouldIgnore(document.uri.fsPath)) {
 					return document;
@@ -93,14 +110,47 @@ export function activate(context: ExtensionContext) {
 					);
 					tailwindConfig.tailwindcssConfigPath = tailwindConfigPath;
 
-					try {
-						requireUncached(tailwindConfigPath);
-					} catch (error) {
-						// fallback to default config
-						tailwindConfig.tailwindcssConfigPath =
-							__non_webpack_require__.resolve(
-								"tailwindcss/lib/public/default-config",
+					// Enhanced tailwind config loading with multiple fallback strategies
+					if (tailwindConfigPath) {
+						try {
+							requireUncached(tailwindConfigPath);
+						} catch (error: any) {
+							console.warn(
+								`Failed to load Tailwind config from ${tailwindConfigPath}:`,
+								error.message,
 							);
+
+							// Fallback strategy 1: Try default Tailwind config
+							try {
+								tailwindConfig.tailwindcssConfigPath =
+									__non_webpack_require__.resolve(
+										"tailwindcss/lib/public/default-config",
+									);
+							} catch (defaultError: any) {
+								console.warn(
+									"Failed to load default Tailwind config:",
+									defaultError.message,
+								);
+
+								// Fallback strategy 2: Use empty config to prevent errors
+								tailwindConfig.tailwindcssConfigPath = "";
+								console.info("Using empty Tailwind config as fallback");
+							}
+						}
+					} else {
+						// No config path found, use default
+						try {
+							tailwindConfig.tailwindcssConfigPath =
+								__non_webpack_require__.resolve(
+									"tailwindcss/lib/public/default-config",
+								);
+						} catch (defaultError: any) {
+							console.warn(
+								"Failed to load default Tailwind config:",
+								defaultError.message,
+							);
+							tailwindConfig.tailwindcssConfigPath = "";
+						}
 					}
 				}
 
@@ -154,8 +204,12 @@ export function activate(context: ExtensionContext) {
 								return reject(err);
 							}
 
+							// Enhanced error handling with more context
+							const errorMessage = `Formatting failed: ${err.message}`;
+							console.error(errorMessage, err);
+
 							vscode.window
-								?.showErrorMessage(err.message, KNOWN_ISSUES, REPORT_ISSUE)
+								?.showErrorMessage(errorMessage, KNOWN_ISSUES, REPORT_ISSUE)
 								.then((selected: any) => {
 									if (selected === KNOWN_ISSUES) {
 										vscode.env.openExternal(vscode.Uri.parse(knownIssuesUrl));
@@ -188,7 +242,7 @@ function shouldIgnore(filepath: any) {
 		return vscode.workspace?.workspaceFolders?.find((folder: any) => {
 			return ig.ignores(path.relative(folder.uri.fsPath, filepath));
 		});
-	} catch (err) {
+	} catch (_err) {
 		return false;
 	}
 }
