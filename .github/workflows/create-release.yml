@@ -13,7 +13,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 24.x
       - name: Checkout code
         if: ${{ steps.release.outputs.release_created }}
         uses: actions/checkout@v4
