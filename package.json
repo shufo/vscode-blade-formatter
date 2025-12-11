@@ -215,7 +215,7 @@
     "publish": "vsce publish --allow-package-env-file --yarn"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.1",
+    "@biomejs/biome": "2.3.8",
     "@jest/types": "^30.0.0",
     "@types/find-config": "^1.0.1",
     "@types/mocha": "10.0.10",
@@ -228,15 +228,15 @@
     "app-root-path": "^3.0.0",
     "babel-jest": "^30.0.0",
     "conventional-changelog-cli": "^4.0.0",
-    "debug": "4.4.1",
+    "debug": "4.4.3",
     "dotenv-webpack": "8.1.1",
     "mocha": "^11.0.0",
     "sponsorkit": "16.5.0",
-    "ts-jest": "29.4.0",
-    "ts-loader": "9.5.2",
+    "ts-jest": "29.4.6",
+    "ts-loader": "9.5.4",
     "ts-migrate": "0.1.35",
     "ts-node": "10.9.2",
-    "typescript": "5.8.3",
+    "typescript": "5.9.3",
     "webpack": "5.90.1",
     "webpack-cli": "6.0.1",
     "webpack-node-externals": "^3.0.0"
