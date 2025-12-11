@@ -178,10 +178,10 @@ $ yarn run test
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/notdian">
-                    <img src="https://avatars.githubusercontent.com/u/4225509?v=4" width="100;" alt="notdian"/>
+                <a href="https://github.com/endianf">
+                    <img src="https://avatars.githubusercontent.com/u/4225509?v=4" width="100;" alt="endianf"/>
                     <br />
-                    <sub><b>Null</b></sub>
+                    <sub><b>endianf</b></sub>
                 </a>
             </td>
             <td align="center">
