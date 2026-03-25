@@ -1,5 +1,29 @@
 # ChangeLog
 
+## [0.26.3](https://github.com/shufo/vscode-blade-formatter/compare/v0.26.2...v0.26.3) (2026-03-25)
+
+
+### Fixes
+
+* package.json & yarn.lock to reduce vulnerabilities ([b01055d](https://github.com/shufo/vscode-blade-formatter/commit/b01055daaf95300be9a599e78ddde583edc9c772))
+
+
+### Miscellaneous
+
+* 🤖 bump blade-formatter to 1.44.4 ([8f259ba](https://github.com/shufo/vscode-blade-formatter/commit/8f259ba82fb90561ed0de5601b25aa5378d5ed90))
+* **deps:** bump flatted from 3.3.3 to 3.4.2 ([32c689c](https://github.com/shufo/vscode-blade-formatter/commit/32c689c94367ecf94efef736cb68cf864fa50ded))
+* **deps:** bump lodash from 4.17.21 to 4.17.23 ([3a4f4ad](https://github.com/shufo/vscode-blade-formatter/commit/3a4f4ada64ac1545c21e2fd0963346524b71e8e8))
+* **deps:** bump undici from 7.13.0 to 7.24.1 ([2b2970f](https://github.com/shufo/vscode-blade-formatter/commit/2b2970f1c72c67488c974b16c020573db9fc1d08))
+* **deps:** update actions/cache action to v5 ([6ac37f5](https://github.com/shufo/vscode-blade-formatter/commit/6ac37f5840dbd320ab79a42779732a4a84a8a284))
+* **deps:** update actions/checkout action to v6 ([a7a3541](https://github.com/shufo/vscode-blade-formatter/commit/a7a35410b106a95dc529cee21f6848e96a0dda88))
+* **deps:** update actions/labeler action to v6 ([784a8d0](https://github.com/shufo/vscode-blade-formatter/commit/784a8d0428d8884e4aa9559439c796f342152623))
+* **deps:** update actions/setup-node action to v6 ([efc6750](https://github.com/shufo/vscode-blade-formatter/commit/efc675075d09e0a98e6664ea2de9322c787a50cf))
+* **deps:** update actions/stale action to v10 ([6766b85](https://github.com/shufo/vscode-blade-formatter/commit/6766b851eccd9b545aff02ae2a27cbd7e817a2c5))
+* **deps:** update all minor update of dev dependencies ([fc7894f](https://github.com/shufo/vscode-blade-formatter/commit/fc7894ff8d3fd7febc6924d8db528886abf993a0))
+* **deps:** update dependency ajv to v8.18.0 [security] ([fb91c14](https://github.com/shufo/vscode-blade-formatter/commit/fb91c143ab0ef9ca873d4c1cfa20e8b1ac7d3fd1))
+* **deps:** update dependency webpack to v5.104.1 [security] ([1196bbd](https://github.com/shufo/vscode-blade-formatter/commit/1196bbd77046b142201224b20a76ef332e4edd33))
+* **deps:** update github/codeql-action action to v4 ([626e5e7](https://github.com/shufo/vscode-blade-formatter/commit/626e5e72c5731cb9c56f4cd83331afaad7d101ce))
+
 ## [0.26.2](https://github.com/shufo/vscode-blade-formatter/compare/v0.26.1...v0.26.2) (2025-08-11)
 
 
