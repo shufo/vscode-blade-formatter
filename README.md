@@ -171,6 +171,13 @@ $ yarn run test
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/snyk-bot">
+                    <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
+                    <br />
+                    <sub><b>Snyk Bot</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/yaegassy">
                     <img src="https://avatars.githubusercontent.com/u/188642?v=4" width="100;" alt="yaegassy"/>
                     <br />
@@ -191,20 +198,13 @@ $ yarn run test
                     <sub><b>Isaac Emmanuel</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/j3j5">
                     <img src="https://avatars.githubusercontent.com/u/1239921?v=4" width="100;" alt="j3j5"/>
                     <br />
                     <sub><b>Julio J. Foulquie</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
-                <a href="https://github.com/snyk-bot">
-                    <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
-                    <br />
-                    <sub><b>Snyk Bot</b></sub>
                 </a>
             </td>
 		</tr>
