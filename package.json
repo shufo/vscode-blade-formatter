@@ -229,7 +229,7 @@
     "babel-jest": "^30.0.0",
     "conventional-changelog-cli": "^4.0.0",
     "debug": "4.4.3",
-    "dotenv-webpack": "8.1.1",
+    "dotenv-webpack": "9.0.0",
     "mocha": "^11.0.0",
     "sponsorkit": "16.5.0",
     "ts-jest": "29.4.6",
