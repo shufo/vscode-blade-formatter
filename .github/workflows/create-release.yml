@@ -7,7 +7,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: GoogleCloudPlatform/release-please-action@v4
+      - uses: GoogleCloudPlatform/release-please-action@v5
         id: release
       - name: Setup Node.js
         if: ${{ steps.release.outputs.release_created }}
