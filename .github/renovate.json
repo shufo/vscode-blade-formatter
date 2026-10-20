@@ -3,7 +3,7 @@
 	"assigneesFromCodeOwners": true,
 	"packageRules": [
 		{
-			"matchPackagePatterns": ["*"],
+			"matchPackageNames": ["*"],
 			"excludePackageNames": ["@types/vscode"],
 			"matchDepTypes": ["devDependencies"],
 			"matchUpdateTypes": ["minor", "patch"],
@@ -13,7 +13,7 @@
 			"labels": ["dependencies"]
 		},
 		{
-			"matchPackagePatterns": ["*"],
+			"matchPackageNames": ["*"],
 			"excludePackageNames": ["@types/vscode"],
 			"schedule": ["every weekend"],
 			"matchUpdateTypes": ["major"],
