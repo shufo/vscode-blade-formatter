@@ -8,14 +8,14 @@ import vscode from "vscode";
 export function getCoreNodeModule(moduleName: string) {
 	try {
 		// @ts-ignore
-		return __non_webpack_require__(
+		return require(
 			`${vscode.env.appRoot}/node_modules.asar/${moduleName}`,
 		);
 	} catch (err: any) {}
 
 	try {
 		// @ts-ignore
-		return __non_webpack_require__(
+		return require(
 			`${vscode.env.appRoot}/node_modules/${moduleName}`,
 		);
 	} catch (err: any) {}
@@ -28,8 +28,8 @@ export function getCoreNodeModule(moduleName: string) {
  */
 export function requireUncached(moduleName: string) {
 	try {
-		delete __non_webpack_require__.cache[
-			__non_webpack_require__.resolve(moduleName)
+		delete require.cache[
+			require.resolve(moduleName)
 		];
 
 		const fileContent = fs.readFileSync(moduleName, "utf8");

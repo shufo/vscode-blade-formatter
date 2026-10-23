@@ -97,10 +97,7 @@ export function activate(context: ExtensionContext) {
 						requireUncached(tailwindConfigPath);
 					} catch (error) {
 						// fallback to default config
-						tailwindConfig.tailwindcssConfigPath =
-							__non_webpack_require__.resolve(
-								"tailwindcss/lib/public/default-config",
-							);
+						tailwindConfig.tailwindcssConfigPath = require.resolve("tailwindcss/lib/public/default-config");
 					}
 				}
 
