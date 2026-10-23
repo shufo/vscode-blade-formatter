@@ -200,9 +200,9 @@
     "fix": "biome lint . --apply",
     "format": "biome format . --write",
     "format:check": "biome format . --test",
-    "pretest": "yarn run compile && yarn run compile-tests",
+    "pretest": "npm run compile && npm run compile-tests",
     "test": "node ./out/test/runTest.js",
-    "pretest:e2e": "yarn run compile && yarn run compile-tests",
+    "pretest:e2e": "npm run compile && npm run compile-tests",
     "test:e2e": "node ./out/test/runE2ETest.js",
     "compile": "node esbuild.mjs",
     "build": "node esbuild.mjs",
@@ -211,8 +211,9 @@
     "watch-tests": "tsc -w -p . --outDir out",
     "package-extension": "node esbuild.mjs",
     "changelog": "conventional-changelog -i CHANGELOG.md -p eslint -s -r 0",
-    "package": "vsce package --allow-package-env-file --yarn",
-    "publish": "vsce publish --allow-package-env-file --yarn"
+    "prepackage": "npm run build",
+    "package": "vsce package --allow-package-env-file",
+    "publish": "vsce publish --allow-package-env-file"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.8",
