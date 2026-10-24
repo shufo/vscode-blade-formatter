@@ -1,11 +1,10 @@
-import assert from "assert";
-import fs from "fs";
+import assert from "node:assert";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
 import { before, beforeEach } from "mocha";
-import path from "path";
-import { performance } from "perf_hooks";
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
-import vscode, { TextDocument } from "vscode";
+import vscode from "vscode";
 import { ExtensionConstants } from "../../constants";
 import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 
