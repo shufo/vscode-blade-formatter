@@ -22,6 +22,11 @@ suite("Extension Test Suite", () => {
 
 	vscode.window.showInformationMessage("Start all tests.");
 
+	test("Should start extension", async () => {
+		const started = vscode.extensions.getExtension("shufo.vscode-blade-formatter").isActive;
+		assert.equal(started, true);
+	});
+
 	test("Should format file with extension", async function (this: any) {
 		this.timeout(20000);
 		await formatSameAsBladeFormatter("index.blade.php", "formatted.index.blade.php");
