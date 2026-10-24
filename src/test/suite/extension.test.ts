@@ -38,6 +38,10 @@ describe("Extension Test Suite", function () {
 	});
 
 	test("Should format file with extension", async function (this: any) {
+		if (process.platform === "darwin") {
+			_sleep(500);
+		}
+
 		await formatSameAsBladeFormatter("index.blade.php", "formatted.index.blade.php");
 	});
 
