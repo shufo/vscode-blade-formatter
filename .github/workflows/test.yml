@@ -27,9 +27,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run headless test
+      - name: Run headless test on Linux
         uses: GabrielBB/xvfb-action@v1.7
+        if: runner.os == 'Linux'
         with:
           run: npm run test
+        env:
+          VSCODE_VERSION: ${{ matrix.vscode_version }}
+
+      - name: Run headless test
+        uses: GabrielBB/xvfb-action@v1.7
+        if: runner.os != 'Linux'
+        run: npm run test
         env:
           VSCODE_VERSION: ${{ matrix.vscode_version }}

@@ -27,13 +27,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run headless test
+      - name: Run headless test on Linux
         uses: GabrielBB/xvfb-action@v1.7
+        if: runner.os == 'Linux'
         with:
           run: npm run test:e2e
         env:
           VSCODE_VERSION: ${{ matrix.vscode_version }}
           TMP_DIR: ${{ runner.temp }}
+
+      - name: Run headless test
+        if: runner.os != 'Linux'
+        run: npm run test:e2e
+        env:
+          VSCODE_VERSION: ${{ matrix.vscode_version }}
+          TMP_DIR: ${{ runner.temp }}
+
       - uses: actions/upload-artifact@v7
         with:
           name: packged vsix
