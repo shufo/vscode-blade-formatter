@@ -23,7 +23,7 @@ suite("Extension Test Suite", () => {
 			const name = key.split(".").pop() ?? "";
 			await config.update(name, undefined, true);
 		});
-		this.reties(5);
+		this.retries(5);
 		this.timeout(20000);
 	});
 
