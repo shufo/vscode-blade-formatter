@@ -28,7 +28,7 @@ suite("Extension Test Suite", () => {
 
 	vscode.window.showInformationMessage("Start all tests.");
 
-	test("Should start extension", async () => {
+	test("Should started extension", async () => {
 		const started = vscode.extensions.getExtension("shufo.vscode-blade-formatter")?.isActive;
 		assert.equal(started, true);
 	});
