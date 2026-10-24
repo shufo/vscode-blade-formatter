@@ -10,6 +10,12 @@ import { ExtensionConstants } from "../../constants";
 import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 
 suite("Extension Test Suite", () => {
+	before(async () => {
+		const extension = vscode.extensions.getExtension("shufo.vscode-blade-formatter");
+		// wait for extension activated
+		await extension?.activate();
+	});
+
 	beforeEach(async () => {
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		const configurations = require(path.resolve(__dirname, "../../../package.json")).contributes.configuration
