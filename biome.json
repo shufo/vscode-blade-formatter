@@ -10,6 +10,6 @@
 	"formatter": {
 		"enabled": true,
 		"lineWidth": 120,
-		"includes": ["./src/**/*", "!tailwind.config.js", "!src/test/**/*", "src/test/suite/extension.test.ts"]
+		"includes": ["./src/**/*", "!tailwind.config.js", "!src/test/fixtures/*"]
 	}
 }
