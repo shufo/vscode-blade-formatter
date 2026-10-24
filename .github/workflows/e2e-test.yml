@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        vscode_version: ["stable"]
+        vscode_version: ["1.140.0", "1.142.0"]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -25,7 +25,7 @@ jobs:
           path: .vscode-test
           key: ${{ runner.os }}-vscode-test-${{ matrix.vscode_version }}
       - name: Install dependencies
-        run: npm ci 
+        run: npm ci
 
       - name: Run headless test
         uses: GabrielBB/xvfb-action@v1.7
