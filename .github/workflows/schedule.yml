@@ -21,7 +21,7 @@ jobs:
           node-version: lts/*
 
       - run: echo APP_INSIGHT_INSTRUMENT_KEY=example_key >> .env
-      - run: yarn install
+      - run: npm ci 
 
       - name: Update sponsors
         run: npx sponsorkit

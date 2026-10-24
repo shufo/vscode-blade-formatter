@@ -40,9 +40,7 @@ class Telemetry {
 	 */
 	private canSend(): boolean {
 		// Don't send telemetry when developing or testing the extension
-		if (
-			getExtensionContext().extensionMode !== vscode.ExtensionMode.Production
-		) {
+		if (getExtensionContext().extensionMode !== vscode.ExtensionMode.Production) {
 			return false;
 		}
 		// Don't send telemetry when user disabled it in Settings
@@ -58,10 +56,7 @@ class Telemetry {
 	 * @param eventName sent message title
 	 * @param payload custom properties to add to the message
 	 */
-	send<T extends TelemetryEventNamePropertyMapping, E extends keyof T>(
-		eventName: E,
-		payload?: T[E],
-	): void {
+	send<T extends TelemetryEventNamePropertyMapping, E extends keyof T>(eventName: E, payload?: T[E]): void {
 		if (!this.canSend()) {
 			return;
 		}
@@ -96,10 +91,7 @@ class Telemetry {
 }
 
 function getExtensionVersion() {
-	return (
-		vscode.extensions.getExtension(extensionId)?.packageJSON.version ||
-		"unknown version"
-	);
+	return vscode.extensions.getExtension(extensionId)?.packageJSON.version || "unknown version";
 }
 
 /**

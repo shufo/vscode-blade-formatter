@@ -6,7 +6,7 @@
     "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
-    "types": ["node", "webpack-env"],
+    "types": ["node"],
   },
   "exclude": ["node_modules", ".vscode-test"],
   "include": ["src/**/*"]

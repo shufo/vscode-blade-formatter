@@ -21,13 +21,13 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         run: |
           echo APP_INSIGHT_INSTRUMENT_KEY=${{ secrets.APP_INSIGHT_INSTRUMENT_KEY }} >> .env
-      - run: yarn install
+      - run: ci
         if: ${{ steps.release.outputs.release_created }}
-      - run: yarn run compile
+      - run: npm run compile
         if: ${{ steps.release.outputs.release_created }}
-      - run: yarn run vsce package --yarn --allow-package-env-file -o artifact.vsix
+      - run: npm run vsce package --allow-package-env-file -o artifact.vsix
         if: ${{ steps.release.outputs.release_created }}
-      - run: yarn run vsce publish -p $VSCE_TOKEN --yarn -i artifact.vsix
+      - run: npm run vsce publish -p $VSCE_TOKEN -i artifact.vsix
         if: ${{ steps.release.outputs.release_created }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
@@ -37,3 +37,11 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         env:
           OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
+
+      - name: Upload Release Artifact
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mv artifact.vsix vscode-blade-formatter-${{ steps.release.outputs.version }}.vsix && \
+          gh release upload ${{ steps.release.outputs.tag_name }} vscode-blade-formatter-${{ steps.release.outputs.version }}.vsix

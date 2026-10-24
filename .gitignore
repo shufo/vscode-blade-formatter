@@ -5,3 +5,4 @@ test-resources/**
 dist/
 out/
 .env
+syntaxes/
