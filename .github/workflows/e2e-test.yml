@@ -34,3 +34,7 @@ jobs:
         env:
           VSCODE_VERSION: ${{ matrix.vscode_version }}
           TMP_DIR: ${{ runner.temp }}
+      - uses: actions/upload-artifact@v7
+        with:
+          name: my-artifact
+          path: path/to/artifact/world.txt
