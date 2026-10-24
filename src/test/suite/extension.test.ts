@@ -1,14 +1,17 @@
 import assert from "node:assert";
 import path from "node:path";
 import { performance } from "node:perf_hooks";
-import { before, beforeEach } from "mocha";
+import { before, beforeEach, describe } from "mocha";
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import vscode from "vscode";
 import { ExtensionConstants } from "../../constants";
 import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 
-suite("Extension Test Suite", () => {
+describe("Extension Test Suite", function () {
+	this.timeout(20000);
+	this.retries(5);
+
 	before(async () => {
 		const extension = vscode.extensions.getExtension("shufo.vscode-blade-formatter");
 		// wait for extension activated
@@ -23,8 +26,6 @@ suite("Extension Test Suite", () => {
 			const name = key.split(".").pop() ?? "";
 			await config.update(name, undefined, true);
 		});
-		this.retries(5);
-		this.timeout(20000);
 	});
 
 	vscode.window.showInformationMessage("Start all tests.");
