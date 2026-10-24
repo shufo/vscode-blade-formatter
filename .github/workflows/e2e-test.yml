@@ -36,5 +36,5 @@ jobs:
           TMP_DIR: ${{ runner.temp }}
       - uses: actions/upload-artifact@v7
         with:
-          name: my-artifact
-          path: path/to/artifact/world.txt
+          name: packged vsix
+          path: ${{ runner.temp }}/*.vsix
