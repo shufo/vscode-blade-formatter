@@ -1,25 +1,19 @@
 import assert from "assert";
 import fs from "fs";
-import path from "path";
-
 import { before, beforeEach } from "mocha";
+import path from "path";
 import { performance } from "perf_hooks";
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 import vscode, { TextDocument } from "vscode";
 import { ExtensionConstants } from "../../constants";
-import {
-	formatSameAsBladeFormatter,
-	getContent,
-	getDoc,
-} from "../support/util";
+import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 
 suite("Extension Test Suite", () => {
 	beforeEach(async () => {
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
-		const configurations = require(
-			path.resolve(__dirname, "../../../package.json"),
-		).contributes.configuration.properties;
+		const configurations = require(path.resolve(__dirname, "../../../package.json")).contributes.configuration
+			.properties;
 		Object.keys(configurations).forEach(async (key: string) => {
 			const name = key.split(".").pop() ?? "";
 			await config.update(name, undefined, true);
@@ -30,10 +24,7 @@ suite("Extension Test Suite", () => {
 
 	test("Should format file with extension", async function (this: any) {
 		this.timeout(20000);
-		await formatSameAsBladeFormatter(
-			"index.blade.php",
-			"formatted.index.blade.php",
-		);
+		await formatSameAsBladeFormatter("index.blade.php", "formatted.index.blade.php");
 	});
 
 	test("Should ignore file if target listed in .bladeignore", async function (this: any) {
@@ -239,11 +230,7 @@ suite("Extension Test Suite", () => {
 		this.timeout(20000);
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("sortHtmlAttributes", "custom", true);
-		await config.update(
-			"customHtmlAttributesOrder",
-			"id, aria-.+, src, class",
-			true,
-		);
+		await config.update("customHtmlAttributesOrder", "id, aria-.+, src, class", true);
 		await formatSameAsBladeFormatter(
 			"withoutConfig/customHtmlAttributesOrder/index.blade.php",
 			"withoutConfig/customHtmlAttributesOrder/formatted.index.blade.php",

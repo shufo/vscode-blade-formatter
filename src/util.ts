@@ -8,16 +8,12 @@ import vscode from "vscode";
 export function getCoreNodeModule(moduleName: string) {
 	try {
 		// @ts-ignore
-		return require(
-			`${vscode.env.appRoot}/node_modules.asar/${moduleName}`,
-		);
+		return require(`${vscode.env.appRoot}/node_modules.asar/${moduleName}`);
 	} catch (err: any) {}
 
 	try {
 		// @ts-ignore
-		return require(
-			`${vscode.env.appRoot}/node_modules/${moduleName}`,
-		);
+		return require(`${vscode.env.appRoot}/node_modules/${moduleName}`);
 	} catch (err: any) {}
 
 	return null;
@@ -28,9 +24,7 @@ export function getCoreNodeModule(moduleName: string) {
  */
 export function requireUncached(moduleName: string) {
 	try {
-		delete require.cache[
-			require.resolve(moduleName)
-		];
+		delete require.cache[require.resolve(moduleName)];
 
 		const fileContent = fs.readFileSync(moduleName, "utf8");
 
