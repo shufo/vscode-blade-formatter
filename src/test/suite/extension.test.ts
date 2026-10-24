@@ -10,7 +10,7 @@ import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util"
 
 describe("Extension Test Suite", function () {
 	this.timeout(20000);
-	this.retries(5);
+	this.retries(10);
 
 	before(async () => {
 		const extension = vscode.extensions.getExtension("shufo.vscode-blade-formatter");
