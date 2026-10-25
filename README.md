@@ -1,8 +1,8 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/shufo/vscode-blade-formatter/test.yml?style=flat-square)](https://github.com/shufo/vscode-blade-formatter/actions/workflows/test.yml)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/shufo.vscode-blade-formatter?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
-[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/shufo.vscode-blade-formatter?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/shufo.vscode-blade-formatter?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter&ssr=false#version-history)
-[![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/shufo.vscode-blade-formatter?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter&ssr=false#review-details)
+[![Visual Studio Marketplace Version](https://badgen.net/vs-marketplace/v/shufo.vscode-blade-formatter)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
+[![Visual Studio Marketplace Installs](https://badgen.net/vs-marketplace/i/shufo.vscode-blade-formatter)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
+[![Visual Studio Marketplace Downloads](https://badgen.net/vs-marketplace/d/shufo.vscode-blade-formatter)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)
+[![Visual Studio Marketplace Rating](https://badgen.net/vs-marketplace/rating/shufo.vscode-blade-formatter)](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter&ssr=false#review-details)
 
 # vscode-blade-formatter
 

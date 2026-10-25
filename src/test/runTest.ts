@@ -20,10 +20,7 @@ async function main() {
 		const extensionTestsPath = path.resolve(__dirname, "./suite/index");
 
 		const launchArgs = [
-			`${path.resolve(
-				__dirname,
-				"../../src",
-			)}/test/fixtures/test.code-workspace`,
+			`${path.resolve(__dirname, "../../src")}/test/fixtures/test.code-workspace`,
 			"--disable-extensions",
 		];
 

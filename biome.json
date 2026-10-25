@@ -1,32 +1,15 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
+	"$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true
 		},
-		"ignore": [
-			"./.vscode-test",
-			"./out",
-			"./src/test/**/*SyntaxError*/*",
-			"./src/test/**/*Error*/*",
-			"./.vscode",
-			"./dist"
-		]
+		"includes": ["./src/**/*", "!tailwind.config.js", "!src/test/**/*Error*/*", "!src/test/**/*SyntaxError*/*"]
 	},
 	"formatter": {
 		"enabled": true,
-		"ignore": [
-			"./.vscode-test",
-			"./out",
-			"./src/test/**/*SyntaxError*/*",
-			"./src/test/**/*Error*/*",
-			"./package.json",
-			"./.vscode",
-			"./dist"
-		]
+		"lineWidth": 120,
+		"includes": ["./src/**/*", "!tailwind.config.js", "!src/test/fixtures/*"]
 	}
 }

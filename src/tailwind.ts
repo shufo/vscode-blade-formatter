@@ -15,10 +15,7 @@ export type TailwindConfig = {
  * @param filepath string
  * @param optionPath string
  */
-export function resolveTailwindConfig(
-	filepath: string,
-	optionPath: string,
-): string {
+export function resolveTailwindConfig(filepath: string, optionPath: string): string {
 	if (!optionPath) {
 		return findConfig(__config__, { cwd: path.dirname(filepath) }) ?? "";
 	}

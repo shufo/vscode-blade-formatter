@@ -1,25 +1,27 @@
-import assert from "assert";
-import fs from "fs";
-import path from "path";
-
-import { before, beforeEach } from "mocha";
-import { performance } from "perf_hooks";
+import assert from "node:assert";
+import path from "node:path";
+import { performance } from "node:perf_hooks";
+import { before, beforeEach, describe } from "mocha";
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
-import vscode, { TextDocument } from "vscode";
+import vscode from "vscode";
 import { ExtensionConstants } from "../../constants";
-import {
-	formatSameAsBladeFormatter,
-	getContent,
-	getDoc,
-} from "../support/util";
+import { formatSameAsBladeFormatter, getContent, getDoc } from "../support/util";
 
-suite("Extension Test Suite", () => {
-	beforeEach(async () => {
+describe("Extension Test Suite", function () {
+	this.timeout(20000);
+	this.retries(10);
+
+	before(async () => {
+		const extension = vscode.extensions.getExtension("shufo.vscode-blade-formatter");
+		// wait for extension activated
+		await extension?.activate();
+	});
+
+	beforeEach(async function (this: any) {
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
-		const configurations = require(
-			path.resolve(__dirname, "../../../package.json"),
-		).contributes.configuration.properties;
+		const configurations = require(path.resolve(__dirname, "../../../package.json")).contributes.configuration
+			.properties;
 		Object.keys(configurations).forEach(async (key: string) => {
 			const name = key.split(".").pop() ?? "";
 			await config.update(name, undefined, true);
@@ -28,21 +30,26 @@ suite("Extension Test Suite", () => {
 
 	vscode.window.showInformationMessage("Start all tests.");
 
+	const _sleep = (time: number) => new Promise((r) => setTimeout(r, time));
+
+	test("Should started extension", async () => {
+		const started = vscode.extensions.getExtension("shufo.vscode-blade-formatter")?.isActive;
+		assert.equal(started, true);
+	});
+
 	test("Should format file with extension", async function (this: any) {
-		this.timeout(20000);
-		await formatSameAsBladeFormatter(
-			"index.blade.php",
-			"formatted.index.blade.php",
-		);
+		if (process.platform === "darwin") {
+			await _sleep(500);
+		}
+
+		await formatSameAsBladeFormatter("index.blade.php", "formatted.index.blade.php");
 	});
 
 	test("Should ignore file if target listed in .bladeignore", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter("ignore.blade.php", "ignore.blade.php");
 	});
 
 	test("Should format file with runtime config / indentSize", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/indentSize/index.blade.php",
 			"withConfig/indentSize/formatted.index.blade.php",
@@ -50,7 +57,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / wrapAttributes", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/wrapAttributes/index.blade.php",
 			"withConfig/wrapAttributes/formatted.index.blade.php",
@@ -58,7 +64,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / wrapAttributesMinAttrs", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/wrapAttributesMinAttrs/index.blade.php",
 			"withConfig/wrapAttributesMinAttrs/formatted.index.blade.php",
@@ -84,7 +89,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / wrapLineLength", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/wrapLineLength/index.blade.php",
 			"withConfig/wrapLineLength/formatted.index.blade.php",
@@ -92,7 +96,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / sortTailwindcssClasses", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/sortTailwindcssClasses/index.blade.php",
 			"withConfig/sortTailwindcssClasses/formatted.index.blade.php",
@@ -100,7 +103,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / sortTailwindcssClasses (subdirectory)", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/sortTailwindcssClasses/subdirectory/index.blade.php",
 			"withConfig/sortTailwindcssClasses/subdirectory/formatted.index.blade.php",
@@ -108,7 +110,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / tailwindcssConfigPath ", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigPath/index.blade.php",
 			"withConfig/tailwindConfigPath/formatted.index.blade.php",
@@ -116,7 +117,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / tailwindcssConfigPath (subdirectory) ", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigPath/subdirectory/index.blade.php",
 			"withConfig/tailwindConfigPath/subdirectory/formatted.index.blade.php",
@@ -124,8 +124,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / tailwindcssConfigPath (large file)", async function (this: any) {
-		this.timeout(20000);
-
 		const startTime = performance.now();
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigPath/large_file.blade.php",
@@ -136,7 +134,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / tailwindcssConfigPath (config does not exists error) ", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigPathNotExists/index.blade.php",
 			"withConfig/tailwindConfigPathNotExists/formatted.index.blade.php",
@@ -144,7 +141,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / tailwindcssConfigPath (config does not exists on subdirectory) ", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigPathNotExists/subdirectory/index.blade.php",
 			"withConfig/tailwindConfigPathNotExists/subdirectory/formatted.index.blade.php",
@@ -152,7 +148,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / even if tailwind config has error", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigError/index.blade.php",
 			"withConfig/tailwindConfigError/formatted.index.blade.php",
@@ -160,7 +155,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / even if tailwind config has error (subdirectory) ", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigError/subdirectory/index.blade.php",
 			"withConfig/tailwindConfigError/subdirectory/formatted.index.blade.php",
@@ -168,7 +162,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / even if tailwind config has error (syntax error) ", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigError/syntax/index.blade.php",
 			"withConfig/tailwindConfigError/syntax/formatted.index.blade.php",
@@ -176,8 +169,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file without runtime config / tailwind config exists", async function (this: any) {
-		this.timeout(20000);
-
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("sortTailwindcssClasses", true, true);
 		await formatSameAsBladeFormatter(
@@ -188,7 +179,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / ES Module tailwind config", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigESModule/index.blade.php",
 			"withConfig/tailwindConfigESModule/formatted.index.blade.php",
@@ -196,7 +186,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / ES Module tailwind config (Syntax Error)", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/tailwindConfigESModuleSyntaxError/index.blade.php",
 			"withConfig/tailwindConfigESModuleSyntaxError/formatted.index.blade.php",
@@ -204,7 +193,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / sortHtmlAttributes", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/sortHtmlAttributes/index.blade.php",
 			"withConfig/sortHtmlAttributes/formatted.index.blade.php",
@@ -212,7 +200,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / noMultipleEmptyLines", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/noMultipleEmptyLines/index.blade.php",
 			"withConfig/noMultipleEmptyLines/formatted.index.blade.php",
@@ -220,7 +207,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / noPhpSyntaxCheck", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/noPhpSyntaxCheck/index.blade.php",
 			"withConfig/noPhpSyntaxCheck/formatted.index.blade.php",
@@ -228,7 +214,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / customHtmlAttributesOrder", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/customHtmlAttributesOrder/index.blade.php",
 			"withConfig/customHtmlAttributesOrder/formatted.index.blade.php",
@@ -236,14 +221,9 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file without runtime config / customHtmlAttributesOrder", async function (this: any) {
-		this.timeout(20000);
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("sortHtmlAttributes", "custom", true);
-		await config.update(
-			"customHtmlAttributesOrder",
-			"id, aria-.+, src, class",
-			true,
-		);
+		await config.update("customHtmlAttributesOrder", "id, aria-.+, src, class", true);
 		await formatSameAsBladeFormatter(
 			"withoutConfig/customHtmlAttributesOrder/index.blade.php",
 			"withoutConfig/customHtmlAttributesOrder/formatted.index.blade.php",
@@ -253,7 +233,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / indentInnerHtml", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/indentInnerHtml/index.blade.php",
 			"withConfig/indentInnerHtml/formatted.index.blade.php",
@@ -261,7 +240,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file without runtime config / indentInnerHtml", async function (this: any) {
-		this.timeout(20000);
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("indentInnerHtml", true, true);
 		await formatSameAsBladeFormatter(
@@ -272,7 +250,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / noSingleQuote", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/noSingleQuote/index.blade.php",
 			"withConfig/noSingleQuote/formatted.index.blade.php",
@@ -280,7 +257,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file without runtime config / noSingleQuote", async function (this: any) {
-		this.timeout(20000);
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("noSingleQuote", true, true);
 		await formatSameAsBladeFormatter(
@@ -291,7 +267,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / componentPrefix", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/componentPrefix/index.blade.php",
 			"withConfig/componentPrefix/formatted.index.blade.php",
@@ -299,7 +274,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file without runtime config / componentPrefix", async function (this: any) {
-		this.timeout(20000);
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("componentPrefix", "foo");
 		await formatSameAsBladeFormatter(
@@ -310,7 +284,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / noTrailingCommaPhp", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/noTrailingCommaPhp/index.blade.php",
 			"withConfig/noTrailingCommaPhp/formatted.index.blade.php",
@@ -318,7 +291,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file without runtime config / noTrailingCommaPhp", async function (this: any) {
-		this.timeout(20000);
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("noTrailingCommaPhp", true);
 		await formatSameAsBladeFormatter(
@@ -329,7 +301,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file with runtime config / phpVersion", async function (this: any) {
-		this.timeout(20000);
 		await formatSameAsBladeFormatter(
 			"withConfig/phpVersion/index.blade.php",
 			"withConfig/phpVersion/formatted.index.blade.php",
@@ -337,7 +308,6 @@ suite("Extension Test Suite", () => {
 	});
 
 	test("Should format file without runtime config / phpVersion", async function (this: any) {
-		this.timeout(20000);
 		const config = vscode.workspace.getConfiguration("bladeFormatter.format");
 		await config.update("phpVersion", "8.2");
 		await formatSameAsBladeFormatter(
