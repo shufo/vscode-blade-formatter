@@ -21,19 +21,19 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         run: |
           echo APP_INSIGHT_INSTRUMENT_KEY=${{ secrets.APP_INSIGHT_INSTRUMENT_KEY }} >> .env
-      - run: ci
+      - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
       - run: npm run compile
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm run vsce package --allow-package-env-file -o artifact.vsix
+      - run: npx vsce package --allow-package-env-file -o artifact.vsix
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm run vsce publish -p $VSCE_TOKEN -i artifact.vsix
+      - run: npx vsce publish -p $VSCE_TOKEN -i artifact.vsix
         if: ${{ steps.release.outputs.release_created }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
       - run: npm install -g ovsx
         if: ${{ steps.release.outputs.release_created }}
-      - run: ovsx publish -p $OVSX_TOKEN --yarn -i artifact.vsix
+      - run: ovsx publish -p $OVSX_TOKEN -i artifact.vsix
         if: ${{ steps.release.outputs.release_created }}
         env:
           OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
