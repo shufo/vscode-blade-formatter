@@ -6,7 +6,6 @@
 ### Miscellaneous
 
 * 🤖 add dotenv to dev dependencies ([e0de760](https://github.com/shufo/vscode-blade-formatter/commit/e0de760675bd38653cb0c88ba3b9030581880f89))
-* 🤖 add ignore pattern ([b96b164](https://github.com/shufo/vscode-blade-formatter/commit/b96b1644982cbc11422180682bafd9da621e8c83))
 * 🤖 bump @vscode/vsce to v4 ([cda41ed](https://github.com/shufo/vscode-blade-formatter/commit/cda41edf714e84dc5ee18e1aa5e900aea4c2552a))
 * 🤖 bump action/checkout to v7 ([ba58dd5](https://github.com/shufo/vscode-blade-formatter/commit/ba58dd501da483511a6d5c0cd74cbc74e4f3b4c1))
 * 🤖 bump action/setup-node to v7 ([c3b84a2](https://github.com/shufo/vscode-blade-formatter/commit/c3b84a2052e416bf9220b17bdbf8a0ef332bc602))
@@ -20,14 +19,9 @@
 * 🤖 remove unnecessary webpack-node-externals ([979978e](https://github.com/shufo/vscode-blade-formatter/commit/979978e037caa288ea8fc0ae6a824e380e9dcda0))
 * 🤖 update biome config to v2 ([3b7f05f](https://github.com/shufo/vscode-blade-formatter/commit/3b7f05f8404e49cc44c14e9074efd2f9e9544ab1))
 * **deps:** update actions/labeler action to v7 ([d962c63](https://github.com/shufo/vscode-blade-formatter/commit/d962c63489820cbb2e4c8259f8720e7d58ba20a9))
-* **deps:** update actions/labeler action to v7 ([25a35e8](https://github.com/shufo/vscode-blade-formatter/commit/25a35e8f5a162624b1c6588fc3eba187287a0a46))
 * **deps:** update actions/stale action to v11 ([0d9f8c8](https://github.com/shufo/vscode-blade-formatter/commit/0d9f8c8bd44a6430cff62dadbe02941632b9c858))
-* **deps:** update actions/stale action to v11 ([f49f044](https://github.com/shufo/vscode-blade-formatter/commit/f49f04400bb1a8d59d28818334dcf3d1d42e9165))
 * **deps:** update dependency sponsorkit to v19 ([3ca6ff6](https://github.com/shufo/vscode-blade-formatter/commit/3ca6ff639115f9c0099beff9fef2363c48ebad4a))
-* **deps:** update dependency sponsorkit to v19 ([4059645](https://github.com/shufo/vscode-blade-formatter/commit/40596452311a0f58c63bc873eb37cc76647a4662))
 * **deps:** update endbug/add-and-commit action to v11 ([d86e84f](https://github.com/shufo/vscode-blade-formatter/commit/d86e84fbbb04569b35b18ccd2b92d757070865a5))
-* **deps:** update endbug/add-and-commit action to v11 ([723c0d7](https://github.com/shufo/vscode-blade-formatter/commit/723c0d720f6f90f411e5ad75d929daa57b9533ae))
-* migrate webpack to esbuild, migrate yarn to npm ([ce59f0c](https://github.com/shufo/vscode-blade-formatter/commit/ce59f0cb1e529463cd9b0174df2f5d30dd0d8050))
 
 ## [0.26.3](https://github.com/shufo/vscode-blade-formatter/compare/v0.26.2...v0.26.3) (2026-03-25)
 
