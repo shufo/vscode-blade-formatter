@@ -8,4 +8,7 @@
 !icon.png
 !node_modules/vscode-oniguruma/release/onig.wasm
 !node_modules/blade-formatter/syntaxes/blade.tmLanguage.json
-!node_modules/tailwindcss
+!node_modules/tailwindcss/lib/css/preflight.css
+!node_modules/tailwindcss/lib/public/default-config.js
+!node_modules/tailwindcss/lib/util/cloneDeep.js
+!node_modules/tailwindcss/stubs/config.full.js
