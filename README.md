@@ -165,10 +165,10 @@ $ npm run test:e2e
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/slovenianGooner">
-                    <img src="https://avatars.githubusercontent.com/u/1257629?v=4" width="100;" alt="slovenianGooner"/>
+                <a href="https://github.com/cannonsh">
+                    <img src="https://avatars.githubusercontent.com/u/1257629?v=4" width="100;" alt="cannonsh"/>
                     <br />
-                    <sub><b>SlovenianGooner</b></sub>
+                    <sub><b>Lovro Papež</b></sub>
                 </a>
             </td>
             <td align="center">
