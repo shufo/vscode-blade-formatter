@@ -132,18 +132,19 @@ see [CHANGELOG.md](https://github.com/shufo/vscode-blade-formatter/blob/master/C
 ## Development
 
 ```bash
-$ yarn install
+$ npm install
 $ cp .env.example .env # set your app insight key
-$ yarn run watch # watch changes
+$ npm run watch # watch changes
 ```
 
 ## Testing
 
 ```bash
-$ yarn install
+$ npm install
 $ cp .env.example .env # set your app insight key
-$ yarn run compile
-$ yarn run test
+$ npm run compile
+$ npm run test
+$ npm run test:e2e
 ```
 
 ## Sponsors
